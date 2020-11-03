@@ -1,0 +1,139 @@
+/* ==========================================
+	Globals
+========================================== */
+
+html{margin:0; padding:0;}
+
+body, html{}
+
+body{
+	font-size:14px;
+	line-height:1.5;
+	color:$black;
+	font-family:$sans;
+	font-weight: 300;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width:100%;
+	background:$white;
+	@include defaultTransition;
+} 
+
+.container{
+	margin:0 auto;
+	max-width:1000px;}
+
+.container-fluid{
+	padding-left:0; 
+	padding-right:0;
+	
+	&.bg{
+		background-position:center center;
+		background-color:$off-white;
+		background-size:cover;
+	}
+	
+	&.angle{
+		background:$white;
+		@include angle(after, false);
+		@include angle(before, true);
+	}
+}
+
+.clear{clear:both; float:none;}
+
+section{padding:150px 0;}
+	
+
+#body{
+	position:relative;
+	z-index:0;
+	margin-top:0;
+	background:$white; 
+	position:relative;}
+
+::selection,
+-moz::selection{}
+
+h1, h2, h3, h4, h5, h6{
+	font-family:$sans;}
+
+h6{
+	text-transform:uppercase; 
+	font-weight:bold; 
+	font-size:90%;}
+
+p{margin-bottom:20px;}
+
+strong{font-weight:bold;}
+
+a{
+	color:$secondary;
+	@include defaultTransition;
+	cursor:pointer;
+	
+	&:hover, &:focus, &:active{
+		text-decoration: none; outline:none;}
+		
+	&.button{
+		position:relative;
+		display:inline-block;
+		height:auto;
+		color:$white;
+		font-size:90%;
+		font-weight:bold;
+		text-transform:uppercase;
+		letter-spacing:1.5px;
+		margin:20px 0;
+		padding:15px 40px;
+		text-decoration: none;
+		text-align:center;
+		background:$primary;
+		border:none;
+		outline:none;
+		@include border-radius(50px);
+		@include defaultTransition;
+		
+		&:hover{background:$secondary;}
+	}
+}
+		
+hr{
+	width:100%; height:0;
+	margin:30px auto;
+	background:transparent;
+	border:none;
+	border-bottom:1px solid $black;
+}
+
+
+/* ===== Repeated Page Elements ===== */
+
+blockquote{}
+
+.image-wrapper{
+	display:block;
+	margin:0 auto; padding:0;
+	width:100%; height:100%;
+	min-height:100px;
+	background-position: top center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-color:$trans;
+	
+	&.circle{
+		width:100%; height:auto;
+		background-color:$grey;
+		@include border-radius(100%);
+	}
+}
+
+.card{
+	border:none;
+	@include defaultShadow;
+	@include border-radius(10px);
+	width:80%;
+	margin:20px auto;
+	padding:40px 0 0;
+}

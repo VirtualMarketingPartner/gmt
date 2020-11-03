@@ -1,0 +1,29 @@
+/* ==========================================
+	Responsive Styles
+========================================== */
+
+// Mobile - Smallest screens 
+@media all and (max-width:580px){}
+
+// Mobile - Default 
+@media all and (max-width:768px) {}
+
+// Mobile - Tablets
+@media all and (min-width:768px) {
+	.hero .carousel-item{background-attachment: fixed;}
+	.container-fluid.bg{background-attachment: fixed;}
+}
+
+
+// Mobile - Desktop
+@media all and (min-width:992px) {}
+
+// Mobile - Large Screens
+@media all and (min-width:1200px) {}
+
+// Mobile - Stupid Large Screens 
+@media all and (min-width:1500px){
+	#site_id{width:100%;}
+	.container{max-width:1200px;}
+}
+

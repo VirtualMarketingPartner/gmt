@@ -1,0 +1,48 @@
+/* ==========================================
+	Animations
+========================================== */
+
+.animate{
+	@include opacity(0,0);
+	
+	&.fadeInUp{
+		animation:fadeInUp .5s ease-in .2s forwards;
+		&.fast{animation-duration: .3s;}
+		&.slow{animation-duration: .5s; animation-delay:.5s;}
+		&.delay{animation-delay: 1.2s;}
+	}
+	
+	&.fadeIn{
+		animation:fadeIn .5s ease-in .2s forwards;
+		&.fast{animation-duration: .3s;}
+		&.slow{animation-duration: .5s; animation-delay:.5s;}
+		&.delay{animation-delay: 1.2s;}
+		&.realy-slow{animation-duration: .5s; animation-delay:1.5s;}
+		
+
+		&.low-op{animation-name: low-op;}
+	}
+}
+
+@keyframes fadeInUp{
+	0%{
+		@include opacity(0, .0);
+		transform:translateY(100px);}
+	100%{
+		@include opacity(100, 1);
+		transform:translateY(0);}
+}
+
+@keyframes fadeIn{
+	0%{
+		@include opacity(0, .0);}
+	100%{
+		@include opacity(100, 1);}
+}
+
+@keyframes low-op{
+	0%{
+		@include opacity(0, .0);}
+	100%{
+		@include opacity(15, .15);}
+}

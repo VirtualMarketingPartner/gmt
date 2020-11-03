@@ -1,0 +1,136 @@
+/* ==========================================
+	Mixins
+========================================== */
+
+//Textures
+@mixin pattern{
+	background-image:url('../../partials/images/pattern.png');
+	background-size:contain;
+}
+
+// Default Transition
+@mixin defaultTransition{
+	-webkit-transition: all ease-in-out .2s;
+	-moz-transition:all ease-in-out .2s;
+	transition:all ease-in-out .2s;
+}
+
+// Default Shadow
+@mixin defaultShadow {
+    -webkit-box-shadow:0 0px 20px 0 rgba(204, 204, 204, .40);
+    -moz-box-shadow: 0 0px 20px 0 rgba(204, 204, 204, .40);
+    box-shadow: 0 0px 20px 0 rgba(204, 204, 204, .40);
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+	-webkit-border-radius:$radius;
+	-moz-border-radius:$radius;
+	border-radius:$radius;
+}
+
+// Transition
+@mixin transition($all, $ease, $time) {
+	-webkit-transition:$all $ease $time;
+	-moz-transition:$all $ease $time;
+	transition:$all $ease $time;
+}
+
+// Gradient
+@mixin gradient($angle, $color1, $color-stop-1, $color2, $color-stop2){
+	background-image: linear-gradient($angle, $color1 $color-stop-1, $color2 $color-stop2);
+}
+
+// Triangle
+@mixin triangle($bg, $width, $height){
+		background:$bg;
+		width: $width; height: $height;
+		margin:0 auto;
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+		clip-path:  polygon(0% 0%, 100% 0%, 50% 50%);
+}
+
+// Opacity
+@mixin opacity($ie, $decimal){
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)"; // IE8
+	filter: alpha(opacity=$ie); // IE 5-7
+	opacity: $decimal;
+}
+
+
+// Angle
+@mixin angle($pseudo, $flip:false, $angle:4deg) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: relative;
+    z-index: 1;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
