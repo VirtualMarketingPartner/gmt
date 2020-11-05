@@ -21,11 +21,17 @@
 					<div class="container" >
 						<div class="row" >
 							<div class="col-sm-12 col-md-8" >
-								<h6>Issue of the Day</h6>
-								<h2><?php the_sub_field('title'); ?></h2>
-								<a href="<?php the_sub_field('link'); ?>" class="button" >
-									<?php the_sub_field('button_text'); ?>
-								</a>
+								<div class="text-wrapper" >
+									<?php if($slideCount==0): ?>
+										<h6>Issue of the Day</h6>
+									<?php else: ?>
+										<h6><?php echo get_the_date('d M Y'); ?></h6>
+									<?php endif; ?>
+									<h2><?php the_sub_field('title'); ?></h2>
+									<a href="<?php the_sub_field('link'); ?>" class="button" >
+										<?php the_sub_field('button_text'); ?>
+									</a>
+								</div><!-- .text-wrapper -->
 							</div><!-- .col -->
 						</div><!-- .row -->
 					</div><!-- .container -->
@@ -40,24 +46,21 @@
 	<section class="container-fluid angle services" >
 		<div class="container" >
 			<div class="row" >
-				<div class="col-sm-12 col-md-9" >
-					<?php
-					$services = get_sub_field('services_list'); 
-					if( $services ): ?>
-					<ul>
-						<?php foreach($services as $service): setup_postdata($post); ?>
-						<li>
-							<a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a>
-						</li>
-						<?php endforeach; ?>
-					</ul>
-					<?php wp_reset_postdata(); endif; ?>
+				<div class="col-sm-12 col-md-8 service" >
+					<div class="row" >
+						<?php $servicesQuery = new WP_Query( array( 'post_type' => 'services' ) ); while ( $servicesQuery->have_posts() ) : $servicesQuery->the_post(); ?> 
+						<div class="col-sm-6 col-md-4" >
+							<div class="image-wrapper icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
+							<h3><?php the_title(); ?></h3>
+						</div><!-- .col -->	 
+						<?php endwhile; wp_reset_postdata(); ?>
+					</div><!-- .row -->
 				</div><!-- .col -->
-				<div class="col-sm-12 col-md-3" >
+				<div class="col-sm-12 col-md-4" >
 					<div class="card" >
 						<h2><?php the_sub_field('header'); ?></h2>
 						<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
-						<a href="<?php the_sub_field('link'); ?>" ><?php the_sub_field('label'); ?></a>
+						<a href="<?php the_sub_field('link'); ?>" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
 						<?php endwhile; endif; ?>
 					</div><!-- .card -->
 				</div><!-- .col -->
@@ -71,14 +74,16 @@
 	<section class="container-fluid bg network" style="background-image:url(<?php the_sub_field('bg'); ?>);" >
 		<div class="container" >
 			<div class="row" >
-				<div class="offset-md-3 col-md-6 text-center" >
-					<h2><?php the_sub_field('header'); ?></h2>
-					<p><?php the_sub_field('content'); ?></p>
-					<?php if(have_rows('button')): ?>
-						<?php while(have_rows('button')): the_row(); ?>
-						<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?></a>
-						<?php endwhile; ?>
-					<?php endif; ?>
+				<div class="offset-md-2 col-md-8 text-center" >
+					<div class="text-wrapper" >
+						<h2><?php the_sub_field('header'); ?></h2>
+						<p><?php the_sub_field('content'); ?></p>
+						<?php if(have_rows('button')): ?>
+							<?php while(have_rows('button')): the_row(); ?>
+							<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?></a>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</div><!-- .text-wrapper -->
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
@@ -121,16 +126,26 @@
 			<div class="row" >
 				<div class="col" >
 					<h2><?php the_sub_field('header'); ?></h2>
+					<br>
 					<div class="row" >
-						<div class="col" >
-							<p>The posts go here</p>
-						</div><!-- .col -->
-						<div class="col" >
-							<p>The posts go here</p>
-						</div><!-- .col -->
-						<div class="col" >
-							<p>The posts go here</p>
-						</div><!-- .col -->
+					<?php $query = new WP_Query( array( 'post_type' => 'post' ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
+						<div class="col-sm-12 col-md-4 recent-news" >
+							<div class="row" >
+								<div class="col-xs-12 col-md-4" >
+									<div class="date square" >
+										<p>
+											<span class="day" ><?php echo get_the_date('d'); ?></span><span class="month" ><?php echo get_the_date('M'); ?></span>
+										</p>
+									</div>
+								</div><!-- .col -->
+								
+								<div class="col-sm-12 col-md-8" >
+									<h4><?php the_title(); ?></h4>
+									<a href="<?php the_permalink(); ?>" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
+								</div><!-- .col -->
+							</div><!-- .row -->						
+						</div><!-- .col -->	 
+						<?php endwhile; wp_reset_postdata(); ?>
 					</div><!-- .row -->
 				</div><!-- .col -->
 			</div><!-- .row -->

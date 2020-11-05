@@ -98,6 +98,8 @@ body {
     background-position: center center;
     background-color: #f5f5f5;
     background-size: cover; }
+    .container-fluid.bg .text-wrapper {
+      padding: 120px 0; }
   .container-fluid.angle {
     background: #fff;
     position: relative;
@@ -138,7 +140,7 @@ body {
   float: none; }
 
 section {
-  padding: 150px 0; }
+  padding: 80px 0; }
 
 #body {
   position: relative;
@@ -166,7 +168,8 @@ a {
   -webkit-transition: all ease-in-out .2s;
   -moz-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s;
-  cursor: pointer; }
+  cursor: pointer;
+  text-transform: uppercase; }
   a:hover, a:focus, a:active {
     text-decoration: none;
     outline: none; }
@@ -177,7 +180,6 @@ a {
     color: #fff;
     font-size: 90%;
     font-weight: bold;
-    text-transform: uppercase;
     letter-spacing: 1.5px;
     margin: 20px 0;
     padding: 15px 40px;
@@ -235,12 +237,40 @@ hr {
   margin: 20px auto;
   padding: 40px 0 0; }
 
+.recent-news {
+  border-right: 1px solid #ccc;
+  padding-left: 20px; }
+  .recent-news:last-child {
+    border-right-color: transparent; }
+  .recent-news h4 {
+    font-size: 125%; }
+  .recent-news .date {
+    display: block;
+    background: #232323;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px 0; }
+    .recent-news .date p {
+      margin-bottom: 0;
+      padding-bottom: 0; }
+    .recent-news .date span {
+      display: block;
+      padding-bottom: 0;
+      margin-bottom: 0; }
+      .recent-news .date span.day {
+        font-size: 175%; }
+  .recent-news a {
+    display: block; }
+
 /* ==========================================
 	Layout
 ========================================== */
 #home .hero {
   padding: 0;
-  min-height: 500px; }
+  min-height: 600px; }
   #home .hero #slideshow ol.carousel-indicators {
     position: absolute;
     bottom: 50px; }
@@ -252,9 +282,29 @@ hr {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat; }
+#home .services .service {
+  text-align: center; }
+  #home .services .service h3 {
+    font-size: 100%;
+    width: 65%;
+    margin: 0 auto;
+    padding: 10px 0 40px; }
+  #home .services .service .icon {
+    background-color: #f5f5f5;
+    background-size: 75%;
+    background-position: center center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; }
+#home .services .card {
+  padding: 20px 30px; }
 #home .network {
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.85); }
+#home .news {
+  padding: 150px 0 80px; }
 
 /* ==========================================
 	Sticky Nav
@@ -277,12 +327,11 @@ hr {
   #header #site_id {
     margin: 10px auto;
     display: block;
-    width: 100px;
+    width: 200px;
     height: 40px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #111111; }
+    background-size: contain; }
   #header .navbar {
     width: 100%; }
   #header .collapse {

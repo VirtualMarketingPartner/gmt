@@ -5,7 +5,7 @@
 #home{
 	.hero{
 		padding:0;
-		min-height:500px;
+		min-height:600px;
 		
 		#slideshow{
 			ol.carousel-indicators{
@@ -24,9 +24,40 @@
 		}
 	}
 	
+	.services{
+		
+		.service{
+			text-align: center;
+			
+			h3{
+				font-size:100%;
+				width:65%;
+				margin:0 auto;
+				padding:10px 0 40px;
+			}
+
+			.icon{
+				background-color:$off-white;
+				background-size:75%;
+				background-position:center center;
+				@include border-radius(50%);
+				width:100px; height:100px;
+			}
+		}
+		
+		.card{
+			padding:20px 30px;
+		}
+		
+	}
+	
 	
 	.network{
 		color:$white;
 		text-shadow:0 0 5px rgba(0,0,0,.85);
+	}
+	
+	.news{
+		padding:150px 0 80px;
 	}
 }
