@@ -2,6 +2,12 @@
 	Mixins
 ========================================== */
 
+// Default Font Styles 
+@mixin uppercase{
+	text-transform:uppercase; 
+	font-weight:bold;
+}
+
 //Textures
 @mixin pattern{
 	background-image:url('../../partials/images/pattern.png');

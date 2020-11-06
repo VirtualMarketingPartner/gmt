@@ -62,8 +62,7 @@ h1, h2, h3, h4, h5, h6{
 	font-family:$sans;}
 
 h6{
-	text-transform:uppercase; 
-	font-weight:bold; 
+	@include uppercase; 
 	font-size:90%;}
 
 p{margin-bottom:20px;}
@@ -92,12 +91,36 @@ a{
 		text-decoration: none;
 		text-align:center;
 		background:$primary;
-		border:none;
+		border:3px solid transparent;
 		outline:none;
 		@include border-radius(50px);
 		@include defaultTransition;
 		
-		&:hover{background:$secondary;}
+		&:hover{
+			background:$secondary;}
+		
+		&.inverted{
+			background:$trans; 
+			color:$secondary;
+			padding:15px 0;
+			text-align:left;
+			
+			&:after{
+				content:'';
+				width:0;
+				height:3px;
+				background:$secondary;
+				position:absolute;
+				bottom:0; left:0;
+				@include defaultTransition;
+			}
+			
+			&:hover{
+				padding:15px;
+				
+				&:after{width:80%;}
+			}
+		}
 	}
 }
 		

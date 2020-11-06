@@ -60,7 +60,7 @@
 					<div class="card" >
 						<h2><?php the_sub_field('header'); ?></h2>
 						<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
-						<a href="<?php the_sub_field('link'); ?>" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+						<a href="<?php the_sub_field('link'); ?>" class="button inverted" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
 						<?php endwhile; endif; ?>
 					</div><!-- .card -->
 				</div><!-- .col -->
@@ -100,8 +100,13 @@
 				
 				<div class="col-sm-12 col-md-7" >
 					<h2><?php the_sub_field('header'); ?></h2>
-					<?php if(have_rows('quotes')): $quote=0; ?>
-					<div id="quoteCarousel" class="carousel slide" data-ride="carousel" >
+					<?php if(have_rows('quotes')): $quote=0; $quoteIndicator=0; ?>
+					<div id="quoteCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
+						<ol class="carousel-indicators" >
+							<?php while( have_rows('quotes')): the_row(); ?>
+							<li data-target="#quoteCarousel" data-slide-to="<?php echo $quoteIndicator; ?>" class="<?php if($quoteIndicator==0){echo 'active'; } ?>" ></li>
+							<?php $quoteIndicator++; endwhile; ?>
+						</ol>
 						<div class="carousel-inner" >
 						<?php while(have_rows('quotes')): the_row(); ?>
 							<div class="carousel-item <?php if($quote==0){echo 'active';} ?>" >
@@ -141,7 +146,7 @@
 								
 								<div class="col-sm-12 col-md-8" >
 									<h4><?php the_title(); ?></h4>
-									<a href="<?php the_permalink(); ?>" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
+									<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
 								</div><!-- .col -->
 							</div><!-- .row -->						
 						</div><!-- .col -->	 

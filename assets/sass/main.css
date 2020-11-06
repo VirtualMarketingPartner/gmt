@@ -186,7 +186,7 @@ a {
     text-decoration: none;
     text-align: center;
     background: #3a50a2;
-    border: none;
+    border: 3px solid transparent;
     outline: none;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -196,6 +196,26 @@ a {
     transition: all ease-in-out .2s; }
     a.button:hover {
       background: #f47524; }
+    a.button.inverted {
+      background: transparent;
+      color: #f47524;
+      padding: 15px 0;
+      text-align: left; }
+      a.button.inverted:after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #f47524;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        -webkit-transition: all ease-in-out .2s;
+        -moz-transition: all ease-in-out .2s;
+        transition: all ease-in-out .2s; }
+      a.button.inverted:hover {
+        padding: 15px; }
+        a.button.inverted:hover:after {
+          width: 80%; }
 
 hr {
   width: 100%;
@@ -220,7 +240,7 @@ hr {
   .image-wrapper.circle {
     width: 100%;
     height: auto;
-    background-color: #ccc;
+    background-color: #8c8c8c;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%; }
@@ -238,7 +258,7 @@ hr {
   padding: 40px 0 0; }
 
 .recent-news {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #8c8c8c;
   padding-left: 20px; }
   .recent-news:last-child {
     border-right-color: transparent; }
@@ -286,7 +306,7 @@ hr {
   text-align: center; }
   #home .services .service h3 {
     font-size: 100%;
-    width: 65%;
+    font-weight: bold;
     margin: 0 auto;
     padding: 10px 0 40px; }
   #home .services .service .icon {
@@ -299,10 +319,17 @@ hr {
     width: 100px;
     height: 100px; }
 #home .services .card {
-  padding: 20px 30px; }
+  padding: 30px 20px; }
 #home .network {
   color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.85); }
+#home .testimonials .author {
+  margin-bottom: 0;
+  font-weight: bold; }
+#home .testimonials .company {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #8c8c8c; }
 #home .news {
   padding: 150px 0 80px; }
 

@@ -31,7 +31,7 @@
 			
 			h3{
 				font-size:100%;
-				width:65%;
+				font-weight:bold;
 				margin:0 auto;
 				padding:10px 0 40px;
 			}
@@ -46,7 +46,8 @@
 		}
 		
 		.card{
-			padding:20px 30px;
+			padding:30px 20px;
+			
 		}
 		
 	}
@@ -55,6 +56,18 @@
 	.network{
 		color:$white;
 		text-shadow:0 0 5px rgba(0,0,0,.85);
+	}
+	
+	.testimonials{
+		.quote{}
+		.author{
+			margin-bottom:0;
+			font-weight:bold;}
+		
+		.company{
+			@include uppercase;
+			color:$grey;
+		}
 	}
 	
 	.news{
