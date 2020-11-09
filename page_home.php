@@ -23,7 +23,7 @@
 							<div class="col-sm-12 col-md-8" >
 								<div class="text-wrapper" >
 									<?php if($slideCount==0): ?>
-										<h6>Issue of the Day</h6>
+										<p class="all-caps" >Issue of the Day</p>
 									<?php else: ?>
 										<h6><?php echo get_the_date('d M Y'); ?></h6>
 									<?php endif; ?>
@@ -57,7 +57,7 @@
 					</div><!-- .row -->
 				</div><!-- .col -->
 				<div class="col-sm-12 col-md-4" >
-					<div class="card" >
+					<div class="card pattern--right" >
 						<h2><?php the_sub_field('header'); ?></h2>
 						<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
 						<a href="<?php the_sub_field('link'); ?>" class="button inverted" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>

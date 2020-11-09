@@ -9,7 +9,7 @@
 }
 
 //Textures
-@mixin pattern{
+@mixin pattern($direction, $shape) {
 	background-image:url('../../partials/images/pattern.png');
 	background-size:contain;
 }
