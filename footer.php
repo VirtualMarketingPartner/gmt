@@ -12,7 +12,7 @@
 			<div class="row" >
 				<div class="col text-left" >
 					<a class="image-wrapper" href="<?php bloginfo('url'); ?>" style="background-image:url(<?php the_field('logo', 'options'); ?>);" ></a>
-					<?php the_field('site_address','options'); ?>
+					<p><?php the_field('site_address','options'); ?></p>
 					<p class="all-caps">Contact Us</p>
 					<?php get_template_part('partials/socials'); ?>
 				</div><!-- .col -->
@@ -23,11 +23,13 @@
 						</div><!-- .col -->
 					</div><!-- .row -->
 					
+					<?php if(get_field('impressum','options')): ?>
 					<div class="row" >
 						<div class="col offset-md-2" id="impressum" >
 							<p ><?php the_field('impressum','options'); ?></p>
 						</div><!-- .col -->
 					</div><!-- .row -->
+					<?php endif; ?>
 					
 					<div class="row" >
 						<div class="col offset-md-2" >

@@ -1,3 +1,8 @@
+<?php 
+/* Template Name: Services */ 
+?>
+
+
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="content" id="services">
@@ -20,21 +25,38 @@
 	<?php if(have_rows('intro')): while(have_rows('intro')): the_row(); ?>
 	<section class="container-fluid angle intro" >
 		<div class="container" >
-			<div class="row" >
-				<div class="col-sm-12 " >
+			<div class="row vcenter" >
+				<div class="col-sm-12 col-md-6" >
 					<h2><?php the_sub_field('title'); ?></h2>
 					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
+				
+				<div class="col-sm-12 offset-md-1 col-md-5" >
+					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
+				</div><!-- .col -->
 			</div><!-- .row -->
+		</div><!-- .container -->
+	</section ><!-- .intro -->
 	<?php endwhile; endif; ?>
 	
-	<?php if(have_rows('cards')): while(have_rows('cards')): the_row(); ?>
+	<?php if(have_rows('services')): while(have_rows('services')): the_row(); ?>
+	<section class="container-fluid services" >
+		<div class="container" >
+			<div class="row" >
+				<div class="col-sm-12 offset-md-1 col-md-10" >
+					<p>Tab List Here</p>
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section><!-- .services -->
+	<?php endwhile; endif; ?>
+	
+	<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
+	<section class="container-fluid angle approach" >
+		<div class="container" >
 			<div class="row" >
 				<div class="col-sm-12 text-center" >
-					<?php if(get_sub_field('header')): ?>
-						<h2><?php the_sub_field('header'); ?></h2>
-					<?php endif; ?>
-					
+					<h2><?php the_sub_field('header'); ?></h2>
 					<?php if(have_rows('list')): ?>
 					<div class="row card-list" >
 						<?php while(have_rows('list')): the_row(); ?>
@@ -44,10 +66,6 @@
 									<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
 									<h3><?php the_sub_field('title'); ?></h3>
 									<?php the_sub_field('content'); ?>
-									<br>
-									<?php if(get_sub_field('link')): ?>
-									<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
-									<?php endif; ?>
 								</div><!-- .card-body -->
 							</div><!-- .card -->
 						</div><!-- .col -->
@@ -56,9 +74,33 @@
 					<?php endif; ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
-	<?php endwhile; endif; ?>
 		</div><!-- .container -->
-	</section>
+	</section><!-- .approach -->
+	<?php endwhile; endif; ?>
+	
+	<?php if(have_rows('fees')): while(have_rows('fees')): the_row(); ?>
+	<section class="container-fluid grey fees" >
+		<div class="container" >
+			<div class="row vcenter" >
+				<div class="col-sm-12 col-md-6" >
+					<h2><?php the_sub_field('header'); ?></h2>
+					<?php the_sub_field('content'); ?>
+				</div><!-- .col -->
+				
+				<div class="col-sm-12 offset-md-1 col-md-5" >
+					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
+				</div><!-- .col -->
+			</div><!-- .row -->
+			
+			<div class="row" >
+				<div class="col-sm-12 offset-md-1 col-md-10" >
+					[FEES TABLE WILL GO HERE]
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section><!-- .fees -->
+	<?php endwhile; endif; ?>
+	
 
 </div><!-- #services -->
 <?php endwhile; endif; ?>

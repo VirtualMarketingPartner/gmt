@@ -20,7 +20,7 @@
 				<div class="carousel-item <?php if( $slideCount==0 ){echo 'active'; } ?>" style="background-image:url(<?php the_sub_field('image'); ?>);" >
 					<div class="container" >
 						<div class="row" >
-							<div class="col-sm-12 col-md-8" >
+							<div class="col-sm-12 col-md-6" >
 								<div class="text-wrapper" >
 									<?php if($slideCount==0): ?>
 										<p class="all-caps" >Issue of the Day</p>
@@ -45,23 +45,29 @@
 	<?php if(have_rows('services')): while(have_rows('services')): the_row(); ?>
 	<section class="container-fluid angle services" >
 		<div class="container" >
-			<div class="row" >
+			<div class="row vcenter" >
 				<div class="col-sm-12 col-md-8 service" >
 					<div class="row" >
 						<?php $servicesQuery = new WP_Query( array( 'post_type' => 'services' ) ); while ( $servicesQuery->have_posts() ) : $servicesQuery->the_post(); ?> 
 						<div class="col-sm-6 col-md-4" >
-							<div class="image-wrapper icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
-							<h3><?php the_title(); ?></h3>
+							<div class="row" >
+								<div class="col-sm-12 offset-md-2 col-md-8" >
+									<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
+									<h3><?php the_title(); ?></h3>
+								</div><!-- .col -->
+							</div><!-- .row -->
 						</div><!-- .col -->	 
 						<?php endwhile; wp_reset_postdata(); ?>
 					</div><!-- .row -->
 				</div><!-- .col -->
 				<div class="col-sm-12 col-md-4" >
-					<div class="card pattern--right" >
-						<h2><?php the_sub_field('header'); ?></h2>
-						<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
-						<a href="<?php the_sub_field('link'); ?>" class="button inverted" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
-						<?php endwhile; endif; ?>
+					<div class="card" >
+						<div clas="card-body" >
+							<h2><?php the_sub_field('header'); ?></h2>
+							<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
+							<a href="<?php the_sub_field('link'); ?>" class="button inverted" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+							<?php endwhile; endif; ?>
+						</div><!-- .card-body -->
 					</div><!-- .card -->
 				</div><!-- .col -->
 			</div><!-- .row -->
@@ -93,7 +99,7 @@
 	<?php if(have_rows('testimonials')): while(have_rows('testimonials')): the_row(); ?>
 	<section class="container-fluid angle testimonials" >
 		<div class="container" >
-			<div class="row" >
+			<div class="row vcenter" >
 				<div class="col-sm-12 col-md-5" >
 					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
 				</div><!-- .col -->
@@ -133,7 +139,7 @@
 					<h2><?php the_sub_field('header'); ?></h2>
 					<br>
 					<div class="row" >
-					<?php $query = new WP_Query( array( 'post_type' => 'post' ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
+					<?php $query = new WP_Query( array( 'post_type' => 'post', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
 						<div class="col-sm-12 col-md-4 recent-news" >
 							<div class="row" >
 								<div class="col-xs-12 col-md-4" >

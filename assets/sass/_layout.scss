@@ -38,17 +38,13 @@
 
 			.icon{
 				background-color:$off-white;
-				background-size:75%;
+				background-size:70%;
 				background-position:center center;
-				@include border-radius(50%);
-				width:100px; height:100px;
 			}
 		}
 		
 		.card{
-			padding:30px 20px;
-			
-		}
+			padding:20px 40px;}
 		
 	}
 	
@@ -74,3 +70,31 @@
 		padding:150px 0 80px;
 	}
 }
+
+.values{
+	
+	h2{
+		color:$white;
+		text-shadow:0 0 8px rgba(0,0,0,.85);}
+	
+	.card{
+		margin:10px 0;
+		
+		.card-body{
+			padding:15px 30px;
+		}
+	}
+}
+
+.team{
+	p.name{font-size:200%; margin-bottom:0;}
+	p.title{}
+}
+
+.partners.bg{
+	background-position:right center;
+	background-size:70%;
+	background-repeat:no-repeat;
+}
+
+
