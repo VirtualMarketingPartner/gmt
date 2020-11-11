@@ -2,7 +2,6 @@ jQuery(function($){
 	
 	$(window).on("load resize scroll", function() {
 		// animations
-
 	});
 
 	$(document).ready(function(){
