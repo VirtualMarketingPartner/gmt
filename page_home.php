@@ -38,6 +38,7 @@
 				</div><!-- .carousel-item -->
 			<?php $slideCount++; endwhile; ?>		
 			</div><!-- .carousel-inner -->
+			<div class="overlay" ></div>
 		</div><!-- #slideshow -->
 	</section><!-- .hero -->
 	<?php endif; ?>

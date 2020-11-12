@@ -7,49 +7,44 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="content" id="services">
 	
-	<?php if(have_rows('hero')): while(have_rows('hero')): the_row(); ?>
-	<div class="container-fluid bg hero" style="background-image:url(<?php the_sub_field('hero_image'); ?>); background-position:<?php the_sub_field('hero_position'); ?>" >
-		<div class="container" >
-			<div class="row" >
-				<div class="col-sm-12 col-md-6" >
-					<div class="text-wrapper" >
-						<p class="all-caps" ><?php the_sub_field('sub_header'); ?></p>
-						<h2><?php the_sub_field('header'); ?></h2>
-					</div><!-- .text-wrapper -->
-				</div><!-- .col -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</div><!-- .hero -->
-	<?php endwhile; endif; ?>
+	<?php get_template_part('/partials/hero'); ?>
 	
-	<?php if(have_rows('intro')): while(have_rows('intro')): the_row(); ?>
-	<section class="container-fluid angle intro" >
-		<div class="container" >
-			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-6" >
-					<h2><?php the_sub_field('title'); ?></h2>
-					<?php the_sub_field('content'); ?>
-				</div><!-- .col -->
-				
-				<div class="col-sm-12 offset-md-1 col-md-5" >
-					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
-				</div><!-- .col -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section ><!-- .intro -->
-	<?php endwhile; endif; ?>
+	<?php get_template_part('/partials/intro'); ?>
 	
-	<?php if(have_rows('services')): while(have_rows('services')): the_row(); ?>
 	<section class="container-fluid services" >
 		<div class="container" >
 			<div class="row" >
+				<div class="col" >
+					<ul class="nav flex-column nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="nav-ACTIVETAB" data-toggle="tab" href="#tab-ACTIVETAB" role="tab" aria-controls="nav-ACTIVETAB" aria-selected="true">ACTIVE TAB</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="nav-INACTIVETAB" data-toggle="tab" href="#tab-INACTIVETAB" role="tab" aria-controls="nav-INACTIVETAB" aria-selected="true">INACTIVE TAB</a>
+						</li>
+					</ul><!-- .nav -->
+				</div><!-- .col -->
+
+				<div class="col" >
+					<div class="tab-content" id="service-content">
+						<div class="tab-pane fade show active" id="tab-ACTIVETAB" role="tabpanel" aria-labelledby="nav-ACTIVETAB">
+							<h3>ACTIVE TAB HEADER</h3>
+						</div><!-- .tab-pane -->
+						<div class="tab-pane fade" id="tab-INACTIVETAB" role="tabpanel" aria-labelledby="nav-INACTIVETAB">
+							<h3>INACTIVE TAB HEADER</h3>
+						</div><!-- .tab-pane -->
+					</div><!-- .#service-content -->
+				</div><!-- .col -->
+			</div><!-- .row -->
+			<div class="row" >
 				<div class="col-sm-12 offset-md-1 col-md-10" >
-					<p>Tab List Here</p>
+					<?php $servicesQuery = new WP_Query( array( 'post_type' => 'services' ) ); while ( $servicesQuery->have_posts() ) : $servicesQuery->the_post(); ?>
+						<h2><?php the_title(); ?></h2>
+					<?php endwhile; ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</section><!-- .services -->
-	<?php endwhile; endif; ?>
 	
 	<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
 	<section class="container-fluid angle approach" >

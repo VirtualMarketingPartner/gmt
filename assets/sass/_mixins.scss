@@ -47,6 +47,11 @@
 	background-image: linear-gradient($angle, $color1 $color-stop-1, $color2 $color-stop2);
 }
 
+// Gradient 3 stops
+@mixin gradient-3($angle, $color1, $color-stop-1, $color2, $color-stop2, $color3, $color-stop3){
+	background-image: linear-gradient($angle, $color1 $color-stop-1, $color2 $color-stop2, $color3 $color-stop3);
+}
+
 // Triangle
 @mixin triangle($bg, $width, $height){
 		background:$bg;
