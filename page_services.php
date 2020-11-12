@@ -11,38 +11,34 @@
 	
 	<?php get_template_part('/partials/intro'); ?>
 	
-	<section class="container-fluid services" >
+	<section class="container-fluid angle grey services" >
 		<div class="container" >
 			<div class="row" >
-				<div class="col" >
+				<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceCount=0; ?>
+				<div class="col-sm-12 col-md-3" >
 					<ul class="nav flex-column nav-tabs" id="myTab" role="tablist">
+						<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 						<li class="nav-item">
-							<a class="nav-link active" id="nav-ACTIVETAB" data-toggle="tab" href="#tab-ACTIVETAB" role="tab" aria-controls="nav-ACTIVETAB" aria-selected="true">ACTIVE TAB</a>
+							<a class="nav-link <?php if( $serviceCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceCount; ?>" aria-selected="true"><?php the_title(); ?></a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="nav-INACTIVETAB" data-toggle="tab" href="#tab-INACTIVETAB" role="tab" aria-controls="nav-INACTIVETAB" aria-selected="true">INACTIVE TAB</a>
-						</li>
+						<?php $serviceCount++; endwhile; wp_reset_postdata(); ?>
 					</ul><!-- .nav -->
 				</div><!-- .col -->
-
-				<div class="col" >
+				<?php endif; ?>
+				
+				<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceCount=0; ?>
+				<div class="col-sm-12 col-md-9" >
 					<div class="tab-content" id="service-content">
-						<div class="tab-pane fade show active" id="tab-ACTIVETAB" role="tabpanel" aria-labelledby="nav-ACTIVETAB">
-							<h3>ACTIVE TAB HEADER</h3>
+						<?php while($services_query->have_posts()): $services_query->the_post(); ?>
+						<div class="tab-pane fade <?php if( $serviceCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceCount; ?>">
+							<h2><?php the_title(); ?></h2>
+							<?php the_content(); ?>
 						</div><!-- .tab-pane -->
-						<div class="tab-pane fade" id="tab-INACTIVETAB" role="tabpanel" aria-labelledby="nav-INACTIVETAB">
-							<h3>INACTIVE TAB HEADER</h3>
-						</div><!-- .tab-pane -->
+						<?php $serviceCount++; endwhile; wp_reset_postdata(); ?>
 					</div><!-- .#service-content -->
 				</div><!-- .col -->
 			</div><!-- .row -->
-			<div class="row" >
-				<div class="col-sm-12 offset-md-1 col-md-10" >
-					<?php $servicesQuery = new WP_Query( array( 'post_type' => 'services' ) ); while ( $servicesQuery->have_posts() ) : $servicesQuery->the_post(); ?>
-						<h2><?php the_title(); ?></h2>
-					<?php endwhile; ?>
-				</div><!-- .col -->
-			</div><!-- .row -->
+			<?php endif; ?>
 		</div><!-- .container -->
 	</section><!-- .services -->
 	

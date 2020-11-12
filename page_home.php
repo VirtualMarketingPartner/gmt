@@ -44,21 +44,26 @@
 	<?php endif; ?>
 	
 	<?php if(have_rows('services')): while(have_rows('services')): the_row(); ?>
-	<section class="container-fluid angle services" >
+	<section class="container-fluid angle grey services" >
 		<div class="container" >
 			<div class="row vcenter" >
 				<div class="col-sm-12 col-md-8 service" >
 					<div class="row" >
-						<?php $servicesQuery = new WP_Query( array( 'post_type' => 'services' ) ); while ( $servicesQuery->have_posts() ) : $servicesQuery->the_post(); ?> 
-						<div class="col-sm-6 col-md-4" >
-							<div class="row" >
-								<div class="col-sm-12 offset-md-2 col-md-8" >
-									<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
-									<h3><?php the_title(); ?></h3>
-								</div><!-- .col -->
-							</div><!-- .row -->
-						</div><!-- .col -->	 
-						<?php endwhile; wp_reset_postdata(); ?>
+						
+						<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) ); ?>
+
+						<?php if ( $services_query->have_posts() ) : ?>
+							<?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
+							<div class="col-sm-6 col-md-4" >
+								<div class="row" >
+									<div class="col-sm-12 offset-md-2 col-md-8" >
+										<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
+										<h3><?php the_title(); ?></h3>
+									</div><!-- .col -->
+								</div><!-- .row -->
+							</div><!-- .col -->	 
+							<?php endwhile; wp_reset_postdata(); ?>
+						<?php endif; ?>
 					</div><!-- .row -->
 				</div><!-- .col -->
 				<div class="col-sm-12 col-md-4" >
