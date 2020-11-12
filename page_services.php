@@ -14,27 +14,25 @@
 	<section class="container-fluid angle grey services" >
 		<div class="container" >
 			<div class="row" >
-				<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceCount=0; ?>
+				<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
 				<div class="col-sm-12 col-md-3" >
 					<ul class="nav flex-column nav-tabs" id="myTab" role="tablist">
 						<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 						<li class="nav-item">
-							<a class="nav-link <?php if( $serviceCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceCount; ?>" aria-selected="true"><?php the_title(); ?></a>
+							<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
 						</li>
-						<?php $serviceCount++; endwhile; wp_reset_postdata(); ?>
+						<?php $serviceNavCount++; endwhile; wp_reset_postdata(); ?>
 					</ul><!-- .nav -->
 				</div><!-- .col -->
-				<?php endif; ?>
 				
-				<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceCount=0; ?>
 				<div class="col-sm-12 col-md-9" >
 					<div class="tab-content" id="service-content">
 						<?php while($services_query->have_posts()): $services_query->the_post(); ?>
-						<div class="tab-pane fade <?php if( $serviceCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceCount; ?>">
+						<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
 							<h2><?php the_title(); ?></h2>
 							<?php the_content(); ?>
 						</div><!-- .tab-pane -->
-						<?php $serviceCount++; endwhile; wp_reset_postdata(); ?>
+						<?php $serviceTabCount++; endwhile; wp_reset_postdata(); ?>
 					</div><!-- .#service-content -->
 				</div><!-- .col -->
 			</div><!-- .row -->
