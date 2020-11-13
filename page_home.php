@@ -29,7 +29,7 @@
 									<?php endif; ?>
 									<h2><?php the_sub_field('title'); ?></h2>
 									<a href="<?php the_sub_field('link'); ?>" class="button" >
-										<?php the_sub_field('button_text'); ?>
+										<?php the_sub_field('button_text'); ?> <i class="fas fa-long-arrow-right"></i>
 									</a>
 								</div><!-- .text-wrapper -->
 							</div><!-- .col -->
@@ -44,7 +44,7 @@
 	<?php endif; ?>
 	
 	<?php if(have_rows('services')): while(have_rows('services')): the_row(); ?>
-	<section class="container-fluid angle grey services" >
+	<section class="container-fluid angle services" >
 		<div class="container" >
 			<div class="row vcenter" >
 				<div class="col-sm-12 col-md-8 service" >
@@ -145,7 +145,7 @@
 					<h2><?php the_sub_field('header'); ?></h2>
 					<br>
 					<div class="row" >
-					<?php $query = new WP_Query( array( 'post_type' => 'post', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
+					<?php $query = new WP_Query( array( 'post_type' => 'insights', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
 						<div class="col-sm-12 col-md-4 recent-news" >
 							<div class="row" >
 								<div class="col-xs-12 col-md-4" >

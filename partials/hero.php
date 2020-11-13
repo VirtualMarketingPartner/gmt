@@ -6,6 +6,9 @@
 				<div class="text-wrapper" >
 					<p class="all-caps" ><?php the_sub_field('sub_header'); ?></p>
 					<h2><?php the_sub_field('header'); ?></h2>
+					<?php if( get_sub_field('label')): ?>
+					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+					<?php endif; ?>
 				</div><!-- .text-wrapper -->
 			</div><!-- .col -->
 		</div><!-- .row -->
