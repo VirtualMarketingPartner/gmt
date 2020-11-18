@@ -11,7 +11,7 @@ body{
 	line-height:1.5;
 	color:$black;
 	font-family:$sans;
-	font-weight: 300;
+	font-weight: 400;
 	font-smooth: always;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -64,13 +64,13 @@ section{padding:80px 0;}
 -moz::selection{}
 
 h1, h2, h3, h4, h5, h6{
+	font-weight:600;
 	font-family:$sans;}
 
 h2{margin:20px 0 40px;}
 
 h3{
 	margin:10px 0;
-	font-weight:bold;
 	font-size:100%;}
 
 h6{
@@ -79,7 +79,7 @@ h6{
 
 p{margin-bottom:20px;}
 
-strong{font-weight:bold;}
+strong{font-weight:600;}
 
 a{
 	color:$secondary;
