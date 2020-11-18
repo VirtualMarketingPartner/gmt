@@ -236,6 +236,9 @@ hr {
   border-bottom: 1px solid #111111; }
 
 /* ===== Repeated Page Elements ===== */
+.hero-spacer {
+  margin-top: 100px; }
+
 .image-wrapper {
   display: block;
   margin: 0 auto;
@@ -342,6 +345,12 @@ hr {
         font-size: 175%; }
   .recent-news a {
     display: block; }
+
+.circle-list .list-item {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  color: #111111; }
 
 /* ==========================================
 	Layout
