@@ -606,21 +606,43 @@ hr {
   background-repeat: no-repeat;
 }
 
+.single-team .single-team-content h3 {
+  color: #8c8c8c;
+  margin-bottom: 40px;
+}
+
+.single-team .single-team-content i {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #6c89c6;
+}
+
+.single-team .single-team-contact a {
+  font-weight: bold;
+  color: #111111;
+  text-transform: inherit;
+}
+
 .single-team .single-team-image {
-  width: 90%;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 315px;
+  height: 390px;
   background-position: center center;
   float: right;
 }
 
 .single-team .card.single-team-info {
   padding: 40px 30px;
+  margin-top: 70px;
 }
 
 .single-team .card.single-team-info h2 {
   margin: 0;
+}
+
+.single-team .card.single-team-info .all-caps {
+  color: #8c8c8c;
 }
 
 /* ==========================================

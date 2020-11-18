@@ -108,20 +108,46 @@
 }
 
 .single-team {
+	.single-team-content {
+		h3 {
+			color: $grey;
+			margin-bottom: 40px;
+		}
+
+		i {
+			margin-right: 10px;
+			font-weight: 500;
+			color: $accent;
+		}
+	}
+
+	.single-team-contact {
+		a {
+			font-weight: bold;
+			color: $black;
+			text-transform: inherit;
+		}
+	}
+
 	.single-team-image {
-		width: 90%;
+		width: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
-		height: 315px;
+		height: 390px;
 		background-position: center center;
 		float: right;
 	}
 
 	.card.single-team-info {
 		padding: 40px 30px;
+		margin-top: 70px;
 
 		h2 {
 			margin: 0;
+		}
+
+		.all-caps {
+			color: $grey;
 		}
 	}
 }
