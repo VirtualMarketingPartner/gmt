@@ -1,7 +1,7 @@
 /* ==========================================
 	Variables
 ========================================== */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 /* ==========================================
 	Mixins
 ========================================== */
@@ -77,7 +77,7 @@ body {
   line-height: 1.5;
   color: #111111;
   font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -152,6 +152,7 @@ section {
   position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
   font-family: "Montserrat", sans-serif; }
 
 h2 {
@@ -159,7 +160,6 @@ h2 {
 
 h3 {
   margin: 10px 0;
-  font-weight: bold;
   font-size: 100%; }
 
 h6 {
@@ -171,7 +171,7 @@ p {
   margin-bottom: 20px; }
 
 strong {
-  font-weight: bold; }
+  font-weight: 600; }
 
 a {
   color: #f47524;
@@ -412,6 +412,32 @@ hr {
   background-size: 70%;
   background-repeat: no-repeat; }
 
+.single-team .single-team-content h3 {
+  color: #8c8c8c;
+  margin-bottom: 40px; }
+.single-team .single-team-content i {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #6c89c6; }
+.single-team .single-team-contact a {
+  font-weight: bold;
+  color: #111111;
+  text-transform: inherit; }
+.single-team .single-team-image {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 390px;
+  background-position: center center;
+  float: right; }
+.single-team .card.single-team-info {
+  padding: 40px 30px;
+  margin-top: 70px; }
+  .single-team .card.single-team-info h2 {
+    margin: 0; }
+  .single-team .card.single-team-info .all-caps {
+    color: #8c8c8c; }
+
 /* ==========================================
 	Sticky Nav
 ========================================== */
@@ -454,6 +480,7 @@ hr {
       text-align: center;
       padding: 0 10px; }
       #header ul li a {
+        font-weight: 600;
         color: #111111;
         display: block;
         width: 100%;
@@ -536,6 +563,9 @@ hr {
 
   .container-fluid.bg {
     background-attachment: fixed; } }
+@media all and (min-width: 1200px) {
+  .single-team .card.single-team-info {
+    flex-direction: row; } }
 @media all and (min-width: 1500px) {
   #site_id {
     width: 100%; }

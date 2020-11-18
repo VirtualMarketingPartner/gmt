@@ -2,100 +2,152 @@
 	Layout
 ========================================== */
 
-#home{
-	.hero{
-		padding:0;
-		min-height:600px;
-		
-		#slideshow{
-			ol.carousel-indicators{
-				position:absolute;
-				bottom:50px;
+#home {
+	.hero {
+		padding: 0;
+		min-height: 600px;
+
+		#slideshow {
+			ol.carousel-indicators {
+				position: absolute;
+				bottom: 50px;
 			}
-			
-			.carousel-item{
-				min-height:500px;
-				padding:100px 0;
-				color:$white;
-				text-shadow:0 0 8px rgba(0,0,0,.85);
-				background-position:center center;
-				background-size:cover;
-				background-repeat:no-repeat;}
+
+			.carousel-item {
+				min-height: 500px;
+				padding: 100px 0;
+				color: $white;
+				text-shadow: 0 0 8px rgba(0, 0, 0, .85);
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
 		}
 
 	}
-	
-	.services{
-		
-		.service{
+
+	.services {
+
+		.service {
 			text-align: center;
-			
-			h3{
-				font-size:100%;
-				font-weight:bold;
-				margin:0 auto;
-				padding:10px 0 40px;
+
+			h3 {
+				font-size: 100%;
+				font-weight: bold;
+				margin: 0 auto;
+				padding: 10px 0 40px;
 			}
 
-			.icon{
-				background-color:$off-white;
-				background-size:70%;
-				background-position:center center;
+			.icon {
+				background-color: $off-white;
+				background-size: 70%;
+				background-position: center center;
 			}
 		}
-		
-		.card{
-			padding:20px 40px;}
-		
+
+		.card {
+			padding: 20px 40px;
+		}
+
 	}
-	
-	
-	.network{
-		color:$white;
-		text-shadow:0 0 5px rgba(0,0,0,.85);
+
+
+	.network {
+		color: $white;
+		text-shadow: 0 0 5px rgba(0, 0, 0, .85);
 	}
-	
-	.testimonials{
-		.quote{}
-		.author{
-			margin-bottom:0;
-			font-weight:bold;}
-		
-		.company{
+
+	.testimonials {
+		.quote {}
+
+		.author {
+			margin-bottom: 0;
+			font-weight: bold;
+		}
+
+		.company {
 			@include uppercase;
-			color:$grey;
+			color: $grey;
 		}
 	}
-	
-	.news{
-		padding:150px 0 80px;
+
+	.news {
+		padding: 150px 0 80px;
 	}
 }
 
-.values{
-	
-	h2{
-		color:$white;
-		text-shadow:0 0 8px rgba(0,0,0,.85);}
-	
-	.card{
-		margin:10px 0;
-		
-		.card-body{
-			padding:15px 30px;
+.values {
+
+	h2 {
+		color: $white;
+		text-shadow: 0 0 8px rgba(0, 0, 0, .85);
+	}
+
+	.card {
+		margin: 10px 0;
+
+		.card-body {
+			padding: 15px 30px;
 		}
 	}
 }
 
-.team{
-	p.name{font-size:200%; margin-bottom:0;}
-	p.title{}
+.team {
+	p.name {
+		font-size: 200%;
+		margin-bottom: 0;
+	}
+
+	p.title {}
 }
 
-.partners.bg{
-	background-position:right center;
-	background-size:70%;
-	background-repeat:no-repeat;
+.partners.bg {
+	background-position: right center;
+	background-size: 70%;
+	background-repeat: no-repeat;
 }
 
+.single-team {
+	.single-team-content {
+		h3 {
+			color: $grey;
+			margin-bottom: 40px;
+		}
 
+		i {
+			margin-right: 10px;
+			font-weight: 500;
+			color: $accent;
+		}
+	}
+
+	.single-team-contact {
+		a {
+			font-weight: bold;
+			color: $black;
+			text-transform: inherit;
+		}
+	}
+
+	.single-team-image {
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 390px;
+		background-position: center center;
+		float: right;
+	}
+
+	.card.single-team-info {
+		padding: 40px 30px;
+		margin-top: 70px;
+
+		h2 {
+			margin: 0;
+		}
+
+		.all-caps {
+			color: $grey;
+		}
+	}
+}
