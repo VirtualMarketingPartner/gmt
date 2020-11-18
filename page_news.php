@@ -9,7 +9,7 @@
 	
 	<?php get_template_part('/partials/hero'); ?>
 	
-	<section class="container-fluid angle news" >
+	<section class="container-fluid angle insights" >
 		<div class="container" >
 			<?php if(have_rows('intro')): while(have_rows('intro')): the_row(); ?>
 			<div class="row" >
@@ -33,8 +33,11 @@
 					</div><!-- .post-list -->
 				</div><!-- .col -->
 				
-				<div class="col-sm-12 col-md-3" >
-					<h2>[SIDEBAR HERE]</h2>
+				<div class="col-sm-12 offset-md-1 col-md-3" >
+					<h4><?php the_field('search','options'); ?></h4>
+					[The Sidebar will go here.]
+					<h4><?php the_field('categories','options'); ?></h4>
+					[The Sidebar will go here.]
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->

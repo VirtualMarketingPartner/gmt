@@ -50,8 +50,12 @@
 			<div class="row circle-list" >
 				<?php $teamQuery = new WP_Query( array( 'post_type' => 'team', 'orderby' => 'rand', 'posts_per_page'=>8, ) ); while ( $teamQuery->have_posts() ) : $teamQuery->the_post(); ?> 
 				<div class="col-sm-6 col-md-3 text-center" >
-					<div class="image-wrapper circle" style="background-image:url(<?php the_field('image'); ?>);" ></div>
-					<h3><?php the_title(); ?></h3>
+					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
+					<a href="<?php the_permalink(); ?>" class="list-item" >
+						<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
+						<h3><?php the_title(); ?></h3>
+					</a>
+					<?php endwhile; endif; ?>
 				</div><!-- .col -->	 
 				<?php endwhile; wp_reset_postdata(); ?>
 			</div><!-- .row -->
