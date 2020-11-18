@@ -15,4 +15,7 @@
 	</div><!-- .container -->
 	<div class="overlay" ></div>
 </div><!-- .hero -->
-<?php endwhile; endif; ?>
+<?php endwhile; ?>
+<?php else: ?>
+<div class="hero-spacer" ></div>
+<?php endif; ?>
