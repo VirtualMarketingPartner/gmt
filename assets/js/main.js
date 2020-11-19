@@ -14,11 +14,11 @@ jQuery(function($){
 			interval: 2000
 		})
 		
+		// set circle height
 		$('.image-wrapper.circle').each(function(){
 			var circleW = $(this).width();
 			$(this).css('height', circleW );
 		});
-		
 		
 		//set card heights
 		var cardHeight = 0;
@@ -31,6 +31,11 @@ jQuery(function($){
 		$('.card-list .card a.button').css({
 			'position':'absolute',
 			'bottom':'10px',
+		});
+		
+		//reset form styles to use cool labels
+		$('.gform_body li').each(function(){
+			$(this).children('label').appendTo( $(this).children('.ginput_container') );
 		});
 
 

@@ -221,6 +221,11 @@ hr{
 		h2{margin-bottom:0;}
 	}
 	
+	&.narrow{
+		margin:20px auto;
+		.card-body{padding:10px 30px;}
+	}
+	
 	&.bottom{border-bottom:5px solid $accent;}
 	
 	&.left{

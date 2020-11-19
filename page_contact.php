@@ -12,14 +12,14 @@
 	<?php if(have_rows('intro')): while(have_rows('intro')): the_row(); ?>
 	<section class="container-fluid angle intro" >
 		<div class="container" >
-			<div class="row vcenter" >
+			<div class="row" >
 				<div class="col-sm-12 col-md-5" >
 					<h2><?php the_sub_field('title'); ?></h2>
 					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
 				<div class="col-sm-12 offset-md-1 col-md-6" >
 					<div class="card" >
-						[CONTACT FORM GOES HERE]
+						<?php the_sub_field('form'); ?>
 					</div><!-- .card -->
 				</div><!-- .col -->
 			</div><!-- .row -->
@@ -71,8 +71,6 @@
 		</div><!-- .container -->
 	</section><!-- .offices -->
 	<?php endwhile; endif; ?>
-
-	
 
 </div><!-- #contact -->
 <?php endwhile; endif; ?>

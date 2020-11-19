@@ -97,7 +97,7 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
-	</section ><!-- .intro -->
+	</section ><!-- .careers -->
 	<?php endwhile; endif; ?>
 	
 

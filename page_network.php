@@ -10,6 +10,59 @@
 	<?php get_template_part('/partials/hero'); ?>
 	
 	<?php get_template_part('/partials/intro'); ?>
+	
+	<?php if(have_rows('network')): ?>
+	<section class="container-fluid bg network-map" >
+		<?php while(have_rows('network')): the_row(); ?>
+		[DO THE PARTNER MAP]
+		<?php endwhile; ?>
+	</section><!-- .network-map -->
+	<?php endif; ?>
+	
+	<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
+	<section class="container-fluid angle approach" >
+		<div class="container" >
+			<div class="row " >
+				<div class="col offset-md-2 col-md-8 text-center" >
+					<h2><?php the_sub_field('header'); ?></h2>
+				</div><!-- .col -->
+			</div><!-- .row -->
+			<?php if(have_rows('list')): ?>
+			<div class="row card-row" >
+			<?php while(have_rows('list')): the_row(); ?>
+				<div class="col-sm-12 col-md-4" >
+					<div class="card narrow left" >
+						<div class="card-body vcenter" >
+							<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
+							<h3><?php the_sub_field('title'); ?></h3>
+						</div><!-- .card-body -->
+					</div><!-- .card -->
+				</div><!-- .col -->
+			<?php endwhile; ?>
+			</div><!-- .row -->
+			<?php endif; ?>
+		</div><!-- .container -->
+	</section><!-- .approach -->
+	<?php endwhile; endif; ?>
+	
+	<?php if(have_rows('contact')): while(have_rows('contact')): the_row(); ?>
+		<section class="container-fluid angle grey contact" >
+		<div class="container" >
+			<div class="row vcenter" >
+				<div class="col-sm-12 col-md-5" >
+					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
+				</div><!-- .col -->
+				
+				<div class="col-sm-12 md-offset-1 col-md-6" >
+					<h2><?php the_sub_field('title'); ?></h2>
+					<?php the_sub_field('content'); ?>
+					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section ><!-- .contact -->
+	<?php endwhile; endif; ?>
+	
 
 </div><!-- #services -->
 <?php endwhile; endif; ?>
