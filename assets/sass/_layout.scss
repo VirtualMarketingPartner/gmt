@@ -129,13 +129,12 @@
 		}
 	}
 
-	.single-team-image {
+	.image-wrapper {
 		width: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
-		height: 390px;
+		min-height: 390px;
 		background-position: center center;
-		float: right;
 	}
 
 	.card.single-team-info {

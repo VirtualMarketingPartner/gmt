@@ -6,10 +6,10 @@
 <section>
 	<div class="content" >
 		<div class="container single-team">
-			<div class="row" >
+			<div class="row vcenter" >
 				<?php if ( have_rows('team_member') ): while ( have_rows('team_member') ) : the_row(); ?>
-					<div class="col-sm col-md-5 order-md-5">
-						<div class="single-team-image" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div><!-- .single-team-image -->
+					<div class="col-sm col-md-4 order-md-4 offset-md-1">
+						<div class="image-wrapper" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div><!-- .single-team-image -->
 					</div><!-- .col-sm .col-md-4 .single-team-image -->
 					<div class="col-sm-12 col-md-7 single-team-content" >
 						<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
