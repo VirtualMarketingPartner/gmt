@@ -107,3 +107,10 @@ function remove_menu_pages() {
     remove_menu_page( 'edit.php' );
 }
  
+
+// Google Map API Key - Temp setup 11/18/20
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyAXdo1pSufFydCToPxjbsSPwJPsUWGkXpY');
+}
+
+add_action('acf/init', 'my_acf_init');

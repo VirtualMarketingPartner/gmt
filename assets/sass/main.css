@@ -438,6 +438,15 @@ hr {
   .single-team .card.single-team-info .all-caps {
     color: #8c8c8c; }
 
+#contact .contact-map {
+  height: 600px;
+  overflow: hidden; }
+  #contact .contact-map .acf-map {
+    height: 800px;
+    margin-top: -100px; }
+#contact .offices .card {
+  padding: 40px; }
+
 /* ==========================================
 	Sticky Nav
 ========================================== */
