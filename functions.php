@@ -43,32 +43,6 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'website-settings',
 	));
 	
-		function cptui_register_my_taxes_topics() {
-		$labels = [
-			"name" => __( "Topics", "custom-post-type-ui" ),
-			"singular_name" => __( "Topic", "custom-post-type-ui" ),
-		];
-		$args = [
-			"label" => __( "Topics", "custom-post-type-ui" ),
-			"labels" => $labels,
-			"public" => true,
-			"publicly_queryable" => false,
-			"hierarchical" => false,
-			"show_ui" => true,
-			"show_in_menu" => 'true',
-			"show_in_nav_menus" => 'posts',
-			"query_var" => true,
-			"rewrite" => [ 'slug' => 'topics', 'with_front' => true, ],
-			"show_admin_column" => true,
-			"show_in_rest" => true,
-			"rest_base" => "topics",
-			"rest_controller_class" => "WP_REST_Terms_Controller",
-			"show_in_quick_edit" => true,
-				];
-		register_taxonomy( "topics", [ "insights", "company_news" , "events" ], $args );
-	}
-	add_action( 'init', 'cptui_register_my_taxes_topics' );
-
 }
 // custom page & subnav for custom taxonomy
 
@@ -95,8 +69,8 @@ function post_menu(){
 
 add_action('admin_menu', 'tax_menu');
 function tax_menu() {
-add_submenu_page( 'posts', 'Edit Topics', 'Edit Topics',
-    'manage_options', 'edit-tags.php?taxonomy=topics');
+	add_submenu_page( 'posts', 'Edit Categories', 'Edit Categories',
+    'manage_options', 'edit-tags.php?taxonomy=category');
 }
 
 
@@ -106,7 +80,7 @@ add_action( 'admin_init', 'remove_menu_pages' );
 function remove_menu_pages() {
     remove_menu_page( 'edit.php' );
 }
- 
+
 
 // Google Map API Key - Temp setup 11/18/20
 function my_acf_init() {
@@ -114,3 +88,5 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
+
+

@@ -18,26 +18,29 @@
 			<?php endwhile; endif; ?>
 			<div class="row" >
 				<div class="col-sm-12 col-md-8" >
-					<div class="row post-list" >
 					<?php $query = new WP_Query( array( 'post_type' => 'insights', 'posts_per_page'=>10 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
+					<div class="row post" >
 						<div class="col-sm-12 col-md-4" >
-							<p class="date" ><?php echo get_the_date('M d'); ?></p>
-							<div class="image-wrapper" style="background-image:url();" ></div>
+							<div class="image-date-wrapper" >
+								<p class="date all-caps" ><?php echo get_the_date('M d'); ?></p>
+								<a href="<?php the_permalink(); ?>" >
+									<div class="image-wrapper" style="background-image:url();" ></div>
+								</a>
+							</div><!-- .image-date-wrapper -->
 						</div><!-- .col -->
 						<div class="col-sm-12 col-md-8" >
-							<h5><?php the_title(); ?></h5>
+							<h5><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h5>
 							<?php the_excerpt(); ?>
-							<a href="<?php the_permalink(); ?>" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
+							<a href="<?php the_permalink(); ?>" class="button inverted" >
+								<?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
 						</div><!-- .col -->
+					</div><!-- .row -->
 					<?php endwhile; ?>
-					</div><!-- .post-list -->
+					
 				</div><!-- .col -->
 				
 				<div class="col-sm-12 offset-md-1 col-md-3" >
-					<h4><?php the_field('search','options'); ?></h4>
-					[The Sidebar will go here.]
-					<h4><?php the_field('categories','options'); ?></h4>
-					[The Sidebar will go here.]
+					<?php get_template_part('/partials/list_sidebar'); ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->

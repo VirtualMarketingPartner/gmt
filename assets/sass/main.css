@@ -154,6 +154,9 @@ section {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-family: "Montserrat", sans-serif; }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-transform: inherit; }
 
 h2 {
   margin: 20px 0 40px; }
@@ -359,6 +362,7 @@ hr {
 /* ==========================================
 	Layout
 ========================================== */
+/* ===== Homepage ===== */
 #home .hero {
   padding: 0;
   min-height: 600px; }
@@ -399,6 +403,7 @@ hr {
 #home .news {
   padding: 150px 0 80px; }
 
+/* ===== About Us ===== */
 .values h2 {
   color: #fff;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.85); }
@@ -416,6 +421,7 @@ hr {
   background-size: 70%;
   background-repeat: no-repeat; }
 
+/* ===== Team - Single Team Member ===== */
 .single-team .single-team-content h3 {
   color: #8c8c8c;
   margin-bottom: 40px; }
@@ -438,6 +444,7 @@ hr {
   .single-team .card.single-team-info .all-caps {
     color: #8c8c8c; }
 
+/* ===== Contact Us ===== */
 #contact .card {
   padding: 40px; }
 #contact .contact-map {
@@ -446,6 +453,31 @@ hr {
   #contact .contact-map .acf-map {
     height: 800px;
     margin-top: -100px; }
+
+/* ===== Partner Network ===== */
+#network .partner-map {
+  height: 650px;
+  overflow: hidden; }
+  #network .partner-map .acf-map {
+    height: 700px;
+    margin-top: -50px; }
+
+/* ===== Blog ===== */
+#post_list .post {
+  margin: 20px 0; }
+  #post_list .post .image-date-wrapper {
+    position: relative; }
+    #post_list .post .image-date-wrapper .date {
+      font-size: 80%;
+      background: #111111;
+      color: #fff;
+      padding: 5px 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+    #post_list .post .image-date-wrapper .image-wrapper {
+      background: #8c8c8c;
+      min-height: 150px; }
 
 /* ==========================================
 	Sticky Nav

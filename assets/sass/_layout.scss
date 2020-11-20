@@ -2,6 +2,8 @@
 	Layout
 ========================================== */
 
+
+/* ===== Homepage ===== */
 #home {
 	.hero {
 		padding: 0;
@@ -76,6 +78,9 @@
 	}
 }
 
+
+/* ===== About Us ===== */
+
 .values {
 
 	h2 {
@@ -107,6 +112,8 @@
 	background-repeat: no-repeat;
 }
 
+
+/* ===== Team - Single Team Member ===== */
 .single-team {
 	.single-team-content {
 		h3 {
@@ -148,6 +155,8 @@
 	}
 }
 
+/* ===== Contact Us ===== */
+
 #contact{
 	
 	.card{padding:40px;}
@@ -161,4 +170,43 @@
 			margin-top:-100px;}
 	}
 
+}
+
+/* ===== Partner Network ===== */
+
+#network{
+	
+	.partner-map{
+		height:650px;
+		overflow:hidden;
+		
+		.acf-map{
+			height:700px;
+			margin-top:-50px;
+		}
+	}
+}
+
+
+/* ===== Blog ===== */
+#post_list{
+	
+	.post{
+		margin:20px 0;
+		
+		.image-date-wrapper{
+			position:relative;
+			
+			.date{
+				font-size:80%;
+				background:$black;
+				color:$white;
+				padding:5px 10px;
+				position:absolute;
+				bottom:0; left:0;
+			}
+			
+			.image-wrapper{background:$grey; min-height:150px;}
+		}
+	}
 }

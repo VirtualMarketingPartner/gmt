@@ -16,8 +16,7 @@
 				</div><!-- .col -->
 				
 				<div class="col-sm-12 offset-md-1 col-md-3" >
-					<h4><?php the_field('recent_news','options'); ?></h4>
-					[The Sidebar will go here.]
+					<?php get_template_part('/partials/post_sidebar'); ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->

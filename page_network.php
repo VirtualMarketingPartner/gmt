@@ -5,17 +5,25 @@
 
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="content" id="services">
+<div class="content" id="network">
 	
 	<?php get_template_part('/partials/hero'); ?>
 	
 	<?php get_template_part('/partials/intro'); ?>
 	
 	<?php if(have_rows('network')): ?>
-	<section class="container-fluid bg network-map" >
-		<?php while(have_rows('network')): the_row(); ?>
-		[DO THE PARTNER MAP]
+	<section class="container-fluid bg partner-map" >	
+		<div class="acf-map" data-zoom="2">
+		<?php while ( have_rows('network') ) : the_row(); 
+			$location = get_sub_field('map');
+			$title = get_sub_field('name');
+			?>
+			<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>">
+				<h3><?php echo esc_html( $title ); ?></h3>
+			</div>
 		<?php endwhile; ?>
+		</div>
+		<?php get_template_part('partials/map_helper'); ?>
 	</section><!-- .network-map -->
 	<?php endif; ?>
 	
@@ -64,6 +72,6 @@
 	<?php endwhile; endif; ?>
 	
 
-</div><!-- #services -->
+</div><!-- #network -->
 <?php endwhile; endif; ?>
 <?php get_footer(); 
