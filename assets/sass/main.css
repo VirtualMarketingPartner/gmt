@@ -754,11 +754,11 @@ hr {
   width: 100%;
 }
 
-#header #menu-main-menu li:hover ul {
+#header .navbar-nav #menu-main-menu li:hover ul {
   display: block;
 }
 
-#header #menu-main-menu .sub-menu {
+#header .navbar-nav #menu-main-menu .sub-menu {
   position: absolute;
   width: 230px;
   left: 0;
@@ -769,20 +769,41 @@ hr {
   overflow: hidden;
 }
 
-#header #menu-main-menu .sub-menu li {
+#header .navbar-nav #menu-main-menu .sub-menu li {
   display: block;
   text-align: left;
-  padding: 5px 10px;
+  padding: 6px 10px;
   height: auto;
 }
 
-#header #menu-main-menu .sub-menu li:hover {
+#header .navbar-nav #menu-main-menu .sub-menu li:hover {
   background: #3a50a2;
   color: #fff;
 }
 
-#header #menu-main-menu .sub-menu li a:hover {
+#header .navbar-nav #menu-main-menu .sub-menu li a:hover {
   color: #fff;
+}
+
+#header .navbar-nav #menu-main-menu .sub-menu-icon::after {
+  content: "\f0dd";
+  font-family: FontAwesome;
+  bottom: 3px;
+  position: relative;
+  margin-left: 6px;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#header .navbar-nav #menu-main-menu .sub-menu-icon:hover::after {
+  content: "\f0d8";
+  bottom: 0;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #header .collapse {

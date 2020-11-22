@@ -37,9 +37,12 @@ jQuery(function($){
 		$('.gform_body li').each(function(){
 			$(this).children('label').appendTo( $(this).children('.ginput_container') );
 		});
-
-
 	});
-	
+
+	// Adds class for icon in each li that contacts sub navigations
+	$(document).ready(function(){
+		$('.menu-item-has-children a').addClass('sub-menu-icon');
+		$('.sub-menu a').removeClass('sub-menu-icon');
+	});
 });
 
