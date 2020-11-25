@@ -90,7 +90,6 @@ a{
 	color:$secondary;
 	@include defaultTransition;
 	cursor:pointer;
-	text-transform:uppercase;
 	
 	&:hover, &:focus, &:active{
 		text-decoration: none; outline:none;}
@@ -106,6 +105,7 @@ a{
 		margin:20px 0;
 		padding:10px 40px;
 		text-decoration: none;
+		text-transform:uppercase;
 		text-align:center;
 		background:$primary;
 		border:3px solid transparent;
@@ -120,7 +120,8 @@ a{
 			background:$trans; 
 			color:$secondary;
 			padding:15px 0;
-			text-align:left;
+			text-align:left;		
+			text-transform:uppercase;
 			
 			&:after{
 				content:'';
@@ -212,6 +213,7 @@ hr{
 	width:100%;
 	margin:40px auto;
 	border:none;
+	background:$white;
 	
 	.card-body{
 		padding:30px;
@@ -242,6 +244,30 @@ hr{
 			display:inline-block;}
 	}
 	
+}
+.pattern{
+	position:relative;
+	z-index:1; 
+	
+	//&:before,
+	&:after{
+		content:'';
+		display:block;
+		position:absolute;
+		z-index:-2;
+		left:-10%; top:10%;
+		background:$accent;
+		background-image:url('../../partials/images/pattern.png');
+		background-size:contain;
+		width:50%; height:100%;
+	}
+	
+	&.before{
+		//&:after{display:none;}
+	}
+	&.after{
+		//&:after{display:none;}
+	}
 }
 
 .recent-news{
@@ -284,4 +310,33 @@ hr{
 		width:80%; 
 		margin:0 auto;
 		color:$black;}
+}
+
+.sidebar{
+	.row{margin-bottom:30px;}
+	
+	.categories{
+		list-style:none;
+		margin:0; padding:0;
+
+		li{
+			border-bottom:1px solid $off-white;
+			padding:10px 0;
+
+			i{color:$accent; margin-right:10px;}
+			a{
+				display:inline-block;
+				width:88%;
+				color:$black;
+
+				span{
+					display:inline-block; 
+					width:70%;
+
+					&.text-right{width:28%;}
+				}			
+			}
+		}
+	}
+	
 }

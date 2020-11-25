@@ -67,7 +67,7 @@
 					</div><!-- .row -->
 				</div><!-- .col -->
 				<div class="col-sm-12 col-md-4" >
-					<div class="card" >
+					<div class="card pattern before" >
 						<div clas="card-body" >
 							<h2><?php the_sub_field('header'); ?></h2>
 							<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>

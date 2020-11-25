@@ -68,3 +68,61 @@ input.gform_button.button{
 		background:$secondary;
 	}
 }
+
+
+/* Search Form */
+.searchform{
+	
+	div{
+		position:relative;
+		
+		label{
+			position:absolute;
+			z-index:2; 
+			left:15px; top:8px;
+			width:50%;
+			display:inline-block;
+		}
+		input#search{
+			position:relative;
+			width:100%;
+			border:1px solid $grey;
+			padding:0 50px 0 15px;
+			height:40px;
+			line-height:36px;
+			@include border-radius(20px);
+			
+			&:focus{
+				outline:none;
+				border:2px solid $primary;
+				@include border-radius(20px);}
+		}
+		
+		input#search:focus + label,
+		input#search:valid + label{
+			top:-10px;
+			left:15px;
+			font-size:75%;
+			padding:3px 10px;
+			background:$white;
+			width:auto;
+			@include defaultTransition;
+		}
+
+		#searchsubmit{
+			height:40px; width:40px;
+			line-height:36px;
+			position:absolute;
+			right:0; top:0;
+			z-index:2;
+			margin:0;
+			padding:0;
+			@include border-radius(50%);
+			font-size:125%;
+			
+			&:hover{
+				color:$white;
+				background:$secondary;}
+		}
+	}
+}

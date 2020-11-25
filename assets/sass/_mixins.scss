@@ -8,12 +8,6 @@
 	font-weight:bold;
 }
 
-//Textures
-@mixin pattern($direction, $shape) {
-	background-image:url('../../partials/images/pattern.png');
-	background-size:contain;
-}
-
 // Default Transition
 @mixin defaultTransition{
 	-webkit-transition: all ease-in-out .2s;
