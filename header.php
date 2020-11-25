@@ -10,9 +10,17 @@
 	
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	
+
 	<script src="https://kit.fontawesome.com/391389ab70.js" crossorigin="anonymous"></script>
 	
+	<!-- offline versions of BS & FA -->
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/bootstrap.min.css" >
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/fa-all.min.css" >
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" ></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap.bundle.min.js" ></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/fa-all.min.js" ></script>
+	
+	<!-- end offline versions --> 
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
