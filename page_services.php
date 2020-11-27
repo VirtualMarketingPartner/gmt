@@ -82,8 +82,27 @@
 			</div><!-- .row -->
 			
 			<div class="row" >
-				<div class="col-sm-12 offset-md-1 col-md-10" >
-					[FEES TABLE WILL GO HERE]
+				<div class="col-sm-12 offset-md-1 col-md-10 services-table" >
+					<table>
+						<tr>
+							<th></th>
+							<th class="th-color">Strategic</th>
+							<th class="th-color">Performance</th>
+							<th class="th-color">Compliance</th>
+						</tr>
+							<tr>
+								<td>Equity Overview and Advice</td>
+								<td>[ICON_HERE]</td>
+								<td>[ICON_HERE]</td>
+								<td>[ICON_HERE]</td>
+							</tr>
+							<tr>
+								<td>Home / Host Country Tax Preparation & Filing Initial</td>
+								<td>[ICON_HERE]</td>
+								<td>[ICON_HERE]</td>
+								<td>[ICON_HERE]</td>
+    						</tr>
+					</table>
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
