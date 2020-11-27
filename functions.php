@@ -82,6 +82,24 @@ function remove_menu_pages() {
 }
 
 
+// add CPT to searches
+function custom_post_type_cat_filter($query) {
+  if ( !is_admin() && $query->is_main_query() ) {
+    if ($query->is_category()) {
+		$query->set( 'post_type', array( 'post', 'insights', 'events', 'company_news' ) );
+    }
+  }
+}
+
+add_action('pre_get_posts','custom_post_type_cat_filter');
+
+// excerpt length
+function custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
 // Google Map API Key - Temp setup 11/18/20
 function my_acf_init() {
     acf_update_setting('google_api_key', 'AIzaSyAXdo1pSufFydCToPxjbsSPwJPsUWGkXpY');

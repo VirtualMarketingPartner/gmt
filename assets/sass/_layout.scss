@@ -194,6 +194,8 @@
 	.post{
 		margin:20px 0;
 		
+		.date{color:$grey;}
+		
 		.image-date-wrapper{
 			position:relative;
 			
@@ -206,7 +208,12 @@
 				bottom:0; left:0;
 			}
 			
-			.image-wrapper{background:$off-white; min-height:150px;}
+			.image-wrapper{
+				background:$off-white; 
+				min-height:150px;
+				background-size:cover;}
 		}
+		
+		a.button{padding:0 0 15px; margin:0;}
 	}
 }

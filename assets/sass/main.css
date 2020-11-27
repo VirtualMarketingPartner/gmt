@@ -332,7 +332,7 @@ hr {
   z-index: 1; }
   .pattern:after {
     content: '';
-    display: block;
+    display: none;
     position: absolute;
     z-index: -2;
     left: -10%;
@@ -505,6 +505,8 @@ hr {
 /* ===== Blog ===== */
 #post_list .post {
   margin: 20px 0; }
+  #post_list .post .date {
+    color: #8c8c8c; }
   #post_list .post .image-date-wrapper {
     position: relative; }
     #post_list .post .image-date-wrapper .date {
@@ -517,7 +519,11 @@ hr {
       left: 0; }
     #post_list .post .image-date-wrapper .image-wrapper {
       background: #f5f5f5;
-      min-height: 150px; }
+      min-height: 150px;
+      background-size: cover; }
+  #post_list .post a.button {
+    padding: 0 0 15px;
+    margin: 0; }
 
 /* ==========================================
 	Sticky Nav
