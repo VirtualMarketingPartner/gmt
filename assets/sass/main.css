@@ -724,6 +724,10 @@ hr {
   color: #8c8c8c;
 }
 
+.single-team .card.single-team-info ul {
+  padding: 0 0 0 16px;
+}
+
 /* ===== Contact Us ===== */
 #contact .card {
   padding: 40px;
