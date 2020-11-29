@@ -804,7 +804,12 @@ hr {
 .fees .services-table table td:nth-child(n+2):nth-child(-n+4) {
   text-align: center;
   border-right: 1px solid #e1e1e1;
-  padding: 10px 0;
+  padding: 15px 0;
+  width: 170px;
+}
+
+.fees .services-table table td:nth-child(n+2):nth-child(-n+4):first-of-type {
+  min-width: 200px;
 }
 
 .fees .services-table table td:nth-child(n+2):nth-child(-n+4):last-child {
@@ -817,6 +822,11 @@ hr {
 
 .fees .services-table table tr:nth-child(n+2):last-child {
   border-bottom: none;
+}
+
+.fees .services-table i {
+  color: #4CA963;
+  font-size: 16px;
 }
 
 /* ==========================================
