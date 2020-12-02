@@ -4,126 +4,130 @@
 
 
 <?php get_header(); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="content" id="services">
-	
-	<?php get_template_part('/partials/hero'); ?>
-	
-	<?php get_template_part('/partials/intro'); ?>
-	
-	<section class="container-fluid angle grey services" >
-		<div class="container" >
-			<div class="row" >
-				<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
-				<div class="col-sm-12 col-md-3" >
-					<ul class="nav flex-column nav-tabs" id="myTab" role="tablist">
-						<?php while($services_query->have_posts()): $services_query->the_post(); ?>
-						<li class="nav-item">
-							<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
-						</li>
-						<?php $serviceNavCount++; endwhile; wp_reset_postdata(); ?>
-					</ul><!-- .nav -->
-				</div><!-- .col -->
-				
-				<div class="col-sm-12 col-md-9" >
-					<div class="tab-content" id="service-content">
-						<?php while($services_query->have_posts()): $services_query->the_post(); ?>
-						<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
-							<h2><?php the_title(); ?></h2>
-							<?php the_content(); ?>
-						</div><!-- .tab-pane -->
-						<?php $serviceTabCount++; endwhile; wp_reset_postdata(); ?>
-					</div><!-- .#service-content -->
-				</div><!-- .col -->
-			</div><!-- .row -->
-			<?php endif; ?>
-		</div><!-- .container -->
-	</section><!-- .services -->
-	
-	<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
-	<section class="container-fluid angle approach" >
-		<div class="container" >
-			<div class="row" >
-				<div class="col-sm-12 text-center" >
-					<h2><?php the_sub_field('header'); ?></h2>
-					<?php if(have_rows('list')): ?>
-					<div class="row card-list" >
-						<?php while(have_rows('list')): the_row(); ?>
-						<div class="col-sm-12 col-md-4" >
-							<div class="card bottom" >
-								<div class="card-body text-left" >
-									<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
-									<h3><?php the_sub_field('title'); ?></h3>
-									<?php the_sub_field('content'); ?>
-								</div><!-- .card-body -->
-							</div><!-- .card -->
-						</div><!-- .col -->
-						<?php endwhile; ?>
-					</div><!-- .row -->
-					<?php endif; ?>
-				</div><!-- .col -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section><!-- .approach -->
-	<?php endwhile; endif; ?>
-	
-	<?php if(have_rows('fees')): while(have_rows('fees')): the_row(); ?>
-	<section class="container-fluid grey fees" >
-		<div class="container" >
-			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-6" >
-					<h2><?php the_sub_field('header'); ?></h2>
-					<?php the_sub_field('content'); ?>
-				</div><!-- .col -->
-				
-				<div class="col-sm-12 offset-md-1 col-md-5" >
-					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
-				</div><!-- .col -->
-			</div><!-- .row -->
-			
-			<div class="row" >
-				<div class="col-sm-12 offset-md-1 col-md-10 services-table" >
-					<?php if(have_rows('table')): while(have_rows('table')): the_row(); ?>
-						<?php if(have_rows('th_options')): while(have_rows('th_options')): the_row(); ?>
-							<table>
-								<tr>
-									<th></th>
-									<th class="th-color"><strong><?php the_sub_field('option_1'); ?></strong></th>
-									<th class="th-color"><strong><?php the_sub_field('option_2'); ?></strong></th>
-									<th class="th-color"><strong><?php the_sub_field('option_3'); ?></strong></th>
-								</tr>
-						<?php endwhile; endif; ?>
-						<?php if(have_rows('table_content')): while(have_rows('table_content')): the_row(); 
-						$tableOptions = get_sub_field('table_options')
-						?>
-							<tr>
-								<td><?php the_sub_field('table_objective'); ?></td>
-								<td>
-									<?php if($tableOptions && in_array('strategic', $tableOptions)) {
-										echo '<i class="fas fa-check-circle"></i>';
-									}?>
-								</td>
-								<td>
-									<?php if($tableOptions && in_array('performance', $tableOptions)) {
-										echo '<i class="fas fa-check-circle"></i>';
-									}?>
-								</td>
-								<td>
-									<?php if($tableOptions && in_array('compliance', $tableOptions)) {
-										echo '<i class="fas fa-check-circle"></i>';
-									}?>
-								</td>
-							</tr>
-						<?php endwhile; endif; ?>
-							</table>
-					<?php endwhile; endif; ?>
-				</div><!-- .col -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section><!-- .fees -->
-	<?php endwhile; endif; ?>
-	
 
-</div><!-- #services -->
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<div class="content" id="services">
+		
+		<?php get_template_part('/partials/hero'); ?>
+		
+		<?php get_template_part('/partials/intro'); ?>
+		
+		<section class="container-fluid angle grey services" >
+			<div class="container" >
+				<div class="row" >
+					<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
+					<div class="col-sm-12 col-md-3" >
+						<ul class="nav flex-column nav-tabs" id="myTab" role="tablist">
+							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
+							<li class="nav-item">
+								<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
+							</li>
+							<?php $serviceNavCount++; endwhile; wp_reset_postdata(); ?>
+						</ul><!-- .nav -->
+					</div><!-- .col -->
+					
+					<div class="col-sm-12 col-md-9" >
+						<div class="tab-content" id="service-content">
+							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
+							<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
+								<h2><?php the_title(); ?></h2>
+								<?php the_content(); ?>
+							</div><!-- .tab-pane -->
+							<?php $serviceTabCount++; endwhile; wp_reset_postdata(); ?>
+						</div><!-- .#service-content -->
+					</div><!-- .col -->
+				</div><!-- .row -->
+				<?php endif; ?>
+			</div><!-- .container -->
+		</section><!-- .services -->
+		
+		<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
+		<section class="container-fluid angle approach" >
+			<div class="container" >
+				<div class="row" >
+					<div class="col-sm-12 text-center" >
+						<h2><?php the_sub_field('header'); ?></h2>
+						<?php if(have_rows('list')): ?>
+						<div class="row card-list" >
+							<?php while(have_rows('list')): the_row(); ?>
+							<div class="col-sm-12 col-md-4" >
+								<div class="card bottom" >
+									<div class="card-body text-left" >
+										<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
+										<h3><?php the_sub_field('title'); ?></h3>
+										<?php the_sub_field('content'); ?>
+									</div><!-- .card-body -->
+								</div><!-- .card -->
+							</div><!-- .col -->
+							<?php endwhile; ?>
+						</div><!-- .row -->
+						<?php endif; ?>
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</section><!-- .approach -->
+		<?php endwhile; endif; ?>
+		
+		<?php if(have_rows('fees')): while(have_rows('fees')): the_row(); ?>
+			<section class="container-fluid grey fees" >
+				<div class="container" >
+					<div class="row vcenter" >
+						<div class="col-sm-12 col-md-6" >
+							<h2><?php the_sub_field('header'); ?></h2>
+							<?php the_sub_field('content'); ?>
+						</div><!-- .col -->
+						
+						<div class="col-sm-12 offset-md-1 col-md-5" >
+							<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
+						</div><!-- .col -->
+					</div><!-- .row -->
+					
+					<div class="row" >
+						<?php if(have_rows('table')): while(have_rows('table')): the_row(); ?>
+							<div class="table-responsive offset-md-1 col-md-10 services-table" >
+								<table class="table">
+									<thead>
+										<tr>
+											<?php if(have_rows('th_options')): while(have_rows('th_options')): the_row(); ?>
+												<th scope="col"></th>
+												<th scope="col"><?php the_sub_field('option_1'); ?></th>
+												<th scope="col"><?php the_sub_field('option_2'); ?></th>
+												<th scope="col"><?php the_sub_field('option_3'); ?></th>
+											<?php endwhile; endif; ?>
+										</tr>
+									</thead>
+									<tbody>
+										<?php if(have_rows('table_content')): while(have_rows('table_content')): the_row(); 
+										$options = get_sub_field('options') 
+										?>
+											<tr>
+											<td scope="row"><?php the_sub_field('objective'); ?></td>
+												<td>
+													<?php if($options && in_array('strategic', $options)) {
+														echo '<i class="fas fa-check-circle"></i>';
+													}?>
+												</td>
+												<td>
+													<?php if($options && in_array('performance', $options)) {
+														echo '<i class="fas fa-check-circle"></i>';
+													}?>
+												</td>
+												<td>
+													<?php if($options && in_array('compliance', $options)) {
+														echo '<i class="fas fa-check-circle"></i>';
+													}?>
+												</td>
+											</tr>
+										<?php endwhile; endif; ?>
+									</tbody>
+								</table><!-- .table -->
+							</div><!-- .offset-md-1 .col-md-10 .services-table -->
+						<?php endwhile; endif; ?>
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</section><!-- .fees -->
+		<?php endwhile; endif; ?>
+	</div><!-- #services -->
 <?php endwhile; endif; ?>
+
 <?php get_footer(); 

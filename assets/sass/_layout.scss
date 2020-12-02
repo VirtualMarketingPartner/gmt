@@ -238,44 +238,51 @@
 	.services-table {
 		padding-top: 60px;
 
-		table {
-			width: 100%;
+		.table {
+			th {
+				border: none;
 
-			.th-color {
-				background: $charcoal;
-				color: $white;
-				text-align: center;
-				border: 2px solid;
-				padding: 5px 0;
+				&:nth-child(n+2):nth-child(-n+4) {
+					background: $charcoal;
+					color: $white;
+					text-align: center;
+					border: 2px solid;
+					padding: 5px;
+					min-width: 130px;
+				}
 			}
 
-			td:nth-child(n+2):nth-child(-n+4) {
-				text-align: center;
-				border-right: 1px solid $light-grey;
-				padding: 15px 0;
-				width: 170px;
+			td {
+				border-top: none;
+
+				&:nth-child(n+2):nth-child(-n+4) {
+					text-align: center;
+					border-right: 1px solid $light-grey;
+					padding: 15px 0;
+					min-width: 170px;
+
+					&:last-child {
+						border-right: none;
+					}
+				}
 
 				&:first-of-type {
-					min-width: 200px;
-				}
-
-				&:last-child {
-					border-right: none;
+					min-width: 250px;
 				}
 			}
 
-			tr:nth-child(n+2) {
+			tr {
 				border-bottom: 1px solid $light-grey;
 
 				&:last-child {
 					border-bottom: none;
 				}
 			}
-		}
 
-		i {
-			color: $lime-green;
-			font-size: 16px;
+			i {
+				color: $lime-green;
+				font-size: 16px;
+			}
 		}
 	}
 }
