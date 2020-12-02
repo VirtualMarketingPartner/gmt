@@ -83,38 +83,40 @@
 			
 			<div class="row" >
 				<div class="col-sm-12 offset-md-1 col-md-10 services-table" >
-					<table>
-						<tr>
-							<th></th>
-							<th class="th-color">Strategic</th>
-							<th class="th-color">Performance</th>
-							<th class="th-color">Compliance</th>
-						</tr>
-						<?php if(have_rows('table')): while(have_rows('table')): the_row(); ?>
-							<?php if(have_rows('table_content')): while(have_rows('table_content')): the_row(); 
-							$tableOptions = get_sub_field('table_options')
-							?>
+					<?php if(have_rows('table')): while(have_rows('table')): the_row(); ?>
+						<?php if(have_rows('th_options')): while(have_rows('th_options')): the_row(); ?>
+							<table>
 								<tr>
-									<td><?php the_sub_field('table_objective'); ?></td>
-									<td>
-										<?php if($tableOptions && in_array('strategic', $tableOptions)) {
-											echo '<i class="fas fa-check-circle"></i>';
-										}?>
-									</td>
-									<td>
-										<?php if($tableOptions && in_array('performance', $tableOptions)) {
-											echo '<i class="fas fa-check-circle"></i>';
-										}?>
-									</td>
-									<td>
-										<?php if($tableOptions && in_array('compliance', $tableOptions)) {
-											echo '<i class="fas fa-check-circle"></i>';
-										}?>
-									</td>
+									<th></th>
+									<th class="th-color"><strong><?php the_sub_field('option_1'); ?></strong></th>
+									<th class="th-color"><strong><?php the_sub_field('option_2'); ?></strong></th>
+									<th class="th-color"><strong><?php the_sub_field('option_3'); ?></strong></th>
 								</tr>
-							<?php endwhile; endif; ?>
 						<?php endwhile; endif; ?>
-					</table>
+						<?php if(have_rows('table_content')): while(have_rows('table_content')): the_row(); 
+						$tableOptions = get_sub_field('table_options')
+						?>
+							<tr>
+								<td><?php the_sub_field('table_objective'); ?></td>
+								<td>
+									<?php if($tableOptions && in_array('strategic', $tableOptions)) {
+										echo '<i class="fas fa-check-circle"></i>';
+									}?>
+								</td>
+								<td>
+									<?php if($tableOptions && in_array('performance', $tableOptions)) {
+										echo '<i class="fas fa-check-circle"></i>';
+									}?>
+								</td>
+								<td>
+									<?php if($tableOptions && in_array('compliance', $tableOptions)) {
+										echo '<i class="fas fa-check-circle"></i>';
+									}?>
+								</td>
+							</tr>
+						<?php endwhile; endif; ?>
+							</table>
+					<?php endwhile; endif; ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
