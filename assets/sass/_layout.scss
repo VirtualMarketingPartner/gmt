@@ -141,7 +141,7 @@
 		background-position: center center;
 	}
 
-	.card.single-team-info {
+	.single-team-info {
 		padding: 40px 30px;
 		margin-top: 70px;
 
@@ -155,6 +155,21 @@
 
 		ul {
 			padding: 0 0 0 16px;
+		}
+		
+				
+		ul.socials{
+			list-style:none;
+			padding:0; margin:0;
+			margin-top:40px;
+			
+			li{
+				display:inline-block;
+				margin:5px;
+				a{
+					font-size:125%;
+				}
+			}
 		}
 	}
 }
@@ -233,6 +248,49 @@
 }
 
 /* ===== Services ===== */
+
+#service_tabs{
+	.nav-tabs{
+		margin:50px 0;
+		padding:30px;
+		border:none;
+		border-right:1px solid $grey;
+		
+		li{
+			padding:5px 0;
+			border-bottom:1px solid $grey;
+			
+			a{
+				color:$black;
+				border:none;
+				position:relative;
+				@include border-radius(0);
+				
+				&.active{
+					background:$trans;
+					font-weight:bold;
+					
+					&:after{border-right-color:$secondary;}
+				}
+				
+				&:after{
+					content:'';
+					width:0; height:55px; 
+					border-right:4px solid $trans;
+					position:absolute;
+					right:-33px; top:0;
+				}
+				
+				&:hover{font-weight:bold;}
+			}
+			
+			&:last-child{border-bottom-color:$trans;}
+		}
+	}
+	
+	.tab-content{}
+}
+
 
 .fees {
 	.services-table {

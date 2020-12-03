@@ -14,10 +14,11 @@
 		
 		<section class="container-fluid angle grey services" >
 			<div class="container" >
+				<div id="service_tabs" >
 				<div class="row" >
 					<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
-					<div class="col-sm-12 col-md-3" >
-						<ul class="nav flex-column nav-tabs" id="myTab" role="tablist">
+					<div class="col-sm-12 col-md-4" >
+						<ul class="nav flex-column nav-tabs" role="tablist">
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 							<li class="nav-item">
 								<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
@@ -26,7 +27,7 @@
 						</ul><!-- .nav -->
 					</div><!-- .col -->
 					
-					<div class="col-sm-12 col-md-9" >
+					<div class="col-sm-12 col-md-8" >
 						<div class="tab-content" id="service-content">
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 							<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
@@ -37,6 +38,7 @@
 						</div><!-- .#service-content -->
 					</div><!-- .col -->
 				</div><!-- .row -->
+				</div><!-- #service_tabs -->
 				<?php endif; ?>
 			</div><!-- .container -->
 		</section><!-- .services -->
