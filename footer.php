@@ -1,9 +1,26 @@
 </div><!-- #body -->
 
-<div id="newsletter_signup" >
-	<div class="text-wrapper" >
-	</div><!-- .text-wrapper -->
-</div><!-- #newsletter_signup -->
+<?php if(have_rows('newsletter_signup','options')): while(have_rows('newsletter_signup','options')): the_row(); ?>
+<section class="container-fluid bg" style="background-image:url(<?php the_sub_field('bg'); ?>); " id="newsletter_signup" >
+	<div class="container" >
+		<div class="row" >
+			<div class="col-sm-12 offset-md-1 col-md-10 text-align-center" >
+				<div class="row" >
+					<div class="col-sm-3" >
+						<div class="image-wrapper" style="background-image:url(<?php the_sub_field('icon'); ?>);" ></div>
+					</div><!-- col -->
+					<div class="col-sm-9" >
+						<p class="all-caps" ><?php the_sub_field('header'); ?></p>
+						<div class="text-wrapper" >
+							<?php the_sub_field('content'); ?>
+						</div><!-- .text-wrapper -->
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .col -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #newsletter_signup -->
+<?php endwhile; endif; ?>
 	 
 	 
 <div id="footer" >

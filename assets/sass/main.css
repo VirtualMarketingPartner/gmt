@@ -1,7 +1,7 @@
 /* ==========================================
 	Variables
 ========================================== */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap");
 /* ==========================================
 	Mixins
 ========================================== */
@@ -175,6 +175,9 @@ p {
 
 strong {
   font-weight: 600; }
+
+.really-bold {
+  font-weight: 800; }
 
 a {
   color: #f47524;
@@ -711,6 +714,18 @@ hr {
 /* ==========================================
 	Footer
 ========================================== */
+#newsletter_signup {
+  background-blend-mode: multiply;
+  background-color: #6c89c6;
+  padding: 150px 0 100px;
+  color: #fff; }
+  #newsletter_signup .image-wrapper {
+    background-size: contain; }
+  #newsletter_signup .text-wrapper {
+    padding: 0; }
+    #newsletter_signup .text-wrapper h4 {
+      font-weight: 800; }
+
 #footer {
   background: #232323;
   position: relative;
