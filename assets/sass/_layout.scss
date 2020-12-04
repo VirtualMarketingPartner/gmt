@@ -99,11 +99,12 @@
 
 .team {
 	p.name {
-		font-size: 200%;
+		font-size:150%;
+		font-weight:600;
 		margin-bottom: 0;
 	}
-
-	p.title {}
+	
+	a.button{margin:0;}
 }
 
 .partners.bg {
@@ -213,7 +214,7 @@
 /* ===== Blog ===== */
 #post_list {
 
-	.post {
+	.post{
 		margin: 20px 0;
 
 		.date {
@@ -226,7 +227,7 @@
 			.date {
 				font-size: 80%;
 				background: $black;
-				color: $white;
+				color: $white !important;
 				padding: 5px 10px;
 				position: absolute;
 				bottom: 0;
@@ -244,6 +245,19 @@
 			padding: 0 0 15px;
 			margin: 0;
 		}
+	}
+	
+}
+
+.post-body{
+	h1{margin-bottom:50px;}
+	
+	 .date{
+		color:$grey; 
+		margin-bottom:30px;}
+	
+	#post_cta .card-body{
+		padding:15px 30px;
 	}
 }
 

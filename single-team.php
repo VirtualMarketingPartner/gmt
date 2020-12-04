@@ -10,7 +10,10 @@
 				<?php if ( have_rows('team_member') ): while ( have_rows('team_member') ) : the_row(); ?>
 				<?php if(get_sub_field('image')): ?>
 				<div class="col-sm col-md-4 offset-md-1 order-md-5">
-					<div class="image-wrapper" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
+					<div class="pattern large left" >
+						<div class="image-wrapper blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
+						<div class="pattern-block" ></div>
+					</div><!-- .pattern -->
 				</div><!-- .col-sm .col-md-4 .single-team-image -->
 				<?php endif; ?>
 				<div class="col-sm-12 <?php if(get_sub_field('image')): ?>col-md-7<?php endif; ?> single-team-content" >

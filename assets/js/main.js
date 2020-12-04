@@ -33,10 +33,11 @@ jQuery(function($){
 			'bottom':'10px',
 		});
 		
-		//reset form styles to use cool labels
+		// reset form styles to use cool labels
 		$('.gform_body li').each(function(){
 			$(this).children('label').appendTo( $(this).children('.ginput_container') );
 		});
+		
 	});
 
 	// Adds class for icon in each li that contacts sub navigations

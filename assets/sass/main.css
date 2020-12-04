@@ -267,7 +267,7 @@ hr {
 .all-caps {
   margin: 10px 0;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: 600; }
 
 .vcenter {
   display: flex;
@@ -306,7 +306,9 @@ hr {
   width: 100%;
   margin: 40px auto;
   border: none;
-  background: #fff; }
+  background: #fff;
+  position: relative;
+  display: block; }
   .card .card-body {
     padding: 30px; }
     .card .card-body .icon {
@@ -331,20 +333,30 @@ hr {
       display: inline-block; }
 
 .pattern {
-  position: relative;
-  z-index: 1; }
-  .pattern:after {
+  position: relative; }
+  .pattern .blocker {
+    position: relative;
+    z-index: 1; }
+  .pattern .pattern-block {
     content: '';
-    display: none;
     position: absolute;
-    z-index: -2;
-    left: -10%;
-    top: 10%;
-    background: #6c89c6;
-    background-image: url("../../partials/images/pattern.png");
+    background-image: url("../images/diagonal_stripes.png");
     background-size: contain;
-    width: 50%;
-    height: 100%; }
+    width: 85%;
+    height: 100%;
+    bottom: -10%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
+    filter: alpha(opacity=15);
+    opacity: 0.15; }
+  .pattern.right .pattern-block {
+    right: -20%; }
+  .pattern.left .pattern-block {
+    left: -10%;
+    height: 80%;
+    width: 70%; }
+  .pattern.large .pattern-block {
+    top: -10%;
+    height: 120%; }
 
 .recent-news {
   border-right: 1px solid #8c8c8c;
@@ -377,7 +389,7 @@ hr {
 .circle-list .list-item {
   display: block;
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   color: #111111; }
 
 .sidebar .row {
@@ -401,6 +413,11 @@ hr {
         width: 70%; }
         .sidebar .categories li a span.text-right {
           width: 28%; }
+.sidebar .recent-news {
+  border-color: transparent !important;
+  padding-left: 0; }
+  .sidebar .recent-news a.button {
+    margin: 0; }
 
 /* ==========================================
 	Layout
@@ -456,8 +473,11 @@ hr {
     padding: 15px 30px; }
 
 .team p.name {
-  font-size: 200%;
+  font-size: 150%;
+  font-weight: 600;
   margin-bottom: 0; }
+.team a.button {
+  margin: 0; }
 
 .partners.bg {
   background-position: right center;
@@ -527,7 +547,7 @@ hr {
     #post_list .post .image-date-wrapper .date {
       font-size: 80%;
       background: #111111;
-      color: #fff;
+      color: #fff !important;
       padding: 5px 10px;
       position: absolute;
       bottom: 0;
@@ -539,6 +559,14 @@ hr {
   #post_list .post a.button {
     padding: 0 0 15px;
     margin: 0; }
+
+.post-body h1 {
+  margin-bottom: 50px; }
+.post-body .date {
+  color: #8c8c8c;
+  margin-bottom: 30px; }
+.post-body #post_cta .card-body {
+  padding: 15px 30px; }
 
 /* ===== Services ===== */
 #service_tabs .nav-tabs {
@@ -715,6 +743,7 @@ hr {
 	Footer
 ========================================== */
 #newsletter_signup {
+  position: relative;
   background-blend-mode: multiply;
   background-color: #6c89c6;
   padding: 150px 0 100px;
@@ -725,6 +754,21 @@ hr {
     padding: 0; }
     #newsletter_signup .text-wrapper h4 {
       font-weight: 800; }
+
+#page_down {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  transform: translate(-50%, 0);
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  background-image: url("../images/arrow_down.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  z-index: 3; }
 
 #footer {
   background: #232323;

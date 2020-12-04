@@ -5,7 +5,7 @@
 
 <?php get_header(); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="content" id="services">
+<div class="content" id="team">
 	
 	<?php get_template_part('/partials/hero'); ?>
 	
@@ -22,7 +22,7 @@
 			<div class="row circle-list" >
 				<?php $teamQuery = new WP_Query( array( 'post_type' => 'team' ) ); while ( $teamQuery->have_posts() ) : $teamQuery->the_post(); ?> 
 					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
-					<div class="col-sm-6" >
+					<div class="col-sm-6 list-item" >
 						<div class="row vcenter" >
 							<div class="col-sm-12 col-md-4" >
 								<a href="<?php the_permalink(); ?>" >
@@ -32,7 +32,7 @@
 							<div class="col-sm-12 col-md-8" >
 								<p class="name" ><?php the_title(); ?></p>
 								<p class="title"><?php the_sub_field('title'); ?></p>
-								<a href="<?php the_permalink(); ?>"><?php the_field('meet_team_member','options'); ?> 
+								<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('meet_team_member','options'); ?> 
 									<?php 
 									$name = get_the_title();
 									$name_array = explode(' ', $name);
@@ -50,6 +50,6 @@
 	</section ><!-- .team -->
 	<?php endwhile; endif; ?>
 
-</div><!-- #services -->
+</div><!-- #team -->
 <?php endwhile; endif; ?>
 <?php get_footer(); 

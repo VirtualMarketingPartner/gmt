@@ -173,7 +173,7 @@ hr{
 .all-caps{
 	margin:10px 0;
 	text-transform:uppercase; 
-	font-weight:bold;
+	font-weight:600;
 }
 
 .vcenter {
@@ -215,6 +215,8 @@ hr{
 	margin:40px auto;
 	border:none;
 	background:$white;
+	position:relative;
+	display:block;
 	
 	.card-body{
 		padding:30px;
@@ -248,26 +250,29 @@ hr{
 }
 .pattern{
 	position:relative;
-	z-index:1; 
 	
-	//&:before,
-	&:after{
+	.blocker{
+		position:relative;
+		z-index:1;}
+
+	.pattern-block{
 		content:'';
-		display:none;
 		position:absolute;
-		z-index:-2;
-		left:-10%; top:10%;
-		background:$accent;
-		background-image:url('../../partials/images/pattern.png');
+		background-image:url('../images/diagonal_stripes.png');
 		background-size:contain;
-		width:50%; height:100%;
+		width:85%; height:100%;
+		bottom:-10%;
+		@include opacity(15,.15);
 	}
 	
-	&.before{
-		//&:after{display:none;}
+	&.right{
+		.pattern-block{right:-20%;}
 	}
-	&.after{
-		//&:after{display:none;}
+	&.left{
+		.pattern-block{left:-10%; height:80%; width:70%;}
+	}
+	&.large{
+		.pattern-block{top:-10%; height:120%;}
 	}
 }
 
@@ -306,10 +311,11 @@ hr{
 }
 
 .circle-list{
+	
 	.list-item{
 		display:block;
 		width:80%; 
-		margin:0 auto;
+		margin:20px auto;
 		color:$black;}
 }
 
@@ -339,5 +345,13 @@ hr{
 			}
 		}
 	}
+	
+	.recent-news{
+		border-color:$trans !important;
+		padding-left:0;
+		
+		a.button{margin:0;}
+	}
+	
 	
 }

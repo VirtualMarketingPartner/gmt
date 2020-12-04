@@ -18,9 +18,12 @@
 					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
 				<div class="col-sm-12 offset-md-1 col-md-6" >
-					<div class="card" >
-						<?php the_sub_field('form'); ?>
-					</div><!-- .card -->
+					<div class="pattern left" >
+						<div class="card blocker" >
+							<?php the_sub_field('form'); ?>
+						</div><!-- .card -->
+						<div class="pattern-block" ></div>
+					</div><!-- .pattern -->
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->

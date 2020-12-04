@@ -9,7 +9,10 @@
 				
 				<?php if(get_sub_field('image')): ?>
 				<div class="col-sm-12 offset-md-1 col-md-5" >
-					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
+					<div class="pattern left" >
+						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
+						<div class="pattern-block" ></div>
+					</div><!-- .pattern -->
 				</div><!-- .col -->
 				<?php endif; ?>
 			</div><!-- .row -->

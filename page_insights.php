@@ -46,6 +46,8 @@
 								<?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
 						</div><!-- .col -->
 						
+						
+						
 						<?php endif; ?>
 					</div><!-- .row -->
 					<?php endwhile; ?>

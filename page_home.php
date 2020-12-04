@@ -67,14 +67,17 @@
 					</div><!-- .row -->
 				</div><!-- .col -->
 				<div class="col-sm-12 col-md-4" >
-					<div class="card pattern before" >
-						<div clas="card-body" >
-							<h2><?php the_sub_field('header'); ?></h2>
-							<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
-							<a href="<?php the_sub_field('link'); ?>" class="button inverted" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
-							<?php endwhile; endif; ?>
-						</div><!-- .card-body -->
-					</div><!-- .card -->
+					<div class="pattern right large" >
+						<div class="card blocker" >
+							<div clas="card-body" >
+								<h2><?php the_sub_field('header'); ?></h2>
+								<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
+								<a href="<?php the_sub_field('link'); ?>" class="button inverted" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+								<?php endwhile; endif; ?>
+							</div><!-- .card-body -->
+						</div><!-- .card -->
+						<div class="pattern-block" ></div>
+					</div><!-- .pattern right -->
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
@@ -107,7 +110,10 @@
 		<div class="container" >
 			<div class="row vcenter" >
 				<div class="col-sm-12 col-md-5" >
-					<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
+					<div class="pattern bottom left" >
+						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
+						<div class="pattern-block" ></div>
+					</div><!-- .pattern -->
 				</div><!-- .col -->
 				
 				<div class="col-sm-12 col-md-7" >
