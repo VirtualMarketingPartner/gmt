@@ -126,6 +126,8 @@
 										<?php endwhile; endif; ?>
 									</tbody>
 								</table><!-- .table -->
+									<p><?php the_sub_field('title'); ?></p>
+									<?php the_sub_field('content'); ?>
 							</div><!-- .offset-md-1 .col-md-10 .services-table -->
 						<?php endwhile; endif; ?>
 					</div><!-- .row -->
