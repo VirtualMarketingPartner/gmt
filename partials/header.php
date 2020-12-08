@@ -8,7 +8,7 @@
 							<i class="fas fa-bars"></i>
 						</button>
 						
-						<div class="collapse navbar-collapse" >
+						<div class="collapse navbar-collapse" id="header_nav" >
 							<div class="navbar-nav" >
 								<?php wp_nav_menu( array( 'theme_location' => 'main_menu' ) ); ?>
 							</div><!-- .navbar-nav -->
