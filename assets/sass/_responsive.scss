@@ -29,18 +29,24 @@
 		}
 	}
 	
-	.recent-news .date{margin-bottom:20px;}
+	.image-wrapper,
+	.image-wrapper.circle{width:80%; margin:0 auto;}
 	
-	#footer{
-		.text-left,
-		.text-right,
-		ul.socials{text-align:center !important;}
-	}
+	.recent-news .date{margin-bottom:20px;}
 	
 	.pattern{
 		&.right{
 			.pattern-block{right:0;}	
 		}
+		&.bottom{
+			.pattern-block{bottom:-5%;}
+		}
+	}
+	
+	#footer{
+		.text-left,
+		.text-right,
+		ul.socials{text-align:center !important;}
 	}
 	
 }

@@ -938,16 +938,23 @@ input.gform_button.button {
       top: 0;
       padding: 10px 0; }
 
+  .image-wrapper,
+  .image-wrapper.circle {
+    width: 80%;
+    margin: 0 auto; }
+
   .recent-news .date {
     margin-bottom: 20px; }
+
+  .pattern.right .pattern-block {
+    right: 0; }
+  .pattern.bottom .pattern-block {
+    bottom: -5%; }
 
   #footer .text-left,
   #footer .text-right,
   #footer ul.socials {
-    text-align: center !important; }
-
-  .pattern.right .pattern-block {
-    right: 0; } }
+    text-align: center !important; } }
 @media all and (min-width: 768px) {
   .hero .carousel-item {
     background-attachment: fixed; }
