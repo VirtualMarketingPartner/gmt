@@ -38,7 +38,7 @@
 			<?php if(have_rows('list')): ?>
 			<div class="row card-row" >
 			<?php while(have_rows('list')): the_row(); ?>
-				<div class="col-sm-12 col-md-4" >
+				<div class="col-12 col-md-4" >
 					<div class="card narrow left" >
 						<div class="card-body vcenter" >
 							<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
@@ -57,14 +57,14 @@
 		<section class="container-fluid angle grey contact" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-5" >
+				<div class="col-12 col-md-5" >
 					<div class="pattern left" >
 						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
 						<div class="pattern-block" ></div>
 					</div><!-- .pattern -->
 				</div><!-- .col -->
 				
-				<div class="col-sm-12 md-offset-1 col-md-6" >
+				<div class="col-12 md-offset-1 col-md-6" >
 					<h2><?php the_sub_field('title'); ?></h2>
 					<?php the_sub_field('content'); ?>
 					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>

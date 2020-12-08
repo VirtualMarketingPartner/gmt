@@ -2,13 +2,13 @@
 	<section class="container-fluid angle intro" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 <?php if(get_sub_field('image')){ echo 'col-md-6'; } ?>" >
+				<div class="col-12 <?php if(get_sub_field('image')){ echo 'col-md-6'; } ?>" >
 					<h2><?php the_sub_field('title'); ?></h2>
 					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
 				
 				<?php if(get_sub_field('image')): ?>
-				<div class="col-sm-12 offset-md-1 col-md-5" >
+				<div class="col-12 offset-md-1 col-md-5" >
 					<div class="pattern left" >
 						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
 						<div class="pattern-block" ></div>

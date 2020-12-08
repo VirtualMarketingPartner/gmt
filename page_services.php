@@ -17,7 +17,7 @@
 				<div id="service_tabs" >
 				<div class="row" >
 					<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
-					<div class="col-sm-12 col-md-4" >
+					<div class="col-12 col-md-4" >
 						<ul class="nav flex-column nav-tabs" role="tablist">
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 							<li class="nav-item">
@@ -27,7 +27,7 @@
 						</ul><!-- .nav -->
 					</div><!-- .col -->
 					
-					<div class="col-sm-12 col-md-8" >
+					<div class="col-12 col-md-8" >
 						<div class="tab-content" id="service-content">
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 							<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
@@ -47,12 +47,12 @@
 		<section class="container-fluid angle approach" >
 			<div class="container" >
 				<div class="row" >
-					<div class="col-sm-12 text-center" >
+					<div class="col-12 text-center" >
 						<h2><?php the_sub_field('header'); ?></h2>
 						<?php if(have_rows('list')): ?>
 						<div class="row card-list" >
 							<?php while(have_rows('list')): the_row(); ?>
-							<div class="col-sm-12 col-md-4" >
+							<div class="col-12 col-md-4" >
 								<div class="card bottom" >
 									<div class="card-body text-left" >
 										<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
@@ -74,12 +74,12 @@
 			<section class="container-fluid grey fees" >
 				<div class="container" >
 					<div class="row vcenter" >
-						<div class="col-sm-12 col-md-6" >
+						<div class="col-12 col-md-6" >
 							<h2><?php the_sub_field('header'); ?></h2>
 							<?php the_sub_field('content'); ?>
 						</div><!-- .col -->
 						
-						<div class="col-sm-12 offset-md-1 col-md-5" >
+						<div class="col-12 offset-md-1 col-md-5" >
 							<div class="pattern left" >
 								<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
 								<div class="pattern-block" ></div>

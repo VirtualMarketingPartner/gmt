@@ -13,11 +13,11 @@
 	<section class="container-fluid angle intro" >
 		<div class="container" >
 			<div class="row" >
-				<div class="col-sm-12 col-md-5" >
+				<div class="col-12 col-md-5" >
 					<h2><?php the_sub_field('title'); ?></h2>
 					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
-				<div class="col-sm-12 offset-md-1 col-md-6" >
+				<div class="col-12 offset-md-1 col-md-6" >
 					<div class="pattern left" >
 						<div class="card blocker" >
 							<?php the_sub_field('form'); ?>

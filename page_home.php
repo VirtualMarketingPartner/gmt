@@ -20,7 +20,7 @@
 				<div class="carousel-item <?php if( $slideCount==0 ){echo 'active'; } ?>" style="background-image:url(<?php the_sub_field('image'); ?>);" >
 					<div class="container" >
 						<div class="row" >
-							<div class="col-sm-12 col-md-6" >
+							<div class="col-12 col-md-6" >
 								<div class="text-wrapper " >
 									<?php if($slideCount==0): ?>
 										<p class="all-caps" ><?php the_field('issue_of_the_day','options'); ?></p>
@@ -47,16 +47,16 @@
 	<section class="container-fluid angle services" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-8 service " >
+				<div class="col-12 col-md-8 service " >
 					<div class="row" >
 						
 						<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) ); ?>
 
 						<?php if ( $services_query->have_posts() ) : ?>
 							<?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
-							<div class="col-sm-6 col-md-4" >
+							<div class="col-6 col-md-4" >
 								<div class="row" >
-									<div class="col-sm-12 offset-md-2 col-md-8" >
+									<div class="col-12 offset-md-2 col-md-8" >
 										<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
 										<h3><?php the_title(); ?></h3>
 									</div><!-- .col -->
@@ -66,7 +66,7 @@
 						<?php endif; ?>
 					</div><!-- .row -->
 				</div><!-- .col -->
-				<div class="col-sm-12 col-md-4  slow" >
+				<div class="col-12 col-md-4  slow" >
 					<div class="pattern right large" >
 						<div class="card blocker" >
 							<div clas="card-body" >
@@ -109,14 +109,14 @@
 	<section class="container-fluid angle testimonials" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-5 " >
+				<div class="col-12 col-md-5 " >
 					<div class="pattern bottom left" >
 						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
 						<div class="pattern-block" ></div>
 					</div><!-- .pattern -->
 				</div><!-- .col -->
 				
-				<div class="col-sm-12 col-md-7  slow" >
+				<div class="col-12 col-md-7  slow" >
 					<h2><?php the_sub_field('header'); ?></h2>
 					<?php if(have_rows('quotes')): $quote=0; $quoteIndicator=0; ?>
 					<div id="quoteCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
@@ -147,14 +147,14 @@
 	<section class="container-fluid bg news" >
 		<div class="container" >
 			<div class="row" >
-				<div class="col-sm-12" >
+				<div class="col-12" >
 					<h2><?php the_sub_field('header'); ?></h2>
 					<br>
 					<div class="row" >
 					<?php $query = new WP_Query( array( 'post_type' => 'insights', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
-						<div class="col-sm-12 col-md-4 recent-news" >
+						<div class="col-12 col-md-4 recent-news" >
 							<div class="row" >
-								<div class="col-sm-6 col-md-4" >
+								<div class="col-4" >
 									<div class="date square" >
 										<p>
 											<span class="day" ><?php echo get_the_date('d'); ?></span><span class="month" ><?php echo get_the_date('M'); ?></span>
@@ -162,7 +162,7 @@
 									</div>
 								</div><!-- .col -->
 								
-								<div class="col-sm-6 col-md-8" >
+								<div class="col-8" >
 									<h4><?php the_title(); ?></h4>
 									<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
 								</div><!-- .col -->

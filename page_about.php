@@ -21,7 +21,7 @@
 						<?php if(have_rows('list')): ?>
 						<div class="row card-row" >
 						<?php while(have_rows('list')): the_row(); ?>
-							<div class="col-sm-12 col-md-6" >
+							<div class="col-6" >
 								<div class="card left" >
 									<div class="card-body vcenter" >
 										<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
@@ -49,7 +49,7 @@
 			</div><!-- .row -->
 			<div class="row circle-list" >
 				<?php $teamQuery = new WP_Query( array( 'post_type' => 'team', 'orderby' => 'rand', 'posts_per_page'=>8, ) ); while ( $teamQuery->have_posts() ) : $teamQuery->the_post(); ?> 
-				<div class="col-sm-6 col-md-3 text-center" >
+				<div class="col-6 col-md-3 text-center" >
 					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
 					<a href="<?php the_permalink(); ?>" class="list-item" >
 						<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
@@ -72,7 +72,7 @@
 	<section class="container-fluid bg partners" style="background-image:url(<?php the_sub_field('bg'); ?>);" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-6" >
+				<div class="col-12 col-md-6" >
 					<h2><?php the_sub_field('title'); ?></h2>
 					<?php the_sub_field('content'); ?>
 					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
@@ -86,14 +86,14 @@
 	<section class="container-fluid angle careers" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-5" >
+				<div class="col-12 col-md-5" >
 					<div class="pattern left" >
 						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
 						<div class="pattern-block" ></div>
 					</div><!-- .pattern -->
 				</div><!-- .col -->
 				
-				<div class="col-sm-12 md-offset-1 col-md-6" >
+				<div class="col-12 md-offset-1 col-md-6" >
 					<h2><?php the_sub_field('title'); ?></h2>
 					<?php the_sub_field('content'); ?>
 					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
