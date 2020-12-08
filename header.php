@@ -8,27 +8,22 @@
 	<meta name="title" content="<?php the_field('default_seo_title', 'options'); ?>" >
 	<meta name="description" content="<?php the_field('default_seo_description', 'options'); ?>" >
 	
+	<!-- NEWNESS -->
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/bootstrap.min.css" crossorigin="anonymous">
 	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-	<script src="https://kit.fontawesome.com/391389ab70.js" crossorigin="anonymous"></script>
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/fa-all.min.css" rel="stylesheet">
 	
-	<!-- offline versions of BS & FA -->
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/bootstrap.min.css" >
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/fa-all.min.css" >
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" ></script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap.bundle.min.js" ></script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/fa-all.min.js" ></script>
-	
-	<!-- end offline versions --> 
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
 	
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery.visible.js" ></script>
+	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/main.js" ></script>
+	<!-- END NEWNESS -->
+	
 	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

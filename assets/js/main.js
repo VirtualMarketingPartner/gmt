@@ -1,24 +1,42 @@
 jQuery(function($){
 	
 	$(window).on("load resize scroll", function() {
-		// animations
-	});
-
-	$(document).ready(function(){
-		$('#menu-toggle').on("click", function(){
-			$(this).toggleClass('open');
-			$('#header').toggleClass('open');
-		});
+		/* if($('section').visible(true)){
+			$(this).find('.animate').addClass('fadeInUp');
+		}
+		/* animations
 		
-		$('.carousel').carousel({
-			interval: 2000
-		})
+		var timeOut = 500;
+		
+		$('section').each(function(){
+			if($('section').visible(true)) {
+				setTimeout(function() { 
+					$('.animate').addClass('fadeInUp');
+				}, timeOut);
+				
+				timeOut +=500;
+				
+				
+			}
+		});
+		*/
+		
+		
+		
+		
 		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){
 			var circleW = $(this).width();
 			$(this).css('height', circleW );
 		});
+		
+	});
+
+	$(document).ready(function(){
+		$('.carousel').carousel({
+			interval: 2000
+		})
 		
 		//set card heights
 		var cardHeight = 0;
@@ -40,10 +58,12 @@ jQuery(function($){
 		
 	});
 
-	// Adds class for icon in each li that contacts sub navigations
+	/*  Adds class for icon in each li that contacts sub navigations
 	$(document).ready(function(){
 		$('.menu-item-has-children a').addClass('sub-menu-icon');
 		$('.sub-menu a').removeClass('sub-menu-icon');
 	});
+	*/
+	
 });
 
