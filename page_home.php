@@ -21,9 +21,9 @@
 					<div class="container" >
 						<div class="row" >
 							<div class="col-sm-12 col-md-6" >
-								<div class="text-wrapper" >
+								<div class="text-wrapper " >
 									<?php if($slideCount==0): ?>
-										<p class="all-caps" >Issue of the Day</p>
+										<p class="all-caps" ><?php the_field('issue_of_the_day','options'); ?></p>
 									<?php else: ?>
 										<h6><?php echo get_the_date('d M Y'); ?></h6>
 									<?php endif; ?>
@@ -47,7 +47,7 @@
 	<section class="container-fluid angle services" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-8 service" >
+				<div class="col-sm-12 col-md-8 service " >
 					<div class="row" >
 						
 						<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) ); ?>
@@ -66,7 +66,7 @@
 						<?php endif; ?>
 					</div><!-- .row -->
 				</div><!-- .col -->
-				<div class="col-sm-12 col-md-4" >
+				<div class="col-sm-12 col-md-4  slow" >
 					<div class="pattern right large" >
 						<div class="card blocker" >
 							<div clas="card-body" >
@@ -90,7 +90,7 @@
 		<div class="container" >
 			<div class="row" >
 				<div class="offset-md-2 col-md-8 text-center" >
-					<div class="text-wrapper" >
+					<div class="text-wrapper " >
 						<h2><?php the_sub_field('header'); ?></h2>
 						<p><?php the_sub_field('content'); ?></p>
 						<?php if(have_rows('button')): ?>
@@ -109,14 +109,14 @@
 	<section class="container-fluid angle testimonials" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-sm-12 col-md-5" >
+				<div class="col-sm-12 col-md-5 " >
 					<div class="pattern bottom left" >
 						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
 						<div class="pattern-block" ></div>
 					</div><!-- .pattern -->
 				</div><!-- .col -->
 				
-				<div class="col-sm-12 col-md-7" >
+				<div class="col-sm-12 col-md-7  slow" >
 					<h2><?php the_sub_field('header'); ?></h2>
 					<?php if(have_rows('quotes')): $quote=0; $quoteIndicator=0; ?>
 					<div id="quoteCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
@@ -147,14 +147,14 @@
 	<section class="container-fluid bg news" >
 		<div class="container" >
 			<div class="row" >
-				<div class="col" >
+				<div class="col-sm-12" >
 					<h2><?php the_sub_field('header'); ?></h2>
 					<br>
 					<div class="row" >
 					<?php $query = new WP_Query( array( 'post_type' => 'insights', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
 						<div class="col-sm-12 col-md-4 recent-news" >
 							<div class="row" >
-								<div class="col-xs-12 col-md-4" >
+								<div class="col-sm-6 col-md-4" >
 									<div class="date square" >
 										<p>
 											<span class="day" ><?php echo get_the_date('d'); ?></span><span class="month" ><?php echo get_the_date('M'); ?></span>
@@ -162,7 +162,7 @@
 									</div>
 								</div><!-- .col -->
 								
-								<div class="col-sm-12 col-md-8" >
+								<div class="col-sm-6 col-md-8" >
 									<h4><?php the_title(); ?></h4>
 									<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
 								</div><!-- .col -->

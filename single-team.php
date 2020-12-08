@@ -37,6 +37,7 @@
 			<div class="row">
 				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
 					<div class="card single-team-info">
+						<div class="row" >
 						<div class="col-sm-12 col-md-4">
 							<?php if(have_rows('social_media_accounts')): ?>
 							<ul class="socials" >
@@ -75,9 +76,9 @@
 							<h3><?php the_field('favorite_hobbies','options'); ?></h3>
 							<p><?php the_sub_field('team_member_favorite_hobbies');?></p>
 						</div><!-- .col-sm-12 .col-md-4 -->
-					</div><!-- .card .single-team-info -->
+					</div><!-- .row -->
+				</div><!-- .card .single-team-info -->
 				<?php endwhile; endif; ?>
-			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- .content -->
 </section>

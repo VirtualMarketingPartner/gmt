@@ -35,58 +35,58 @@
 	}
 
 	.navbar-nav {
-		#menu-main-menu {
-			li:hover ul {
+
+		li:hover ul {
+			display: block;
+		}
+
+		.sub-menu {
+			position: absolute;
+			width: 230px;
+			left: 0;
+			top: 60px;
+			border-radius: 0 0 5px 5px;
+			background: rgba(255, 255, 255, 0.85);
+			display: none;
+			overflow: hidden;
+
+			li {
 				display: block;
-			}
-
-			.sub-menu {
-				position: absolute;
-				width: 230px;
-				left: 0;
-				top: 60px;
-				border-radius: 0 0 5px 5px;
-				background: rgba(255, 255, 255, 0.85);
-				display: none;
-				overflow: hidden;
-
-				li {
-					display: block;
-					text-align: left;
-					padding: 6px 10px;
-					height: auto;
+				text-align: left;
+				padding: 6px 10px;
+				height: auto;
 
 
-					&:hover {
-						background: $primary;
-						color: $white;
-					}
-
-					a:hover {
-						color: $white;
-					}
-				}
-			}
-
-			.sub-menu-icon {
-				&::after {
-					content: "\f0dd";
-					font-family: FontAwesome;
-					bottom: 3px;
-					position: relative;
-					margin-left: 6px;
-					transition-timing-function: ease-out;
-					transition: 0.3s;
+				&:hover {
+					background: $primary;
+					color: $white;
 				}
 
-				&:hover::after {
-					content: "\f0d8";
-					bottom: 0;
-					transition-timing-function: ease-in;
-					transition: 0.3s;
+				a:hover {
+					color: $white;
 				}
 			}
 		}
+
+		.sub-menu-icon {
+			&::after {
+				content: "\f0dd";
+				font-family: FontAwesome;
+				bottom: 3px;
+				position: relative;
+				margin-left: 6px;
+				transition-timing-function: ease-out;
+				transition: 0.3s;
+			}
+
+			&:hover::after {
+				content: "\f0d8";
+				bottom: 0;
+				transition-timing-function: ease-in;
+				transition: 0.3s;
+			}
+		}
+		
 	}
 
 	.collapse {
