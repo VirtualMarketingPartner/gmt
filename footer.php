@@ -15,6 +15,9 @@
 						<div class="text-wrapper" >
 							<?php the_sub_field('content'); ?>
 						</div><!-- .text-wrapper -->
+						<div class="form-wrapper" >
+							<?php get_template_part('/partials/email_signup'); ?>
+						</div><!-- .form-wrapper -->
 					</div><!-- .col -->
 				</div><!-- .row -->
 			</div><!-- .col -->
