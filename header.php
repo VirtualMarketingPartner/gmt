@@ -11,13 +11,15 @@
 	<!-- NEWNESS -->
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/bootstrap.min.css" crossorigin="anonymous">
 	
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/fa-all.min.css" rel="stylesheet">
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/fa-all.css" rel="stylesheet">
 	
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/fa-all.min.js" crossorigin="anonymous"></script>
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery.visible.js" ></script>
 	
