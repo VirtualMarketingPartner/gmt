@@ -7,48 +7,67 @@
 
 // Mobile - Default 
 @media all and (max-width:768px) {
-	#header{
-		background:$white;
-		
-		.navbar-nav{
-			ul{
-				position:relative;
-				padding:0; 
-				margin:0;
-				
-				li{width:100%;}
+	#header {
+		background: $white;
+
+		.navbar-nav {
+			ul {
+				position: relative;
+				padding: 0;
+				margin: 0;
+
+				li {
+					width: 100%;
+				}
 			}
-			
-			.sub-menu{
-				display:none !important;
-				position:relative;
-				width:100%;
-				top:0;
-				padding:10px 0;
+
+			.sub-menu {
+				display: none !important;
+				position: relative;
+				width: 100%;
+				top: 0;
+				padding: 10px 0;
 			}
 		}
+
+		#site_id {
+			margin: 0 0 0 15px;
+		}
 	}
-	
+
 	.image-wrapper,
-	.image-wrapper.circle{width:80%; margin:0 auto;}
-	
-	.recent-news .date{margin-bottom:20px;}
-	
-	.pattern{
-		&.right{
-			.pattern-block{right:0;}	
+	.image-wrapper.circle {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.recent-news .date {
+		margin-bottom: 20px;
+	}
+
+	.pattern {
+		&.right {
+			.pattern-block {
+				right: 0;
+			}
 		}
-		&.bottom{
-			.pattern-block{bottom:-5%;}
+
+		&.bottom {
+			.pattern-block {
+				bottom: -5%;
+			}
 		}
 	}
-	
-	#footer{
+
+	#footer {
+
 		.text-left,
 		.text-right,
-		ul.socials{text-align:center !important;}
+		ul.socials {
+			text-align: center !important;
+		}
 	}
-	
+
 }
 
 // Mobile - Tablets
@@ -71,6 +90,18 @@
 	.single-team {
 		.card.single-team-info {
 			flex-direction: row;
+		}
+	}
+
+	#service_tabs {
+		.nav-tabs {
+			padding-left: 30px;
+		}
+	}
+
+	.card-list {
+		.card {
+			margin-bottom: 40px;
 		}
 	}
 }

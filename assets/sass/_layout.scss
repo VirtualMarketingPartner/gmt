@@ -23,6 +23,10 @@
 				background-position: center center;
 				background-size: cover;
 				background-repeat: no-repeat;
+
+				h2 {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -51,6 +55,12 @@
 			padding: 20px 40px;
 		}
 
+		.pattern {
+			h2 {
+				margin-bottom: 0;
+			}
+		}
+
 	}
 
 
@@ -75,6 +85,12 @@
 
 	.news {
 		padding: 150px 0 80px;
+
+		.recent-news {
+			a {
+				padding-top: 0;
+			}
+		}
 	}
 }
 
@@ -99,12 +115,14 @@
 
 .team {
 	p.name {
-		font-size:150%;
-		font-weight:600;
+		font-size: 150%;
+		font-weight: 600;
 		margin-bottom: 0;
 	}
-	
-	a.button{margin:0;}
+
+	a.button {
+		margin: 30px 0 0;
+	}
 }
 
 .partners.bg {
@@ -157,18 +175,20 @@
 		ul {
 			padding: 0 0 0 16px;
 		}
-		
-				
-		ul.socials{
-			list-style:none;
-			padding:0; margin:0;
-			margin-top:40px;
-			
-			li{
-				display:inline-block;
-				margin:5px;
-				a{
-					font-size:125%;
+
+
+		ul.socials {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			margin-top: 40px;
+
+			li {
+				display: inline-block;
+				margin: 5px;
+
+				a {
+					font-size: 125%;
 				}
 			}
 		}
@@ -214,7 +234,7 @@
 /* ===== Blog ===== */
 #post_list {
 
-	.post{
+	.post {
 		margin: 20px 0;
 
 		.date {
@@ -246,63 +266,74 @@
 			margin: 0;
 		}
 	}
-	
+
 }
 
-.post-body{
-	h1{margin-bottom:50px;}
-	
-	 .date{
-		color:$grey; 
-		margin-bottom:30px;}
-	
-	#post_cta .card-body{
-		padding:15px 30px;
+.post-body {
+	h1 {
+		margin-bottom: 50px;
+	}
+
+	.date {
+		color: $grey;
+		margin-bottom: 30px;
+	}
+
+	#post_cta .card-body {
+		padding: 15px 30px;
 	}
 }
 
 /* ===== Services ===== */
 
-#service_tabs{
-	.nav-tabs{
-		margin:50px 0;
-		padding:30px;
-		border:none;
-		border-right:1px solid $grey;
-		
-		li{
-			padding:5px 0;
-			border-bottom:1px solid $grey;
-			
-			a{
-				color:$black;
-				border:none;
-				position:relative;
+#service_tabs {
+	.nav-tabs {
+		margin: 50px 0;
+		padding: 30px 30px 30px 0;
+		border: none;
+		border-right: 1px solid $grey;
+
+		li {
+			padding: 5px 0;
+			border-bottom: 1px solid $grey;
+
+			a {
+				color: $black;
+				border: none;
+				position: relative;
 				@include border-radius(0);
-				
-				&.active{
-					background:$trans;
-					font-weight:bold;
-					
-					&:after{border-right-color:$secondary;}
+
+				&.active {
+					background: $trans;
+					font-weight: bold;
+
+					&:after {
+						border-right-color: $secondary;
+					}
 				}
-				
-				&:after{
-					content:'';
-					width:0; height:55px; 
-					border-right:4px solid $trans;
-					position:absolute;
-					right:-33px; top:0;
+
+				&:after {
+					content: '';
+					width: 0;
+					height: 55px;
+					border-right: 4px solid $trans;
+					position: absolute;
+					right: -33px;
+					top: 0;
 				}
-				
-				&:hover{font-weight:bold;}
+
+				&:hover {
+					font-weight: bold;
+				}
 			}
-			
-			&:last-child{border-bottom-color:$trans;}
+
+			&:last-child {
+				border-bottom-color: $trans;
+			}
 		}
 	}
-	
-	.tab-content{}
+
+	.tab-content {}
 }
 
 
@@ -356,5 +387,13 @@
 				font-size: 16px;
 			}
 		}
+	}
+}
+
+/* ===== Clients ===== */
+
+.card-list {
+	.card {
+		margin-bottom: 0;
 	}
 }
