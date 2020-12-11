@@ -6,7 +6,7 @@
 	<div class="container" >
 		<div class="row" >
 			<div class="col-sm-12 offset-md-1 col-md-10 text-align-center" >
-				<div class="row" >
+				<div class="row animate" >
 					<div class="col-sm-3" >
 						<div class="image-wrapper" style="background-image:url(<?php the_sub_field('icon'); ?>);" ></div>
 					</div><!-- col -->
