@@ -1,4 +1,4 @@
-<div class="sidebar" >
+<div class="sidebar animate slow" >
 	<div class="row" >
 		<div class="col" >
 			<h4><?php the_field('search','options'); ?></h4>

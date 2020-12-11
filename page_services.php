@@ -14,9 +14,9 @@
 		
 		<section class="container-fluid angle grey services" >
 			<div class="container" >
-				<div id="service_tabs" >
+				<div id="service_tabs animate" >
 				<div class="row" >
-					<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
+					<?php $services_query = new WP_Query( array( 'post_type' => 'services', 'order' => 'ASC' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
 					<div class="col-12 col-md-4" >
 						<ul class="nav flex-column nav-tabs" role="tablist">
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
@@ -28,7 +28,7 @@
 					</div><!-- .col -->
 					
 					<div class="col-12 col-md-8" >
-						<div class="tab-content" id="service-content">
+						<div class="tab-content animate slow" id="service-content">
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 							<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
 								<h2><?php the_title(); ?></h2>
@@ -53,7 +53,7 @@
 						<div class="row card-list" >
 							<?php while(have_rows('list')): the_row(); ?>
 							<div class="col-12 col-md-4" >
-								<div class="card bottom" >
+								<div class="card bottom animate" >
 									<div class="card-body text-left" >
 										<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
 										<h3><?php the_sub_field('title'); ?></h3>
@@ -75,12 +75,14 @@
 				<div class="container" >
 					<div class="row vcenter" >
 						<div class="col-12 col-md-6" >
-							<h2><?php the_sub_field('header'); ?></h2>
-							<?php the_sub_field('content'); ?>
+							<div class="text-wrapper animate" >
+								<h2><?php the_sub_field('header'); ?></h2>
+								<?php the_sub_field('content'); ?>
+							</div><!-- .text-wrapper -->
 						</div><!-- .col -->
 						
 						<div class="col-12 offset-md-1 col-md-5" >
-							<div class="pattern left" >
+							<div class="pattern left animate" >
 								<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
 								<div class="pattern-block" ></div>
 							</div><!-- .pattern -->
@@ -89,7 +91,7 @@
 					
 					<div class="row" >
 						<?php if(have_rows('table')): while(have_rows('table')): the_row(); ?>
-							<div class="table-responsive offset-md-1 col-md-10 services-table" >
+							<div class="table-responsive offset-md-1 col-md-10 services-table animate slow" >
 								<table class="table">
 									<thead>
 										<tr>

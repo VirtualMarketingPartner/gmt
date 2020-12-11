@@ -1,25 +1,28 @@
 jQuery(function($){
 	
-	$(window).on("load resize scroll", function() {
-		/* if($('section').visible(true)){
-			$(this).find('.animate').addClass('fadeInUp');
-		}
-		/* animations
+	$(window).on("load scroll", function() {
+		// animations
+		$.fn.isInViewport = function() {
+		var elementTop = $(this).offset().top;
+		var elementBottom = elementTop + $(this).outerHeight();
+		var viewportTop = $(window).scrollTop();
+		var viewportBottom = viewportTop + $(window).height();
+		return elementBottom > viewportTop && elementTop < viewportBottom;
+		};
 		
 		var timeOut = 500;
 		
-		$('section').each(function(){
-			if($('section').visible(true)) {
-				setTimeout(function() { 
-					$('.animate').addClass('fadeInUp');
-				}, timeOut);
-				
-				timeOut +=500;
-				
-				
+		$(window).on('resize scroll', function() {
+			$('section').each(function() {
+			if ($(this).isInViewport()) {
+				$(this).addClass('active');
+				$(this).children().find('.animate').addClass('fadeInUp');
+			} else {
+				$(this).removeClass('active');
 			}
+			}, timeOut);
+			timeOut += 500;
 		});
-		*/
 		
 		
 		

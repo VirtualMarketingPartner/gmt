@@ -14,11 +14,13 @@
 		<div class="container" >
 			<div class="row" >
 				<div class="col-12 col-md-5" >
-					<h2><?php the_sub_field('title'); ?></h2>
-					<?php the_sub_field('content'); ?>
+					<div class="text-wrapper animate" >
+						<h2><?php the_sub_field('title'); ?></h2>
+						<?php the_sub_field('content'); ?>
+					</div><!-- .text-wrapper -->
 				</div><!-- .col -->
 				<div class="col-12 offset-md-1 col-md-6" >
-					<div class="pattern left" >
+					<div class="pattern left animate slow" >
 						<div class="card blocker" >
 							<?php the_sub_field('form'); ?>
 						</div><!-- .card -->
@@ -53,9 +55,11 @@
 		<div class="container" >
 			<div class="row" >
 				<div class="col" >
-					<h2><?php the_sub_field('header'); ?></h2>
-					<?php if(have_rows('gmt_offices')): ?>
-					<div class="card" >
+					<div class="text-wrapper animate" >
+						<h2><?php the_sub_field('header'); ?></h2>
+						<?php if(have_rows('gmt_offices')): ?>
+					</div><!-- .text-wrapper -->
+					<div class="card animate slow" >
 						<div class="row" >
 						<?php while(have_rows('gmt_offices')): the_row(); ?>
 							<div class="col" >

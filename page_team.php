@@ -22,7 +22,7 @@
 			<div class="row circle-list" >
 				<?php $teamQuery = new WP_Query( array( 'post_type' => 'team' ) ); while ( $teamQuery->have_posts() ) : $teamQuery->the_post(); ?> 
 					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
-					<div class="col-6 list-item" >
+					<div class="col-6 list-item animate slow" >
 						<div class="row vcenter" >
 							<div class="col-12 col-md-4" >
 								<a href="<?php the_permalink(); ?>" >
