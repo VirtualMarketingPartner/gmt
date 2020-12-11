@@ -24,10 +24,6 @@ jQuery(function($){
 			timeOut += 500;
 		});
 		
-		
-		
-		
-		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){
 			var circleW = $(this).width();
@@ -61,12 +57,30 @@ jQuery(function($){
 		
 	});
 
-	/*  Adds class for icon in each li that contacts sub navigations
+	// Adds class for icon in each li that contacts sub navigations
 	$(document).ready(function(){
 		$('.menu-item-has-children a').addClass('sub-menu-icon');
 		$('.sub-menu a').removeClass('sub-menu-icon');
 	});
-	*/
 	
+	
+	// slide indicator for service tabs
+	var currentNav = $('.nav-tabs li a.active').parent('li');
+	var startNavPos = $(currentNav).position(); 
+	var startNavH = $(currentNav).height();
+	$('.nav-tabs .indicator').css({
+		top: +startNavPos.top,
+		height: startNavH
+	});
+	$('.nav-tabs li').hover(function () {
+		var currentNavPos = $(this).position();
+		var currentNavH = $(this).height();
+		$('.nav-tabs .indicator').css({
+			top: +currentNavPos.top, 
+			height: currentNavH
+		});
+	});
+ 
+
 });
 

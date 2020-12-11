@@ -14,11 +14,12 @@
 		
 		<section class="container-fluid angle grey services" >
 			<div class="container" >
-				<div id="service_tabs animate" >
+				<div id="service_tabs" >
 				<div class="row" >
 					<?php $services_query = new WP_Query( array( 'post_type' => 'services', 'order' => 'ASC' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
 					<div class="col-12 col-md-4" >
 						<ul class="nav flex-column nav-tabs" role="tablist">
+							<div class="indicator" ></div>
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 							<li class="nav-item">
 								<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
@@ -28,7 +29,7 @@
 					</div><!-- .col -->
 					
 					<div class="col-12 col-md-8" >
-						<div class="tab-content animate slow" id="service-content">
+						<div class="tab-content" id="service-content">
 							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
 							<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
 								<h2><?php the_title(); ?></h2>

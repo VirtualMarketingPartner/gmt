@@ -562,66 +562,69 @@ hr {
   padding: 15px 30px; }
 
 /* ===== Services ===== */
-#service_tabs .nav-tabs {
+#services #service_tabs .nav-tabs {
   margin: 50px 0;
   padding: 30px 30px 30px 0;
   border: none;
-  border-right: 1px solid #8c8c8c; }
-  #service_tabs .nav-tabs li {
+  border-right: 1px solid #8c8c8c;
+  position: relative; }
+  #services #service_tabs .nav-tabs .indicator {
+    display: block;
+    background: #f47524;
+    width: 5px;
+    min-height: 10px;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    position: absolute;
+    top: 0;
+    right: -3px; }
+  #services #service_tabs .nav-tabs li {
     padding: 5px 0;
     border-bottom: 1px solid #8c8c8c; }
-    #service_tabs .nav-tabs li a {
+    #services #service_tabs .nav-tabs li a {
       color: #111111;
       border: none;
       position: relative;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       border-radius: 0; }
-      #service_tabs .nav-tabs li a.active {
+      #services #service_tabs .nav-tabs li a.active {
         background: transparent;
         font-weight: bold; }
-        #service_tabs .nav-tabs li a.active:after {
+        #services #service_tabs .nav-tabs li a.active:after {
           border-right-color: #f47524; }
-      #service_tabs .nav-tabs li a:after {
-        content: '';
-        width: 0;
-        height: 55px;
-        border-right: 4px solid transparent;
-        position: absolute;
-        right: -33px;
-        top: 0; }
-      #service_tabs .nav-tabs li a:hover {
+      #services #service_tabs .nav-tabs li a:hover {
         font-weight: bold; }
-    #service_tabs .nav-tabs li:last-child {
+    #services #service_tabs .nav-tabs li:last-child {
       border-bottom-color: transparent; }
-
-.fees .services-table {
+#services .fees .services-table {
   padding-top: 60px; }
-  .fees .services-table .table th {
+  #services .fees .services-table .table th {
     border: none; }
-    .fees .services-table .table th:nth-child(n+2):nth-child(-n+4) {
+    #services .fees .services-table .table th:nth-child(n+2):nth-child(-n+4) {
       background: #232323;
       color: #fff;
       text-align: center;
       border: 2px solid;
       padding: 5px;
       min-width: 130px; }
-  .fees .services-table .table td {
+  #services .fees .services-table .table td {
     border-top: none; }
-    .fees .services-table .table td:nth-child(n+2):nth-child(-n+4) {
+    #services .fees .services-table .table td:nth-child(n+2):nth-child(-n+4) {
       text-align: center;
       border-right: 1px solid #e1e1e1;
       padding: 15px 0;
       min-width: 170px; }
-      .fees .services-table .table td:nth-child(n+2):nth-child(-n+4):last-child {
+      #services .fees .services-table .table td:nth-child(n+2):nth-child(-n+4):last-child {
         border-right: none; }
-    .fees .services-table .table td:first-of-type {
+    #services .fees .services-table .table td:first-of-type {
       min-width: 250px; }
-  .fees .services-table .table tr {
+  #services .fees .services-table .table tr {
     border-bottom: 1px solid #e1e1e1; }
-    .fees .services-table .table tr:last-child {
+    #services .fees .services-table .table tr:last-child {
       border-bottom: none; }
-  .fees .services-table .table i {
+  #services .fees .services-table .table i {
     color: #4CA963;
     font-size: 16px; }
 
@@ -677,10 +680,10 @@ hr {
         background: #3a50a2;
         color: #fff; }
       #header .navbar-nav .sub-menu li a:hover {
-        color: #fff; }
+        color: #fff !important; }
   #header .navbar-nav .sub-menu-icon::after {
     content: "\f0dd";
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Pro";
     bottom: 3px;
     position: relative;
     margin-left: 6px;
@@ -693,6 +696,17 @@ hr {
     transition: 0.3s; }
   #header .collapse {
     width: 100%; }
+  #header .indicator {
+    display: block;
+    background: #f47524;
+    height: 5px;
+    min-width: 0;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
   #header ul {
     width: auto;
     list-style: none;
@@ -703,6 +717,8 @@ hr {
     #header ul li {
       display: inline-block;
       text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
       padding: 0 10px;
       position: relative;
       height: 45px; }

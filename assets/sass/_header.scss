@@ -63,7 +63,7 @@
 				}
 
 				a:hover {
-					color: $white;
+					color: $white !important;
 				}
 			}
 		}
@@ -71,7 +71,7 @@
 		.sub-menu-icon {
 			&::after {
 				content: "\f0dd";
-				font-family: FontAwesome;
+				font-family: "Font Awesome 5 Pro";
 				bottom: 3px;
 				position: relative;
 				margin-left: 6px;
@@ -92,6 +92,16 @@
 	.collapse {
 		width: 100%;
 	}
+	
+	.indicator{
+		display:block;
+		background:$secondary;
+		height:5px; min-width:0;
+		@include defaultTransition;
+		position:absolute;
+		bottom:0; left:0;
+	}
+
 
 	ul {
 		width: auto;
@@ -104,6 +114,8 @@
 		li {
 			display: inline-block;
 			text-align: center;
+			text-transform: uppercase;
+			font-weight:600;
 			padding: 0 10px;
 			position: relative;
 			height: 45px;

@@ -8,12 +8,9 @@
 	<meta name="title" content="<?php the_field('default_seo_title', 'options'); ?>" >
 	<meta name="description" content="<?php the_field('default_seo_description', 'options'); ?>" >
 	
-	<!-- NEWNESS -->
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/bootstrap.min.css" crossorigin="anonymous">
 	
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/fa-all.css" rel="stylesheet">
-	
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 
@@ -24,7 +21,8 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery.visible.js" ></script>
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/main.js" ></script>
-	<!-- END NEWNESS -->
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css?ver=12102020" rel="stylesheet">
+	
 	
 	
 	<!-- Google Tag Manager -->
