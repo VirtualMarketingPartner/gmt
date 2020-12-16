@@ -9,9 +9,11 @@
 			<div class="row" >
 				<div class="col-12 col-md-7 post-body" >
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                  	<p class="date all-caps" ><?php the_date(); ?></p>
-					<h1><?php the_title(); ?></h1>
-					<?php the_content(); ?>
+                  	<div class="text-wrapper animate" >
+						<p class="date all-caps" ><?php the_date(); ?></p>
+						<h1><?php the_title(); ?></h1>
+						<?php the_content(); ?>
+					</div><!-- .text-wrapper -->
 					<?php endwhile; endif; ?>
 					
 					<?php if(get_field('post_cta','options')): ?>

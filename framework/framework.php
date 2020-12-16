@@ -580,7 +580,7 @@ acf_add_local_field_group(array(
 			'key' => 'field_5fa89ad691e48',
 			'label' => 'Footer Impressum',
 			'name' => 'impressum',
-			'type' => 'textarea',
+			'type' => 'wysiwyg',
 			'instructions' => 'A brief impressum statement about the Global Mobility Tax company. This section is not a call to action, but a simple statement about the company. This section should be between between 150 and 200 characters.',
 			'required' => 0,
 			'conditional_logic' => 0,

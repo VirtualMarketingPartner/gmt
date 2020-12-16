@@ -371,7 +371,7 @@ hr {
       .recent-news .date span.day {
         font-size: 175%; }
   .recent-news a {
-    display: block; }
+    display: inline-block; }
 
 .circle-list .list-item {
   display: block;
@@ -379,32 +379,34 @@ hr {
   margin: 20px auto;
   color: #111111; }
 
-.sidebar .row {
-  margin-bottom: 30px; }
-.sidebar .categories {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  .sidebar .categories li {
-    border-bottom: 1px solid #f5f5f5;
-    padding: 10px 0; }
-    .sidebar .categories li i {
-      color: #6c89c6;
-      margin-right: 10px; }
-    .sidebar .categories li a {
-      display: inline-block;
-      width: 88%;
-      color: #111111; }
-      .sidebar .categories li a span {
+.sidebar {
+  font-size: 80%; }
+  .sidebar .row {
+    margin-bottom: 30px; }
+  .sidebar .categories {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .sidebar .categories li {
+      border-bottom: 1px solid #f5f5f5;
+      padding: 10px 0; }
+      .sidebar .categories li i {
+        color: #6c89c6;
+        margin-right: 10px; }
+      .sidebar .categories li a {
         display: inline-block;
-        width: 70%; }
-        .sidebar .categories li a span.text-right {
-          width: 28%; }
-.sidebar .recent-news {
-  border-color: transparent !important;
-  padding-left: 0; }
-  .sidebar .recent-news a.button {
-    margin: 0; }
+        width: 88%;
+        color: #111111; }
+        .sidebar .categories li a span {
+          display: inline-block;
+          width: 70%; }
+          .sidebar .categories li a span.text-right {
+            width: 28%; }
+  .sidebar .recent-news {
+    border-color: transparent !important;
+    padding-left: 0; }
+    .sidebar .recent-news a.button {
+      margin: 0; }
 
 /* ==========================================
 	Layout
@@ -437,6 +439,8 @@ hr {
     background-color: #f5f5f5;
     background-size: 70%;
     background-position: center center; }
+    #home .services .service .icon:hover {
+      background-size: 80%; }
 #home .services .card {
   padding: 20px 40px; }
 #home .services .pattern h2 {
@@ -470,7 +474,7 @@ hr {
   font-weight: 600;
   margin-bottom: 0; }
 .team a.button {
-  margin: 30px 0 0; }
+  margin: -15px 0 0; }
 
 .partners.bg {
   background-position: right center;
@@ -497,8 +501,9 @@ hr {
   margin-top: 70px; }
   .single-team .single-team-info h2 {
     margin: 0; }
-  .single-team .single-team-info .all-caps {
-    color: #8c8c8c; }
+  .single-team .single-team-info h5 {
+    font-size: 80%;
+    font-weight: 800; }
   .single-team .single-team-info ul {
     padding: 0 0 0 16px; }
   .single-team .single-team-info ul.socials {
@@ -978,6 +983,9 @@ input.gform_button.button {
     right: 0; }
   .pattern.bottom .pattern-block {
     bottom: -5%; }
+
+  .team {
+    text-align: center; }
 
   #footer .text-left,
   #footer .text-right,

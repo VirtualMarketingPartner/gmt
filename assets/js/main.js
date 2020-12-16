@@ -1,6 +1,6 @@
 jQuery(function($){
 	
-	$(window).on("load scroll", function() {
+	$(window).on("load resize scroll", function() {
 		// animations
 		$.fn.isInViewport = function() {
 		var elementTop = $(this).offset().top;
@@ -11,18 +11,16 @@ jQuery(function($){
 		};
 		
 		var timeOut = 500;
-		
-		$(window).on('resize scroll', function() {
-			$('section').each(function() {
-			if ($(this).isInViewport()) {
-				$(this).addClass('active');
-				$(this).children().find('.animate').addClass('fadeInUp');
-			} else {
-				$(this).removeClass('active');
-			}
-			}, timeOut);
-			timeOut += 500;
-		});
+
+		$('section').each(function() {
+		if ($(this).isInViewport()) {
+			$(this).addClass('active');
+			$(this).children().find('.animate').addClass('fadeInUp');
+		} else {
+			$(this).removeClass('active');
+		}
+		}, timeOut);
+		timeOut += 500;
 		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){

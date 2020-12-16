@@ -48,6 +48,10 @@
 				background-color: $off-white;
 				background-size: 70%;
 				background-position: center center;
+				
+				&:hover{
+					background-size:80%;
+				}
 			}
 		}
 
@@ -121,7 +125,7 @@
 	}
 
 	a.button {
-		margin: 30px 0 0;
+		margin: -15px 0 0;
 	}
 }
 
@@ -164,13 +168,13 @@
 		padding: 40px 30px;
 		margin-top: 70px;
 
-		h2 {
+		h2{
 			margin: 0;
 		}
-
-		.all-caps {
-			color: $grey;
-		}
+		
+		h5{
+			font-size:80%; 
+			font-weight:800;}
 
 		ul {
 			padding: 0 0 0 16px;

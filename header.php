@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +20,7 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery.visible.js" ></script>
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/main.js" ></script>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css?ver=12102020" rel="stylesheet">
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
 	
 	
 	

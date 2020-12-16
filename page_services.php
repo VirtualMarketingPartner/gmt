@@ -10,7 +10,30 @@
 		
 		<?php get_template_part('/partials/hero'); ?>
 		
-		<?php get_template_part('/partials/intro'); ?>
+		<?php if(have_rows('intro')): while(have_rows('intro')): the_row(); ?>
+		<section class="container-fluid angle intro" >
+			<div class="container" >
+				<div class="row vcenter" >
+					<div class="col-12 col-md-6" >
+						<div class="text-wrapper animate" >
+							<h2><?php the_sub_field('title'); ?></h2>
+							<?php the_sub_field('content'); ?>
+						</div><!-- .text-wrapper -->
+					</div><!-- .col -->
+					
+					<div class="col-12 col-md-6" >
+						<div class="animate" >
+							<video autoplay="true" muted="true" loop="true" style="width:100%; height:auto;">
+								<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video.mp4" type="video/mp4">
+								<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video.webm" type="video/webm">
+							</video>
+						</div><!-- .animate -->
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</section ><!-- .intro -->
+		<?php endwhile; endif; ?>
+
 		
 		<section class="container-fluid angle grey services" >
 			<div class="container" >

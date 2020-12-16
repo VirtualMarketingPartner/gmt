@@ -2,7 +2,7 @@
 		<div class="container-fluid" >
 			<div class="container" >
 				<div class="row" >
-					<nav class="navbar navbar-expand-lg" >
+					<nav class="navbar navbar-expand-md" >
 						<a class="navbar-brand" href="<?php bloginfo('url'); ?>" id="site_id" style="background-image:url(<?php the_field('logo', 'options'); ?>);" ></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header_nav" aria-controls="#header_nav" aria-expanded="false" aria-lable="Toggle Navigation" >
 							<i class="fas fa-bars"></i>

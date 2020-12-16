@@ -306,7 +306,7 @@ hr{
 		
 	}
 	
-	a{display:block;}
+	a{display:inline-block;}
 }
 
 .circle-list{
@@ -319,6 +319,8 @@ hr{
 }
 
 .sidebar{
+	font-size:80%;
+	
 	.row{margin-bottom:30px;}
 	
 	.categories{
@@ -330,6 +332,7 @@ hr{
 			padding:10px 0;
 
 			i{color:$accent; margin-right:10px;}
+			
 			a{
 				display:inline-block;
 				width:88%;

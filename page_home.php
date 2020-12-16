@@ -50,14 +50,16 @@
 				<div class="col-12 col-md-8 service" >
 					<div class="row" >
 						
-						<?php $services_query = new WP_Query( array( 'post_type' => 'services' ) ); ?>
+						<?php $services_query = new WP_Query( array( 'post_type' => 'services', 'order' => 'ASC' ) ); ?>
 
 						<?php if ( $services_query->have_posts() ) : ?>
 							<?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
 							<div class="col-6 col-md-4" >
 								<div class="row" >
 									<div class="col-12 offset-md-2 col-md-8 animate" >
-										<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
+										<a href="<?php the_permalink(); ?>" >
+											<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
+										</a>
 										<h3><?php the_title(); ?></h3>
 									</div><!-- .col -->
 								</div><!-- .row -->

@@ -38,7 +38,7 @@
 				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
 					<div class="card single-team-info">
 						<div class="row" >
-						<div class="col-sm-12 col-md-4">
+						<div class="col-12 col-md-4 col-lg-3">
 							<?php if(have_rows('social_media_accounts')): ?>
 							<ul class="socials" >
 								<?php while(have_rows('social_media_accounts')): the_row(); ?>
@@ -66,16 +66,20 @@
 							$first_name = $name_array[0];
 							?> 
 							<h2><?php echo $first_name; ?></h2>
-						</div><!-- .col-sm-12 .col-md-4 -->
-						<div class="col-sm-12 col-md-4">
-							<h3><?php the_field('favorite_quote','options'); ?></h3>
-							<p><?php the_sub_field('team_member_favorite_quote');?></p>
-							<p class="all-caps"><?php the_sub_field('author');?></p>
-						</div><!-- .col-sm-12 .col-md-4 -->
-						<div class="col-sm-12 col-md-4">
-							<h3><?php the_field('favorite_hobbies','options'); ?></h3>
-							<p><?php the_sub_field('team_member_favorite_hobbies');?></p>
-						</div><!-- .col-sm-12 .col-md-4 -->
+						</div><!-- .col-12 .col-md-4 -->
+							
+						<div class="col-12 col-md-8 col-lg-9" >
+							<div class="row" >
+								<?php if(have_rows('fact')): while(have_rows('fact')): the_row(); ?>
+								<div class="col-6 col-md-4" >
+									<div class="text-wrapper" >
+										<h5><?php the_sub_field('header'); ?></h4>
+										<?php the_sub_field('content'); ?>
+									</div><!-- .text-wrapper -->
+								</div><!-- .col -->
+								<?php endwhile; endif; ?>
+							</div><!-- .row -->
+						</div><!-- .col -->
 					</div><!-- .row -->
 				</div><!-- .card .single-team-info -->
 				<?php endwhile; endif; ?>
