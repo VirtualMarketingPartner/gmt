@@ -36,6 +36,7 @@
 			</div><!-- .row -->
 			<div class="row">
 				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
+					<?php if(have_rows('fact')): ?>
 					<div class="card single-team-info">
 						<div class="row" >
 						<div class="col-12 col-md-4 col-lg-3">
@@ -82,6 +83,7 @@
 						</div><!-- .col -->
 					</div><!-- .row -->
 				</div><!-- .card .single-team-info -->
+				<?php endif; ?>
 				<?php endwhile; endif; ?>
 		</div><!-- .container -->
 	</div><!-- .content -->
