@@ -19,8 +19,13 @@
 					<h2><?php the_sub_field('header'); ?></h2>
 				</div><!-- .col -->
 			</div><!-- .row -->
+			<?php if(have_rows('group')): while(have_rows('group')): the_row(); ?>
+			<div class="row" >
+				<h2><?php the_sub_field('group_name'); ?></h2>
+			</div><!-- .row -->
 			<div class="row circle-list" >
-				<?php $teamQuery = new WP_Query( array( 'post_type' => 'team' ) ); while ( $teamQuery->have_posts() ) : $teamQuery->the_post(); ?> 
+				<?php $team_groups = get_sub_field('group_members'); if( $team_groups ):?>
+				<?php foreach( $team_groups as $post ): setup_postdata($post); ?>
 					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
 					<div class="col-6 list-item animate slow" >
 						<div class="row vcenter" >
@@ -43,9 +48,11 @@
 						</div><!-- .row -->
 					</div><!-- .col -->
 					<?php endwhile; endif; ?>
-
-				<?php endwhile; wp_reset_postdata(); ?>
+				<?php endforeach; ?>
+				<hr>
+				<?php wp_reset_postdata(); endif; ?>
 			</div><!-- .row -->
+			<?php endwhile; endif; ?>
 		</div><!-- .container -->
 	</section ><!-- .team -->
 	<?php endwhile; endif; ?>
