@@ -629,7 +629,7 @@ hr {
     border-bottom: 1px solid #e1e1e1; }
     #services .fees .services-table .table tr:last-child {
       border-bottom: none; }
-  #services .fees .services-table .table i {
+  #services .fees .services-table .table .fa-check-circle {
     color: #4CA963;
     font-size: 16px; }
 
