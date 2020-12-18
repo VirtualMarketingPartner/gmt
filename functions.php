@@ -48,10 +48,10 @@ if( function_exists('acf_add_options_page') ) {
 
 add_action( 'admin_menu', 'post_menu' );  
 function post_menu(){    
-	$page_title = 'Posts';   
-	$menu_title = 'Posts';   
+	$page_title = 'News & Events';   
+	$menu_title = 'News & Events';   
 	$capability = 'manage_options';   
-	$menu_slug  = 'posts';   
+	$menu_slug  = 'news-events';   
 	$function   = 'post';   
 	$icon_url   = 'dashicons-edit-large';   
 	$position   = 20;    
@@ -66,20 +66,22 @@ function post_menu(){
 		$position ); 
 }
 
-
 add_action('admin_menu', 'tax_menu');
 function tax_menu() {
-	add_submenu_page( 'posts', 'Edit Categories', 'Edit Categories',
+	add_submenu_page( 'news-events', 'Edit Categories', 'Edit Categories',
     'manage_options', 'edit-tags.php?taxonomy=category');
 }
 
+// hide default Posts menu
+if( current_user_can('editor') ) { 
+    add_action( 'admin_init', 'remove_menu_pages' );
 
-// remove default Posts menu
-add_action( 'admin_init', 'remove_menu_pages' );
-
-function remove_menu_pages() {
-    remove_menu_page( 'edit.php' );
-}
+	function remove_menu_pages() {
+		remove_menu_page( 'edit.php' );
+		remove_menu_page( 'cptui.php' );
+		remove_menu_page( 'admin.php?page=members-settings' );
+	}
+} 
 
 
 // add CPT to searches

@@ -20,7 +20,7 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery.visible.js" ></script>
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/main.js?ver=12162020" ></script>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css?ver=12172020" rel="stylesheet">
 	
 	
 	

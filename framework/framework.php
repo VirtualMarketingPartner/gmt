@@ -1,6 +1,22 @@
 <?php
 
 /* =========================================
+	Framework : Custom Login & Footer
+========================================= */
+
+// register custom styles for Login Page
+function custom_login(){
+  echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/assets/css/custom-login.css" />';
+}
+add_action('login_head', 'custom_login');
+
+// Custom Backend Footer
+add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');
+function wp_bootstrap_custom_admin_footer() {
+	echo '<span id="footer-thankyou">Website created by <a href="https://taylordesens.com/?utm_campaign=wp_theme_dashboard_theme_gmt" target="_blank" >Taylor Desens</a>';
+}
+
+/* =========================================
 	Framework : Shortcodes
 ========================================= */
 

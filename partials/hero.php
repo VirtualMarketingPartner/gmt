@@ -1,4 +1,6 @@
 <?php if(have_rows('hero')): while(have_rows('hero')): the_row(); ?>
+<?php if(get_sub_field('hero_image')): ?>
+
 <section class="container-fluid bg hero" style="background-image:url(<?php the_sub_field('hero_image'); ?>); background-position:<?php the_sub_field('hero_position'); ?>" >
 	<div class="container" >
 		<div class="row" >
@@ -15,7 +17,13 @@
 	</div><!-- .container -->
 	<div class="overlay" ></div>
 </section><!-- .hero -->
-<?php endwhile; ?>
+
 <?php else: ?>
+
 <div class="hero-spacer" ></div>
+
 <?php endif; ?>
+
+
+
+<?php endwhile; endif; ?>

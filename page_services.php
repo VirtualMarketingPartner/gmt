@@ -152,8 +152,16 @@
 										<?php endwhile; endif; ?>
 									</tbody>
 								</table><!-- .table -->
-									<p><?php the_sub_field('title'); ?></p>
-									<?php the_sub_field('content'); ?>
+								<div class="row" >
+									<div class="col-12 col-md-9" >
+										<?php the_sub_field('content'); ?>
+									</div><!-- .col -->
+									
+									<div class="col-12 col-md-3" >
+										<a href="<?php the_sub_field('button_link'); ?>" class="button" ><?php the_sub_field('button_label'); ?></a>
+									</div>
+								</div><!-- .row -->
+								
 							</div><!-- .offset-md-1 .col-md-10 .services-table -->
 						<?php endwhile; endif; ?>
 					</div><!-- .row -->

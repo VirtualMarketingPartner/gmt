@@ -55,7 +55,7 @@
 					<div class="row" >
 						<div class="col offset-md-2" >
 							<p><?php the_field('copyright','options'); ?><br>
-								Website by <a href="https://taylordesens.com/" >Taylor Desens</a></p>
+								Website by <a href="https://taylordesens.com/" target="_blank" >Taylor Desens</a></p>
 						</div><!-- .col -->
 					</div><!-- .row -->
 				</div><!-- .col -->
