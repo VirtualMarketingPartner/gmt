@@ -103,6 +103,7 @@ body {
       -webkit-backface-visibility: hidden; }
     .container-fluid.angle:after {
       bottom: 0;
+      height: 20%;
       transform: skewY(-4deg);
       transform-origin: 100%; }
     .container-fluid.angle:before {
@@ -127,7 +128,7 @@ body {
   float: none; }
 
 section {
-  padding: 40px 0; }
+  padding: 40px 0 100px; }
 
 #body {
   position: relative;

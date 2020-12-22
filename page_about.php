@@ -48,7 +48,24 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 			<div class="row circle-list animate" >
-				<?php $teamQuery = new WP_Query( array( 'post_type' => 'team', 'orderby' => 'rand', 'posts_per_page'=>8, ) ); while ( $teamQuery->have_posts() ) : $teamQuery->the_post(); ?> 
+				<?php 
+				$args = array(
+					'post_type' => 'team',
+					'tax_query' => array(
+						'relation' => 'AND',
+						array(
+							'taxonomy' => 'group',
+							'field'    => 'slug',
+							'terms'    => array( 'leadership' ),
+						),
+					),
+				);
+				$leadershipQuery = new WP_Query( $args );
+				while( $leadershipQuery->have_posts()): $leadershipQuery -> the_post(); 
+				?> 
+				
+				
+				
 				<div class="col-6 col-md-3 text-center" >
 					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
 					<a href="<?php the_permalink(); ?>" class="list-item" >
