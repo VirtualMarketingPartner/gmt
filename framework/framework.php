@@ -67,6 +67,16 @@ add_filter('acf/format_value/type=textarea', 'do_shortcode');
 add_filter('acf/format_value/type=text', 'do_shortcode');
 
 
+function social_Shortcode(){
+  ob_start();
+    get_template_part( 'partials/socials' );
+    return ob_get_clean();
+}
+add_shortcode('socials', 'social_Shortcode');
+add_filter('acf/format_value/type=textarea', 'do_shortcode');
+add_filter('acf/format_value/type=text', 'do_shortcode');
+
+
 /* =========================================
 	Framework : Custom Fields
 ========================================= */

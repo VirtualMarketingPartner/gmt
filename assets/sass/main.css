@@ -405,6 +405,16 @@ hr {
     .sidebar .recent-news a.button {
       margin: 0; }
 
+ul.socials {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+  ul.socials li {
+    font-size: 120%;
+    display: inline-block;
+    margin-right: 10px; }
+
 /* ==========================================
 	Layout
 ========================================== */
@@ -813,14 +823,6 @@ hr {
     min-height: 50px;
     margin-bottom: 15px;
     background-size: contain; }
-  #footer ul.socials {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: left; }
-    #footer ul.socials li {
-      display: inline-block;
-      margin-right: 10px; }
   #footer ul.menu {
     list-style: none;
     margin: 20px 0;
