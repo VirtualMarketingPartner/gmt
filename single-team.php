@@ -39,7 +39,6 @@
 			</div><!-- .row -->
 			<div class="row">
 				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
-					<?php if(have_rows('fact')): ?>
 					<div class="card single-team-info">
 						<div class="row" >
 						<div class="col-12 col-md-4 col-lg-3">
@@ -73,35 +72,22 @@
 						</div><!-- .col-12 .col-md-4 -->
 							
 						<div class="col-12 col-md-8 col-lg-9" >
-							<div class="row" >
-								
+							<div class="row" >	
 								<?php 
-								$rows = get_field('fact'); //get all rows
-								shuffle ($rows); //randomize rows
-								if($rows) {
-									foreach($rows as $row) { //print rows
-										echo $row['header'];
-										echo ' ';
-										echo $row['content'];
-										echo '<br>';
-									} 
-								}
-								?>
-								
-								
-								<?php if(have_rows('fact')): while(have_rows('fact')): the_row(); ?>
-								<div class="col-6 col-md-4" >
-									<div class="text-wrapper" >
-										<h5><?php the_sub_field('header'); ?></h4>
-										<?php the_sub_field('content'); ?>
-									</div><!-- .text-wrapper -->
+								$rows = get_sub_field('fact');
+								$temp_arr = $rows;
+								shuffle ($temp_arr); 
+								$random_rows = array_slice( $temp_arr, 0, 2 );
+								foreach($random_rows as $row): ?>
+								<div class="col-6" >
+									<h3 class="all-caps"><?php echo $row['header']; ?></h3>
+									<p><?php echo $row['content']; ?></p>
 								</div><!-- .col -->
-								<?php endwhile; endif; ?>
+								<?php endforeach; ?>
 							</div><!-- .row -->
 						</div><!-- .col -->
 					</div><!-- .row -->
 				</div><!-- .card .single-team-info -->
-				<?php endif; ?>
 				<?php endwhile; endif; ?>
 		</div><!-- .container -->
 	</div><!-- .content -->
