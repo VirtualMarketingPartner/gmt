@@ -10,8 +10,10 @@ jQuery(function($){
 		return elementBottom > viewportTop && elementTop < viewportBottom;
 		};
 		
+		
+		/*
 		var timeOut = 500;
-
+ 
 		$('section').each(function() {
 		if ($(this).isInViewport()) {
 			$(this).addClass('active');
@@ -21,6 +23,7 @@ jQuery(function($){
 		}
 		}, timeOut);
 		timeOut += 500;
+		*/
 		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){
@@ -31,6 +34,16 @@ jQuery(function($){
 	});
 
 	$(document).ready(function(){
+		
+		// set slideshow height to be consistent based on tallest slide
+		var slideHeight = 0;
+		$('.carousel-item').each(function(){
+			if($(this).height() > slideHeight){
+				slideHeight = $(this).height();
+			}
+		});
+		$('.carousel-item').height(slideHeight);
+		
 		$('.carousel').carousel({
 			interval: 2000
 		})

@@ -7,6 +7,7 @@
 	<section class="container-fluid angle" >
 		<div class="container" >
 			<div class="text-wrapper animate slow" >
+				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
 			</div><!-- .text-wrapper -->
 		</div><!-- .container -->

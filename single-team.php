@@ -3,6 +3,7 @@
 ?>
 
 <?php get_header(); ?>
+
 <section>
 	<div class="content" >
 		<div class="container single-team">
@@ -23,12 +24,14 @@
 					<?php endwhile; endif;?>
 					<?php the_content(); ?>
 					<div class="single-team-contact">
-						<?php if(get_field('email')): ?>
-						<i class="fal fa-envelope"></i><a href="mailto:<?php the_sub_field('email');?>"><?php the_sub_field('email');?></a>
-						<?php endif; ?>
+						<?php if(get_sub_field('email')): ?>
+						<i class="far fa-envelope"></i>
+						<a href="mailto:<?php the_sub_field('email');?>"><?php the_sub_field('email');?></a>
 						<br>
-						<?php if(get_field('phone')): ?>
-						<i class="fal fa-phone"></i><a href="tel:<?php the_sub_field('phone');?>"><?php the_sub_field('phone');?></a>
+						<?php endif; ?>
+						<?php if(get_sub_field('phone')): ?>
+						<i class="far fa-phone"></i>
+						<a href="tel:<?php the_sub_field('phone');?>"><?php the_sub_field('phone');?></a>
 						<?php endif; ?>
 					</div><!-- .single-team-contact -->
 				</div><!-- .col-sm-12 .col-md-8 .single-team -->
@@ -71,6 +74,21 @@
 							
 						<div class="col-12 col-md-8 col-lg-9" >
 							<div class="row" >
+								
+								<?php 
+								$rows = get_field('fact'); //get all rows
+								shuffle ($rows); //randomize rows
+								if($rows) {
+									foreach($rows as $row) { //print rows
+										echo $row['header'];
+										echo ' ';
+										echo $row['content'];
+										echo '<br>';
+									} 
+								}
+								?>
+								
+								
 								<?php if(have_rows('fact')): while(have_rows('fact')): the_row(); ?>
 								<div class="col-6 col-md-4" >
 									<div class="text-wrapper" >

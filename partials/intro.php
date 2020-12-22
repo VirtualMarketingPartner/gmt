@@ -10,7 +10,7 @@
 				</div><!-- .col -->
 				
 				<?php if(get_sub_field('image')): ?>
-				<div class="col-12 offset-md-1 col-md-5" >
+				<div class="col-12 offset-md-1 col-md-5" style="margin-bottom:100px;" >
 					<div class="pattern left animate" >
 						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
 						<div class="pattern-block" ></div>

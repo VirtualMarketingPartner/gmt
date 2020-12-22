@@ -3,7 +3,7 @@
 ========================================== */
 
 .animate{
-	@include opacity(0,0);
+	// @include opacity(0,0);
 	
 	&.fadeInUp{
 		animation:fadeInUp .5s ease-in .4s forwards;
@@ -22,7 +22,7 @@
 	}
 }
 
-@keyframes fadeInUp{
+@keyframes fadeInUpXXX{
 	0%{
 		@include opacity(0, .0);
 		transform:translateY(70px);}
@@ -31,7 +31,7 @@
 		transform:translateY(0);}
 }
 
-@keyframes fadeIn{
+@keyframes fadeInXXX{
 	0%{
 		@include opacity(0, .0);}
 	100%{

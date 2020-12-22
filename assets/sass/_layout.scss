@@ -16,7 +16,7 @@
 			}
 
 			.carousel-item {
-				min-height: 500px;
+				min-height:500px;
 				padding: 100px 0;
 				color: $white;
 				text-shadow: 0 0 8px rgba(0, 0, 0, .85);
@@ -138,6 +138,9 @@
 
 /* ===== Team - Single Team Member ===== */
 .single-team {
+	margin-top:100px;
+	
+	
 	.single-team-content {
 		h3 {
 			color: $grey;
@@ -153,10 +156,16 @@
 
 	.single-team-contact {
 		a {
+			font-size:110%;
 			font-weight: bold;
 			color: $black;
 			text-transform: inherit;
 		}
+		
+		.fa-envelope,
+		.fa-phone{
+			color:$accent;
+			margin-right:5px;}
 	}
 
 	.image-wrapper {
