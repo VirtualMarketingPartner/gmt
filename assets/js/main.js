@@ -19,8 +19,6 @@ jQuery(function($){
 	});
 
 	$(document).ready(function(){
-		
-	$('.carousel').carousel({interval: 2000});
 
 		// set slideshow height to be consistent based on tallest slide
 		var slideHeight = 0;
@@ -60,7 +58,7 @@ jQuery(function($){
 	});
 	
 	
-	// slide indicator for service tabs
+	//  slide indicator for service tabs
 	var currentNav = $('.nav-tabs li a.active').parent('li');
 	var startNavPos = $(currentNav).position(); 
 	var startNavH = $(currentNav).height();
@@ -76,6 +74,7 @@ jQuery(function($){
 			height: currentNavH
 		});
 	});
+	
  
 
 });
