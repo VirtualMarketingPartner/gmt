@@ -100,7 +100,7 @@
     @if $pseudo == 'after' {
       #{$selector} {
         bottom: 0;
-		  height:20%;
+		  height:25%;
 
         @if $flip {
           transform: skewY($angle);

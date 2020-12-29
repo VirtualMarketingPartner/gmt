@@ -103,7 +103,7 @@ body {
       -webkit-backface-visibility: hidden; }
     .container-fluid.angle:after {
       bottom: 0;
-      height: 20%;
+      height: 25%;
       transform: skewY(-4deg);
       transform-origin: 100%; }
     .container-fluid.angle:before {
@@ -143,9 +143,6 @@ h1, h2, h3, h4, h5, h6 {
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: inherit;
     text-transform: inherit; }
-
-h2 {
-  margin: 40px 0; }
 
 h3 {
   margin: 10px 0;
@@ -349,33 +346,42 @@ blockquote {
     top: -10%;
     height: 120%; }
 
-.recent-news {
-  border-right: 1px solid #8c8c8c;
-  padding-left: 20px; }
-  .recent-news:last-child {
-    border-right-color: transparent; }
-  .recent-news h4 {
-    font-size: 125%; }
-  .recent-news .date {
-    display: block;
-    background: #232323;
-    color: #fff;
+.recent-news h4 {
+  font-size: 125%; }
+.recent-news .image-wrapper {
+  background: #f5f5f5;
+  background-size: cover;
+  height: 150px;
+  position: relative; }
+.recent-news .date {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  display: block;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-weight: bold; }
+  .recent-news .date.square {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-shadow: none;
     text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
     width: 100%;
-    padding: 15px 0; }
-    .recent-news .date p {
-      margin-bottom: 0;
-      padding-bottom: 0; }
-    .recent-news .date span {
-      display: block;
-      padding-bottom: 0;
-      margin-bottom: 0; }
-      .recent-news .date span.day {
-        font-size: 175%; }
-  .recent-news a {
-    display: inline-block; }
+    padding: 5px 0;
+    background: #232323; }
+  .recent-news .date p {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+  .recent-news .date span {
+    display: block;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+    .recent-news .date span.day {
+      font-size: 175%; }
+.recent-news a {
+  display: inline-block; }
 
 .circle-list .list-item {
   display: block;
@@ -475,6 +481,12 @@ ul.socials {
   padding: 150px 0 80px; }
   #home .news .recent-news a {
     padding-top: 0; }
+
+.testimonials ol.carousel-indicators {
+  position: absolute;
+  bottom: 50px; }
+  .testimonials ol.carousel-indicators li {
+    background-color: #6c89c6; }
 
 /* ===== About Us ===== */
 .values h2 {

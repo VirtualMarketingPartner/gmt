@@ -74,7 +74,7 @@
 					<div class="col-12 text-center" >
 						<h2><?php the_sub_field('header'); ?></h2>
 						<?php if(have_rows('list')): ?>
-						<div class="row card-list" >
+						<div class="row card-row" >
 							<?php while(have_rows('list')): the_row(); ?>
 							<div class="col-12 col-md-4" >
 								<div class="card bottom animate" >

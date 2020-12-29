@@ -1,5 +1,4 @@
 jQuery(function($){
-	
 	$(window).on("load resize scroll", function() {
 		// animations
 		$.fn.isInViewport = function() {
@@ -11,20 +10,6 @@ jQuery(function($){
 		};
 		
 		
-		/*
-		var timeOut = 500;
- 
-		$('section').each(function() {
-		if ($(this).isInViewport()) {
-			$(this).addClass('active');
-			$(this).children().find('.animate').addClass('fadeInUp');
-		} else {
-			$(this).removeClass('active');
-		}
-		}, timeOut);
-		timeOut += 500;
-		*/
-		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){
 			var circleW = $(this).width();
@@ -35,6 +20,8 @@ jQuery(function($){
 
 	$(document).ready(function(){
 		
+	$('.carousel').carousel({interval: 2000});
+
 		// set slideshow height to be consistent based on tallest slide
 		var slideHeight = 0;
 		$('.carousel-item').each(function(){
@@ -44,19 +31,17 @@ jQuery(function($){
 		});
 		$('.carousel-item').height(slideHeight);
 		
-		$('.carousel').carousel({
-			interval: 2000
-		})
 		
 		//set card heights
 		var cardHeight = 0;
-		$('.card-list .card').each(function(){
+		$('.card-row .card').each(function(){
 			if($(this).height() > cardHeight){
 				cardHeight = $(this).height();
 			}
 		});
-		$('.card-list .card').height(cardHeight);
-		$('.card-list .card a.button').css({
+		$('.card-row .card').height(cardHeight);
+		
+		$('.card-row .card a.button').css({
 			'position':'absolute',
 			'bottom':'10px',
 		});

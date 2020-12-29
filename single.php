@@ -1,6 +1,8 @@
 
 <?php get_header(); ?>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <?php get_template_part('/partials/hero'); ?>
 
 <section class="container-fluid angle post" >
@@ -8,13 +10,12 @@
 			
 			<div class="row" >
 				<div class="col-12 col-md-7 post-body" >
-					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+					
                   	<div class="text-wrapper animate" >
 						<p class="date all-caps" ><?php the_date(); ?></p>
 						<h1><?php the_title(); ?></h1>
 						<?php the_content(); ?>
 					</div><!-- .text-wrapper -->
-					<?php wp_reset_postdata(); endwhile; endif; ?>
 					
 					<?php if(get_field('author')): ?>
 					<?php $authors = get_field('author'); if( $authors ): ?>
@@ -65,4 +66,6 @@
 	</section><!-- .post -->
 
 
+
+					<?php wp_reset_postdata(); endwhile; endif; ?>
 <?php get_footer(); 

@@ -148,23 +148,25 @@
 				<div class="col-12" >
 					<h2><?php the_sub_field('header'); ?></h2>
 					<br>
-					<div class="row" >
+					<div class="row card-row" >
 					<?php $query = new WP_Query( array( 'post_type' => 'insights', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
 						<div class="col-12 col-md-4 recent-news animate" >
-							<div class="row" >
-								<div class="col-4" >
-									<div class="date square" >
+							<div class="card" >
+								<?php if(have_rows('hero')): while(have_rows('hero')): the_row(); if(get_sub_field('hero_image')): ?>
+								<div class="image-wrapper" style="background-image:url(<?php the_sub_field('hero_image'); ?>); background-position:<?php the_sub_field('position'); ?>" >
+									<div class="date" >
 										<p>
 											<span class="day" ><?php echo get_the_date('d'); ?></span><span class="month" ><?php echo get_the_date('M'); ?></span>
 										</p>
 									</div>
-								</div><!-- .col -->
+								</div><!-- .image-wrapper -->
+								<?php endif; endwhile; endif; ?>
 								
-								<div class="col-8" >
+								<div class="card-body" >
 									<h4><?php the_title(); ?></h4>
 									<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
-								</div><!-- .col -->
-							</div><!-- .row -->						
+								</div><!-- .card-body -->
+							</div><!-- .card -->						
 						</div><!-- .col -->	 
 						<?php endwhile; wp_reset_postdata(); ?>
 					</div><!-- .row -->

@@ -25,7 +25,7 @@
 					<?php endif; ?>
 					
 					<?php if(have_rows('list')): ?>
-					<div class="row card-list" >
+					<div class="row card-row" >
 						<?php while(have_rows('list')): the_row(); ?>
 						<div class="col-sm-12 col-md-4" >
 							<div class="card bottom animate" >

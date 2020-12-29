@@ -72,8 +72,6 @@ h1, h2, h3, h4, h5, h6{
 	}
 }
 
-h2{margin:40px 0;}
-
 h3{
 	margin:10px 0;
 	font-size:100%;}
@@ -285,21 +283,33 @@ blockquote{
 }
 
 .recent-news{
-	border-right:1px solid $grey;
-	padding-left:20px;
-	&:last-child{border-right-color:$trans;}
 	
 	h4{font-size:125%;}
 	
+	.image-wrapper{
+		background:$off-white;
+		background-size:cover;
+		height:150px;
+		position:relative;
+	}
+	
 	.date{	
+		position:absolute;
+		bottom:15px; left:30px;
 		display:block;
-		background:$charcoal;
 		color:$white;
-		text-align: center;
+		text-shadow:0 0 5px rgba(0,0,0,.8);
 		text-transform:uppercase;
 		font-weight:bold;
-		width:100%;
-		padding:15px 0;
+		
+		&.square{
+			position:relative;
+			bottom:0; left:0;
+			text-shadow: none;
+			text-align:center;
+			width:100%;
+			padding:5px 0;
+			background:$charcoal;}
 
 		p{margin-bottom:0; padding-bottom:0;}
 
