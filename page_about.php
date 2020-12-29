@@ -19,7 +19,6 @@
 					<div class="text-wrapper animate slow" >
 						<h2><?php the_sub_field('header'); ?></h2>
 						<?php if(have_rows('list')): ?>
-					</div><!-- .text-wrapper -->
 						<div class="row card-row animate slow" >
 						<?php while(have_rows('list')): the_row(); ?>
 							<div class="col-6" >
@@ -33,6 +32,7 @@
 						<?php endwhile; ?>
 						</div><!-- .row -->
 						<?php endif; ?>
+					</div><!-- .text-wrapper -->
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->
@@ -63,8 +63,6 @@
 				$leadershipQuery = new WP_Query( $args );
 				while( $leadershipQuery->have_posts()): $leadershipQuery -> the_post(); 
 				?> 
-				
-				
 				
 				<div class="col-6 col-md-3 text-center" >
 					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>

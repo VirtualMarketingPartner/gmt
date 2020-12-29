@@ -101,7 +101,7 @@
 .testimonials{
 	ol.carousel-indicators {
 		position: absolute;
-		bottom: 50px;
+		bottom: -50px;
 		
 		li{background-color:$accent;}
 	}

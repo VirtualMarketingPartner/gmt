@@ -22,12 +22,12 @@ jQuery(function($){
 
 		// set slideshow height to be consistent based on tallest slide
 		var slideHeight = 0;
-		$('.carousel-item').each(function(){
+		$('.hero .carousel-item').each(function(){
 			if($(this).height() > slideHeight){
 				slideHeight = $(this).height();
 			}
 		});
-		$('.carousel-item').height(slideHeight);
+		$('.hero .carousel-item').height(slideHeight);
 		
 		
 		//set card heights
