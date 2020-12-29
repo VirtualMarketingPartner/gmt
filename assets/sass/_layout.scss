@@ -127,6 +127,8 @@
 }
 
 .team {
+padding:80px 0;
+	
 	p.name {
 		font-size: 150%;
 		font-weight: 600;
@@ -142,6 +144,10 @@
 	background-position: right center;
 	background-size: 70%;
 	background-repeat: no-repeat;
+}
+
+.careers{
+	padding-bottom:100px;
 }
 
 
@@ -254,6 +260,11 @@
 			margin-top: -50px;
 		}
 	}
+	
+
+	.approach{padding:80px 0 100px;}
+
+	.contact{padding-bottom:80px;}
 }
 
 

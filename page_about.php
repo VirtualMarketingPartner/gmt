@@ -76,6 +76,7 @@
 			</div><!-- .row -->
 			<div class="row" >
 			  <div class="col text-center" >
+				  	<br>
 					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('button_label'); ?> <i class="fas fa-long-arrow-right"></i></a>
 				</div><!-- .col -->
 			</div><!-- .row -->

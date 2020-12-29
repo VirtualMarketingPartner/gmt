@@ -160,6 +160,7 @@ blockquote{
 }
 
 .hero-spacer{margin-top:100px;}
+
 .image-wrapper{
 	display:block;
 	margin:0 auto; padding:0;
@@ -171,7 +172,8 @@ blockquote{
 	
 	&.circle{
 		width:100%; height:auto;
-		background-color:$grey;
+		background-color:$off-white;
+		background-blend-mode:multiply;
 		@include border-radius(100%);
 	}
 }
