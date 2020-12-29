@@ -47,6 +47,7 @@
 
 					
 					<?php if(get_field('post_cta','options')): ?>
+					<br><br>
 					<div id="post_cta" >
 						
 							<?php the_field('post_cta','options'); ?>

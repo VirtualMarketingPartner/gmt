@@ -327,7 +327,9 @@ blockquote{
 		
 	}
 	
-	a{display:inline-block;}
+	a.button.inverted{
+		padding:0 0 10px;
+		display:inline-block;}
 }
 
 .circle-list{
