@@ -17,6 +17,54 @@ function wp_bootstrap_custom_admin_footer() {
 }
 
 /* =========================================
+	Framework : Custom WYSIWYG Editor
+========================================= */
+
+// register custom styles for Content Editor
+function wpb_mce_buttons_2($buttons){
+  array_unshift($buttons, 'styleselect');
+  return $buttons;
+};
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+function my_mce_before_init_insert_formats( $init_array ) { 
+ 
+// Define the style_formats array
+ 
+    $style_formats = array( 
+        // Each array child is a format with it's own settings
+       
+    array(
+      'title' => 'Subtitle',
+      'block' => 'h6',
+      'wrapper' => false
+    ),
+    array(
+      'title' => 'Hero Header',
+      'block' => 'h1',
+      'wrapper' => false
+    ),
+	array(
+      'title' => 'Button',
+      'selector' => 'a',
+	  'classes' => 'button'
+    ),
+    
+    ); 
+    $init_array['style_formats'] = json_encode( $style_formats ); 
+    return $init_array;   
+}
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
+// Use Custom Editor Styles
+function my_theme_add_editor_styles(){
+
+  add_editor_style( '/css/custom-editor.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
+
+
+/* =========================================
 	Framework : Shortcodes
 ========================================= */
 

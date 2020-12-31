@@ -84,7 +84,13 @@ body {
     background-color: #f5f5f5;
     background-size: cover; }
     .container-fluid.bg .text-wrapper {
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+      padding: 150px 0 100px;
       padding: 150px 0 100px; }
+      .container-fluid.bg .text-wrapper .card {
+        color: #111111;
+        text-shadow: none; }
   .container-fluid.angle {
     background: #fff;
     position: relative;
@@ -103,7 +109,6 @@ body {
       -webkit-backface-visibility: hidden; }
     .container-fluid.angle:after {
       bottom: 0;
-      height: 25%;
       transform: skewY(-4deg);
       transform-origin: 100%; }
     .container-fluid.angle:before {
@@ -687,8 +692,15 @@ ul.socials {
       font-size: 16px; }
 
 /* ===== Clients ===== */
-.card-list .card {
+.card-row .card {
   margin-bottom: 0; }
+
+/* ===== Flexible ===== */
+.full_flex,
+.combo_flex,
+.column_flex,
+.cards_flex {
+  padding: 50px 0; }
 
 /* ==========================================
 	Sticky Nav

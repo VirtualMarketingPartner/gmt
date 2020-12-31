@@ -63,8 +63,8 @@
 }
 
 
-// Angle
-@mixin angle($pseudo, $flip:false, $angle:4deg) {
+// mixin
+@mixin angle($pseudo, $flip: false, $angle: 4deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
     position: relative;
@@ -100,7 +100,6 @@
     @if $pseudo == 'after' {
       #{$selector} {
         bottom: 0;
-		  height:25%;
 
         @if $flip {
           transform: skewY($angle);
@@ -139,4 +138,3 @@
     }
   }
 }
-

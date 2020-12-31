@@ -22,11 +22,7 @@
 						<div class="row" >
 							<div class="col-12 col-md-7" >
 								<div class="text-wrapper animate" >
-									<h6><?php the_sub_Field('subtitle'); ?></h6>
-									<h2><?php the_sub_field('title'); ?></h2>
-									<a href="<?php the_sub_field('link'); ?>" class="button" >
-										<?php the_sub_field('button_text'); ?> <i class="fas fa-long-arrow-right"></i>
-									</a>
+									<?php the_sub_field('content'); ?>
 								</div><!-- .text-wrapper -->
 							</div><!-- .col -->
 						</div><!-- .row -->
@@ -89,13 +85,7 @@
 			<div class="row" >
 				<div class="offset-md-2 col-md-8 text-center" >
 					<div class="text-wrapper animate" >
-						<h2><?php the_sub_field('header'); ?></h2>
-						<p><?php the_sub_field('content'); ?></p>
-						<?php if(have_rows('button')): ?>
-							<?php while(have_rows('button')): the_row(); ?>
-							<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?></a>
-							<?php endwhile; ?>
-						<?php endif; ?>
+						<?php the_sub_field('content'); ?>
 					</div><!-- .text-wrapper -->
 				</div><!-- .col -->
 			</div><!-- .row -->

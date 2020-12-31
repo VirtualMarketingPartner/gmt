@@ -34,7 +34,14 @@ body{
 		background-size:cover;
 		
 		.text-wrapper{
-			padding:150px 0 100px;}
+			color:$white;
+			text-shadow:0 0 10px rgba(0,0,0,.8);
+			padding:150px 0 100px;
+			padding:150px 0 100px;
+			
+			.card{color:$black; text-shadow: none;}
+		}
+		
 	}
 	
 	&.angle{
