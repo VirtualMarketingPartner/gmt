@@ -39,11 +39,6 @@ function my_mce_before_init_insert_formats( $init_array ) {
       'block' => 'h6',
       'wrapper' => false
     ),
-    array(
-      'title' => 'Hero Header',
-      'block' => 'h1',
-      'wrapper' => false
-    ),
 	array(
       'title' => 'Button',
       'selector' => 'a',
@@ -64,7 +59,7 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 // Use Custom Editor Styles
 function my_theme_add_editor_styles(){
 
-  add_editor_style( '/css/custom-editor.css' );
+  add_editor_style( '/assets/css/custom-editor.css' );
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
 
