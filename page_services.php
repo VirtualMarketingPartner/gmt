@@ -34,38 +34,38 @@
 		</section ><!-- .intro -->
 		<?php endwhile; endif; ?>
 
-		
+		<?php if(have_rows('services')): while(have_rows('services')): the_row(); ?>
 		<section class="container-fluid angle grey services" >
 			<div class="container" >
 				<div id="service_tabs" >
-				<div class="row" >
-					<?php $services_query = new WP_Query( array( 'post_type' => 'services', 'order' => 'ASC' ) );  if($services_query->have_posts()): $serviceNavCount=0; $serviceTabCount=0; ?>
-					<div class="col-12 col-md-4" >
-						<ul class="nav flex-column nav-tabs" role="tablist">
-							<div class="indicator" ></div>
-							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
-							<li class="nav-item">
-								<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
-							</li>
-							<?php $serviceNavCount++; endwhile; wp_reset_postdata(); ?>
-						</ul><!-- .nav -->
-					</div><!-- .col -->
-					
-					<div class="col-12 col-md-8" >
-						<div class="tab-content" id="service-content">
-							<?php while($services_query->have_posts()): $services_query->the_post(); ?>
-							<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
-								<h2><?php the_title(); ?></h2>
-								<?php the_content(); ?>
-							</div><!-- .tab-pane -->
-							<?php $serviceTabCount++; endwhile; wp_reset_postdata(); ?>
-						</div><!-- .#service-content -->
-					</div><!-- .col -->
-				</div><!-- .row -->
+					<?php $services = get_sub_field('services'); if( $services ):?>
+					<div class="row" >
+						<div class="col-12 col-md-4" >
+							<ul class="nav flex-column nav-tabs" role="tablist">
+								<div class="indicator" ></div>
+							<?php $serviceNavCount=0; $serviceTabCount=0; foreach( $services as $post ): setup_postdata($post); ?>
+								<li class="nav-item">
+									<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
+								</li>
+							<?php $serviceNavCount++; endforeach; ?>
+							<?php wp_reset_postdata(); endif; ?>
+							</ul><!-- .nav -->
+						</div><!-- .col -->
+						<div class="col-12 col-md-8" >
+							<div class="tab-content" id="service-content">
+							<?php $serviceNavCount=0; $serviceTabCount=0; foreach( $services as $post ): setup_postdata($post); ?>
+								<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
+									<h2><?php the_title(); ?></h2>
+									<?php the_content(); ?>
+								</div><!-- .tab-pane -->
+								<?php $serviceTabCount++; endforeach; wp_reset_postdata(); ?>
+							</div><!-- .#service-content -->
+						</div><!-- .col -->
+					</div><!-- .row -->
 				</div><!-- #service_tabs -->
-				<?php endif; ?>
 			</div><!-- .container -->
 		</section><!-- .services -->
+		<?php endwhile; endif; ?>
 		
 		<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
 		<section class="container-fluid angle approach" >

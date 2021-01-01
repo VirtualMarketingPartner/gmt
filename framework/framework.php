@@ -49,6 +49,11 @@ function my_mce_before_init_insert_formats( $init_array ) {
       'selector' => 'a',
 	  'classes' => 'button'
     ),
+	array(
+      'title' => 'Link Button',
+      'selector' => 'a',
+	  'classes' => 'button inverted'
+    ),
     
     ); 
     $init_array['style_formats'] = json_encode( $style_formats ); 

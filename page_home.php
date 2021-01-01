@@ -43,10 +43,7 @@
 					<div class="pattern left large" >
 						<div class="card blocker" >
 							<div clas="card-body" >
-								<h2><?php the_sub_field('header'); ?></h2>
-								<?php if(have_rows('services_link')): while(have_rows('services_link')): the_row(); ?>
-								<a href="<?php the_sub_field('link'); ?>" class="button inverted" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
-								<?php endwhile; endif; ?>
+								<?php the_sub_field('sidebar'); ?>
 							</div><!-- .card-body -->
 						</div><!-- .card -->
 						<div class="pattern-block" ></div>
@@ -55,22 +52,20 @@
 				
 				<div class="col-12 col-md-8 service" >
 					<div class="row" >
-						<?php $services_query = new WP_Query( array( 'post_type' => 'services', 'order' => 'ASC' ) ); ?>
-
-						<?php if ( $services_query->have_posts() ) : ?>
-							<?php while ( $services_query->have_posts() ) : $services_query->the_post(); ?>
-							<div class="col-6 col-md-4" >
-								<div class="row" >
-									<div class="col-12 offset-md-2 col-md-8 animate" >
-										<a href="<?php the_permalink(); ?>" >
-											<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
-										</a>
-										<h3><?php the_title(); ?></h3>
-									</div><!-- .col -->
-								</div><!-- .row -->
-							</div><!-- .col -->	 
-							<?php endwhile; wp_reset_postdata(); ?>
-						<?php endif; ?>
+					<?php $services = get_sub_field('services'); if( $services ):?>
+					<?php foreach( $services as $post ): setup_postdata($post); ?>
+						<div class="col-6 col-md-4" >
+							<div class="row" >
+								<div class="col-12 offset-md-2 col-md-8 animate" >
+									<a href="<?php the_permalink(); ?>" >
+										<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
+									</a>
+									<h3><?php the_title(); ?></h3>
+								</div><!-- .col -->
+							</div><!-- .row -->
+						</div><!-- .col -->	 
+					<?php endforeach; ?>
+					<?php wp_reset_postdata(); endif; ?>
 					</div><!-- .row -->
 				</div><!-- .col -->
 			</div><!-- .row -->
