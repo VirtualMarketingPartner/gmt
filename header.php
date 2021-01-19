@@ -3,9 +3,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title><?php the_field('default_seo_title', 'options'); ?></title>
-	<meta name="title" content="<?php the_field('default_seo_title', 'options'); ?>" >
-	<meta name="description" content="<?php the_field('default_seo_description', 'options'); ?>" >
+	<title><?php the_title(); ?> | <?php echo get_bloginfo( 'name' ); ?></title>
+	
+	<meta property="og:site_name" content="<?php the_field('default_seo_title', 'options'); ?>">
+	<meta property="og:url" content="http://<?php $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>">
+	<meta name="title" content="<?php the_field('default_seo_title', 'options'); ?>">
+	<meta name="description" content="<?php the_field('default_seo_description', 'options'); ?>">
+	
+	
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

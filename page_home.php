@@ -66,6 +66,18 @@
 						</div><!-- .col -->	 
 					<?php endforeach; ?>
 					<?php wp_reset_postdata(); endif; ?>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 					</div><!-- .row -->
 				</div><!-- .col -->
 			</div><!-- .row -->

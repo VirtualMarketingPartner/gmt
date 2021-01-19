@@ -51,9 +51,12 @@
 							<?php wp_reset_postdata(); endif; ?>
 							</ul><!-- .nav -->
 						</div><!-- .col -->
+						
+						
 						<div class="col-12 col-md-8" >
 							<div class="tab-content" id="service-content">
 							<?php $serviceNavCount=0; $serviceTabCount=0; foreach( $services as $post ): setup_postdata($post); ?>
+								
 								<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
 									<h2><?php the_title(); ?></h2>
 									<?php the_content(); ?>
@@ -61,6 +64,11 @@
 								<?php $serviceTabCount++; endforeach; wp_reset_postdata(); ?>
 							</div><!-- .#service-content -->
 						</div><!-- .col -->
+						
+						
+						
+						
+						
 					</div><!-- .row -->
 				</div><!-- #service_tabs -->
 			</div><!-- .container -->
