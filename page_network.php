@@ -42,7 +42,7 @@
 					<div class="card narrow left" >
 						<div class="card-body vcenter" >
 							<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
-							<h3><?php the_sub_field('title'); ?></h3>
+							<h4><?php the_sub_field('title'); ?></h4>
 						</div><!-- .card-body -->
 					</div><!-- .card -->
 				</div><!-- .col -->

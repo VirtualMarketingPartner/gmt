@@ -39,11 +39,13 @@
 // Gradient
 @mixin gradient($angle, $color1, $color-stop-1, $color2, $color-stop2){
 	background-image: linear-gradient($angle, $color1 $color-stop-1, $color2 $color-stop2);
+	background-color:$color1;
 }
 
 // Gradient 3 stops
 @mixin gradient-3($angle, $color1, $color-stop-1, $color2, $color-stop2, $color3, $color-stop3){
 	background-image: linear-gradient($angle, $color1 $color-stop-1, $color2 $color-stop2, $color3 $color-stop3);
+	background-color:$color1;
 }
 
 // Triangle
@@ -64,7 +66,7 @@
 
 
 // mixin
-@mixin angle($pseudo, $flip: false, $angle: 4deg) {
+@mixin angle($pseudo, $flip: false, $angle: 2.5deg) {
   // Possible values for $pseudo are: before, after, both
   @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
     position: relative;

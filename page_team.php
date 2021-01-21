@@ -21,7 +21,9 @@
 			</div><!-- .row -->
 			<?php if(have_rows('group')): while(have_rows('group')): the_row(); ?>
 			<div class="row" >
-				<h2><?php the_sub_field('group_name'); ?></h2>
+              	<div class="col" >
+					<h3><?php the_sub_field('group_name'); ?></h3>
+				</div><!-- .col -->
 			</div><!-- .row -->
 			<div class="row circle-list" >
 				<?php $team_groups = get_sub_field('group_members'); if( $team_groups ):?>

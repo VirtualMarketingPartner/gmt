@@ -57,16 +57,17 @@ input.gform_button.button{
 	text-decoration: none;
 	text-align:center;
 	text-transform:uppercase;
-	background:$primary;
-	border:3px solid transparent;
 	outline:none;
 	float:right;
 	@include border-radius(50px);
 	@include defaultTransition;
-	
+	@include gradient(38deg, $primary, 30%, $secondary, 90%);
+	background-size: 120% auto;
+
 	&:hover{
-		background:$secondary;
+		background-size:150% auto;
 	}
+		
 }
 
 
@@ -120,9 +121,15 @@ input.gform_button.button{
 			@include border-radius(50%);
 			font-size:125%;
 			
+			@include border-radius(50px);
+			@include defaultTransition;
+			@include gradient(38deg, $primary, 30%, $secondary, 90%);
+			background-size: 120% auto;
+
 			&:hover{
+				background-size:150% auto;
 				color:$white;
-				background:$secondary;}
+			}
 		}
 	}
 }

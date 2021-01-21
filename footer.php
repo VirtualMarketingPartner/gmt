@@ -1,7 +1,7 @@
 </div><!-- #body -->
 
 <?php if(have_rows('newsletter_signup','options')): while(have_rows('newsletter_signup','options')): the_row(); ?>
-<section class="container-fluid bg" style="background-image:url(<?php the_sub_field('bg'); ?>); " id="newsletter_signup" >
+<section class="container-fluid bg" style="background-image:url(<?php the_sub_field('bg'); ?>); background-color:<?php the_sub_field('bg_color'); ?>" id="newsletter_signup" >
 	<div id="page_down" ></div>
 	<div class="container" >
 		<div class="row" >
@@ -11,7 +11,6 @@
 						<div class="image-wrapper" style="background-image:url(<?php the_sub_field('icon'); ?>);" ></div>
 					</div><!-- col -->
 					<div class="col-sm-9" >
-						<p class="all-caps" ><?php the_sub_field('header'); ?></p>
 						<div class="text-wrapper" >
 							<?php the_sub_field('content'); ?>
 						</div><!-- .text-wrapper -->
@@ -32,7 +31,7 @@
 		<div class="container" >
 			<div class="row" >
 				<div class="col text-left" >
-					<a class="image-wrapper" href="<?php bloginfo('url'); ?>" style="background-image:url(<?php the_field('logo', 'options'); ?>);" ></a>
+					<a class="image-wrapper" href="<?php bloginfo('url'); ?>" style="background-image:url(<?php the_field('footer_logo', 'options'); ?>);" ></a>
 					<p><?php the_field('site_address','options'); ?></p>
 					<p class="all-caps">Contact Us</p>
 					<?php get_template_part('partials/socials'); ?>

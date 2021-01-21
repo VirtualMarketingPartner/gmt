@@ -5,7 +5,6 @@
 #newsletter_signup{
 	position:relative;
 	background-blend-mode: multiply;
-	background-color:$accent;
 	padding:150px 0 100px;
 	color:$white;
 	
@@ -78,6 +77,6 @@
 	}
 
 	#impressum {
-		color: $accent;
+		color: $white;
 	}
 }

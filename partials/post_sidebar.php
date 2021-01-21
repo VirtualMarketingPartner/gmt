@@ -1,7 +1,7 @@
 <div class="sidebar animate slow" >
 	<div class="row" >
 		<div class="col" >
-			<h4><?php the_field('recent_news','options'); ?></h4>
+			<h3><?php the_field('recent_news','options'); ?></h3>
 			<?php $query = new WP_Query( array( 'post_type' => 'insights', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
 			<div class="recent-news" >
 				<div class="row" >

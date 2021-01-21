@@ -148,10 +148,16 @@
 				outline: none;
 				@include border-radius(50px);
 				@include defaultTransition;
+				@include gradient(38deg, $primary, 30%, $secondary, 90%);
+				background-size: 120% auto;
 
-				&:hover {
-					background: $secondary;
+
+				&:hover{
+					background-size:150% auto;
 				}
+				
+				
+				
 			}
 		}
 	}

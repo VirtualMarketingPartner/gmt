@@ -1,14 +1,14 @@
 <div class="sidebar animate slow" >
 	<div class="row" >
 		<div class="col" >
-			<h4><?php the_field('search','options'); ?></h4>
+			<h3><?php the_field('search','options'); ?></h3>
 			<?php get_search_form(); ?>
 		</div><!-- .col -->
 	</div><!-- .row -->
 
 	<div class="row" >
 		<div class="col" >
-			<h4><?php the_field('categories','options'); ?></h4>
+			<h3><?php the_field('categories','options'); ?></h3>
 			<ul class="categories">
 			<?php 
 			$categories = get_categories();

@@ -44,6 +44,16 @@ jQuery(function($){
 			'bottom':'10px',
 		});
 		
+		//set card heights - use this if there are more than one set of cards on a page
+		var cardHeight2 = 0;
+		$('.card-row-2 .card').each(function(){
+			if($(this).height() > cardHeight2){
+				cardHeight2 = $(this).height();
+			}
+		});
+		$('.card-row-2 .card').height(cardHeight2);
+
+		
 		// reset form styles to use cool labels
 		$('.gform_body li').each(function(){
 			$(this).children('label').appendTo( $(this).children('.ginput_container') );

@@ -25,7 +25,7 @@
 								<div class="card left" >
 									<div class="card-body vcenter" >
 										<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
-										<h3><?php the_sub_field('title'); ?></h3>
+										<h4><?php the_sub_field('title'); ?></h4>
 									</div><!-- .card-body -->
 								</div><!-- .card -->
 							</div><!-- .col -->
@@ -68,7 +68,7 @@
 					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
 					<a href="<?php the_permalink(); ?>" class="list-item" >
 						<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
-						<h3><?php the_title(); ?></h3>
+						<h4><?php the_title(); ?></h4>
 					</a>
 					<?php endwhile; endif; ?>
 				</div><!-- .col -->	 

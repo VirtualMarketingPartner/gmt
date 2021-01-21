@@ -21,7 +21,7 @@
 	
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/main.js" ></script>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css?v=1214pm" rel="stylesheet">
 	
 	
 	

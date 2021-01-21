@@ -20,7 +20,7 @@
 				<div class="col-sm-12 <?php if(get_sub_field('image')): ?>col-md-7<?php endif; ?> single-team-content" >
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<h1><?php the_title(); ?></h1>
-						<h3 class="all-caps"><?php the_sub_field('title');?></h3>
+						<h4 class="all-caps grey"><?php the_sub_field('title');?></h4>
 					<?php endwhile; endif;?>
 					<?php the_content(); ?>
 					<div class="single-team-contact">
@@ -62,13 +62,13 @@
 							</ul>
 							<?php endif; ?>
 							
-							<h2><?php the_field('get_to_know','options'); ?></h2>
+							<h3><?php the_field('get_to_know','options'); ?></h3>
 							<?php 
 							$name = get_the_title();
 							$name_array = explode(' ', $name);
 							$first_name = $name_array[0];
 							?> 
-							<h2><?php echo $first_name; ?></h2>
+							<h3><?php echo $first_name; ?></h3>
 						</div><!-- .col-12 .col-md-4 -->
 							
 						<div class="col-12 col-md-8 col-lg-9" >
@@ -80,7 +80,7 @@
 								$random_rows = array_slice( $temp_arr, 0, 2 );
 								foreach($random_rows as $row): ?>
 								<div class="col-6" >
-									<h3 class="all-caps"><?php echo $row['header']; ?></h3>
+									<h4 class="all-caps"><?php echo $row['header']; ?></h4>
 									<p><?php echo $row['content']; ?></p>
 								</div><!-- .col -->
 								<?php endforeach; ?>
