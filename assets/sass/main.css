@@ -753,7 +753,7 @@ ul.socials {
     display: block;
     width: 300px;
     height: 40px;
-    background-position: center center;
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: contain; }
   #header .navbar {
@@ -901,7 +901,8 @@ ul.socials {
     height: 50px;
     min-height: 50px;
     margin-bottom: 15px;
-    background-size: contain; }
+    background-size: contain;
+    background-position: left center; }
   #footer ul.socials li a i {
     color: #fff !important; }
   #footer ul.menu {

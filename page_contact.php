@@ -63,7 +63,7 @@
 						<div class="row" >
 						<?php while(have_rows('gmt_offices')): the_row(); ?>
 							<div class="col" >
-								<h3><?php the_sub_field('name'); ?></h3>
+								<h4><?php the_sub_field('name'); ?></h4>
 								<p><i class="far fa-phone"></i> <?php the_sub_field('phone'); ?><br>
 								<i class="far fa-envelope"></i> <?php the_sub_field('email'); ?><br>
 								<i class="far fa-map-marker-alt"></i> <?php the_sub_field('address'); ?><br>
