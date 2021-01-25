@@ -67,17 +67,6 @@
 					<?php endforeach; ?>
 					<?php wp_reset_postdata(); endif; ?>
 						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
 					</div><!-- .row -->
 				</div><!-- .col -->
 			</div><!-- .row -->
@@ -100,43 +89,34 @@
 	</section><!-- .network -->
 	<?php endwhile; endif; ?>
 	
-	<?php if(have_rows('testimonials')): while(have_rows('testimonials')): the_row(); ?>
-	<section class="container-fluid angle testimonials" >
-		<div class="container" >
-			<div class="row vcenter" >
-				<div class="col-12 col-md-5 " >
-					<div class="pattern bottom left animate" >
-						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
-						<div class="pattern-block" ></div>
-					</div><!-- .pattern -->
-				</div><!-- .col -->
-				
-				<div class="col-12 col-md-7 animate" >
-					<h2><?php the_sub_field('header'); ?></h2>
-					<?php if(have_rows('quotes')): $quote=0; $quoteIndicator=0; ?>
-					<div id="quoteCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
-						<ol class="carousel-indicators" >
-							<?php while( have_rows('quotes')): the_row(); ?>
-							<li data-target="#quoteCarousel" data-slide-to="<?php echo $quoteIndicator; ?>" class="<?php if($quoteIndicator==0){echo 'active'; } ?>" ></li>
-							<?php $quoteIndicator++; endwhile; ?>
-						</ol>
-						<div class="carousel-inner" >
-						<?php while(have_rows('quotes')): the_row(); ?>
-							<div class="carousel-item <?php if($quote==0){echo 'active';} ?>" >
-								<p><?php the_sub_field('quote'); ?></p>
-								<p class="author" ><?php the_sub_field('author'); ?></p>
-								<p class="company" ><?php the_sub_field('company'); ?></p>
-							</div><!-- .carousel-item -->
-						<?php $quote++; endwhile; ?>
-						</div><!-- .carousel-inner -->
-					</div><!-- #quoteCarousel -->
-					<?php endif; ?>
-					
-				</div><!-- .col -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-	</section><!-- .testimonials -->
-	<?php endwhile; endif; ?>
+	<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
+		<section class="container-fluid angle approach" >
+			<div class="container" >
+				<div class="row" >
+					<div class="col-12 text-center" >
+						<h2><?php the_sub_field('header'); ?></h2>
+						<?php if(have_rows('list')): ?>
+						<div class="row card-row" >
+							<?php while(have_rows('list')): the_row(); ?>
+							<div class="col-12 col-md-4" >
+								<div class="card bottom animate" >
+									<div class="card-body text-left" >
+										<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
+										<h4><?php the_sub_field('title'); ?></h4>
+										<?php the_sub_field('content'); ?>
+									</div><!-- .card-body -->
+								</div><!-- .card -->
+							</div><!-- .col -->
+							<?php endwhile; ?>
+						</div><!-- .row -->
+						<?php endif; ?>
+					</div><!-- .col -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</section><!-- .approach -->
+		<?php endwhile; endif; ?>
+	
+	
 	
 	<?php if(have_rows('news')): while(have_rows('news')): the_row(); ?>
 	<section class="container-fluid bg news" >
@@ -145,7 +125,7 @@
 				<div class="col-12" >
 					<h2><?php the_sub_field('header'); ?></h2>
 					<br>
-					<div class="row card-row" >
+					<div class="row card-row-2" >
 					<?php $query = new WP_Query( array( 'post_type' => 'insights', 'posts_per_page'=>3 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
 						<div class="col-12 col-md-4 recent-news animate" >
 							<div class="card" >
