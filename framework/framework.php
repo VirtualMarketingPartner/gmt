@@ -136,6 +136,11 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Website Settings',
+		'menu_title'	=> 'Website Settings',
+		'parent_slug'	=> 'website-settings',
+	));
+	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Footer Settings',
 		'menu_title'	=> 'Footer Settings',
 		'parent_slug'	=> 'website-settings',
@@ -149,3 +154,54 @@ if( function_exists('acf_add_options_page') ) {
 	
 	
 }
+
+
+/* Custom Menus on WP Dashboard */
+
+
+// custom page & subnav for custom taxonomy
+
+add_action( 'admin_menu', 'post_menu' );  
+function post_menu(){    
+	$page_title = 'News & Events';   
+	$menu_title = 'News & Events';   
+	$capability = 'manage_options';   
+	$menu_slug  = 'news-events';   
+	$function   = 'post';   
+	$icon_url   = 'dashicons-edit-large';   
+	$position   = 20;    
+	
+	add_menu_page( 
+		$page_title,                  
+		$menu_title,                   
+		$capability,                   
+		$menu_slug,                   
+		$function,                   
+		$icon_url,                   
+		$position ); 
+}
+
+add_action('admin_menu', 'tax_menu');
+function tax_menu() {
+	add_submenu_page( 'news-events', 'Edit Categories', 'Edit Categories',
+    'manage_options', 'edit-tags.php?taxonomy=category');
+}
+
+add_action('admin_menu', 'edit_menu');
+function edit_menu() {
+	add_submenu_page( 'website-settings', 'Menu Settings', 'Menu Settings',
+    'manage_options', 'nav-menus.php');
+}
+
+// hide default Posts menu
+if( current_user_can('editor') ) { 
+    add_action( 'admin_init', 'remove_menu_pages' );
+
+	function remove_menu_pages() {
+		remove_menu_page( 'themes.php' );
+		remove_menu_page( 'edit.php' );
+		remove_menu_page( 'cptui.php' );
+		remove_menu_page( 'admin.php?page=members-settings' );
+	}
+} 
+
