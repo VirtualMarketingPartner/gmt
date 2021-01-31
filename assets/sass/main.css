@@ -342,9 +342,9 @@ blockquote {
     .card.narrow .card-body {
       padding: 10px 30px; }
   .card.bottom {
-    border-bottom: 5px solid #08cbfe; }
+    border-bottom: 5px solid #febb15; }
   .card.left {
-    border-left: 5px solid #08cbfe; }
+    border-left: 5px solid #febb15; }
     .card.left .icon {
       display: inline-block;
       margin-right: 20px; }
@@ -1056,6 +1056,75 @@ input.gform_button.button {
     background-size: 120% auto; }
     .searchform div #searchsubmit:hover {
       background-size: 150% auto;
+      color: #fff; }
+
+/* Newsletter Signup Form */
+form .form-group {
+  position: relative; }
+  form .form-group label {
+    position: absolute;
+    z-index: 2;
+    left: 15px;
+    top: 8px;
+    width: 50%;
+    display: inline-block;
+    color: #8c8c8c; }
+  form .form-group input[type=text],
+  form .form-group input[type=email],
+  form .form-group input[type=phone] {
+    position: relative;
+    width: 100%;
+    border: 1px solid #8c8c8c;
+    padding: 0 50px 0 15px;
+    height: 40px;
+    line-height: 36px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px; }
+    form .form-group input[type=text]:focus,
+    form .form-group input[type=email]:focus,
+    form .form-group input[type=phone]:focus {
+      outline: none;
+      border: 2px solid #5c5ce5;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px; }
+  form .form-group input[type=text]:focus + label, form .form-group input[type=text]:valid + label,
+  form .form-group input[type=email]:focus + label,
+  form .form-group input[type=email]:valid + label,
+  form .form-group input[type=phone]:focus + label,
+  form .form-group input[type=phone]:valid + label {
+    top: 0;
+    left: 15px;
+    font-size: 65%;
+    padding: 3px 10px;
+    width: auto;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s; }
+  form .form-group .button {
+    height: 39px;
+    width: 39px;
+    line-height: 36px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 120%;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    background: #febb15; }
+    form .form-group .button:hover {
+      background: #f2b145;
       color: #fff; }
 
 /* ==========================================
