@@ -24,7 +24,7 @@
 		margin: 10px auto;
 		display: block;
 		width: 300px;
-		height: 40px;
+		height: 45px;
 		background-position: left center;
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -77,13 +77,12 @@
 				margin-left: 6px;
 				transition-timing-function: ease-out;
 				transition: 0.3s;
+				display:inline-block;
 			}
 
 			&:hover::after {
-				content: "\f0d8";
-				bottom: 0;
-				transition-timing-function: ease-in;
-				transition: 0.3s;
+				transform:rotate(-180deg) translateY(-4px);
+				@include defaultTransition;
 			}
 		}
 		

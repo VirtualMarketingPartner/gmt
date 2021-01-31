@@ -18,15 +18,22 @@
 
 				li {
 					width: 100%;
+					
+					&:hover > ul.sub-menu{display:block;}
+
 				}
+				
+				
 			}
 
 			.sub-menu {
-				display: none !important;
+				display:none;
 				position: relative;
 				width: 100%;
 				top: 0;
 				padding: 10px 0;
+				
+				li{text-align:center;}
 			}
 		}
 
@@ -40,6 +47,12 @@
 		width: 80%;
 		margin: 0 auto;
 	}
+	
+	.card .image-wrapper,
+	.post .image-wrapper{width:100%;}
+	
+	.hero{min-height:300px;}
+	#home .hero #slideshow .carousel-item{padding:25px 0;}
 
 	.recent-news .date {
 		margin-bottom: 20px;
@@ -75,7 +88,8 @@
 
 // Mobile - Tablets
 @media all and (min-width:768px) {
-	.hero .carousel-item {
+	.hero .carousel-item,
+	.hero{
 		background-attachment: fixed;
 	}
 

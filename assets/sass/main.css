@@ -133,7 +133,14 @@ body {
   float: none; }
 
 section {
-  padding: 40px 0 60px; }
+  padding: 40px 0 60px;
+  position: relative; }
+  section .overlay {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 120%;
+    margin-top: -100px; }
 
 #body {
   position: relative;
@@ -752,7 +759,7 @@ ul.socials {
     margin: 10px auto;
     display: block;
     width: 300px;
-    height: 40px;
+    height: 45px;
     background-position: left center;
     background-repeat: no-repeat;
     background-size: contain; }
@@ -786,12 +793,13 @@ ul.socials {
     position: relative;
     margin-left: 6px;
     transition-timing-function: ease-out;
-    transition: 0.3s; }
+    transition: 0.3s;
+    display: inline-block; }
   #header .navbar-nav .sub-menu-icon:hover::after {
-    content: "\f0d8";
-    bottom: 0;
-    transition-timing-function: ease-in;
-    transition: 0.3s; }
+    transform: rotate(-180deg) translateY(-4px);
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s; }
   #header .collapse {
     width: 100%; }
   #header .indicator {
@@ -1062,12 +1070,16 @@ input.gform_button.button {
       margin: 0; }
       #header .navbar-nav ul li {
         width: 100%; }
+        #header .navbar-nav ul li:hover > ul.sub-menu {
+          display: block; }
     #header .navbar-nav .sub-menu {
-      display: none !important;
+      display: none;
       position: relative;
       width: 100%;
       top: 0;
       padding: 10px 0; }
+      #header .navbar-nav .sub-menu li {
+        text-align: center; }
     #header #site_id {
       margin: 0 0 0 15px; }
 
@@ -1075,6 +1087,16 @@ input.gform_button.button {
   .image-wrapper.circle {
     width: 80%;
     margin: 0 auto; }
+
+  .card .image-wrapper,
+  .post .image-wrapper {
+    width: 100%; }
+
+  .hero {
+    min-height: 300px; }
+
+  #home .hero #slideshow .carousel-item {
+    padding: 25px 0; }
 
   .recent-news .date {
     margin-bottom: 20px; }
@@ -1092,7 +1114,8 @@ input.gform_button.button {
   #footer ul.socials {
     text-align: center !important; } }
 @media all and (min-width: 768px) {
-  .hero .carousel-item {
+  .hero .carousel-item,
+  .hero {
     background-attachment: fixed; }
 
   .container-fluid.bg {
