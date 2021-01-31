@@ -33,17 +33,10 @@
 						<i class="far fa-phone"></i>
 						<a href="tel:<?php the_sub_field('phone');?>"><?php the_sub_field('phone');?></a>
 						<?php endif; ?>
-					</div><!-- .single-team-contact -->
-				</div><!-- .col-sm-12 .col-md-8 .single-team -->
-				<?php endwhile; endif; ?>
-			</div><!-- .row -->
-			<div class="row">
-				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
-					<div class="card single-team-info">
-						<div class="row" >
-						<div class="col-12 col-md-4 col-lg-3">
-							<?php if(have_rows('social_media_accounts')): ?>
-							<ul class="socials" >
+						
+						<?php if(have_rows('get_to_know_content')): while(have_rows('get_to_know_content')): the_row(); ?>
+						<?php if(have_rows('social_media_accounts')): ?>
+							<ul class="socials" style="margin-top:20px;">
 								<?php while(have_rows('social_media_accounts')): the_row(); ?>
 								<li>
 									<a href="<?php the_sub_field('url'); ?>" target="_blank" >
@@ -61,6 +54,17 @@
 								<?php endwhile; ?>
 							</ul>
 							<?php endif; ?>
+						<?php endwhile; endif; ?>
+					</div><!-- .single-team-contact -->
+				</div><!-- .col-sm-12 .col-md-8 .single-team -->
+				<?php endwhile; endif; ?>
+			</div><!-- .row -->
+			<div class="row">
+				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
+					<div class="card single-team-info">
+						<div class="row" >
+						<div class="col-12 col-md-4 col-lg-3">
+							
 							
 							<h3><?php the_field('get_to_know','options'); ?></h3>
 							<?php 
