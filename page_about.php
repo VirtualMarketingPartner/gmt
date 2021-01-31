@@ -13,6 +13,7 @@
 
 	<?php if(have_rows('values')): while(have_rows('values')): the_row(); ?>
 	<section class="container-fluid bg values" style="background-image:url(<?php the_sub_field('bg'); ?>);" >
+		<div class="overlay" style="background-color:rgba(0,0,0, .<?php the_sub_field('bg_overlay'); ?>);" ></div>
 		<div class="container" >
 			<div class="row" >
 				<div class="offset-md-5 col-md-7" >
@@ -21,7 +22,7 @@
 						<?php if(have_rows('list')): ?>
 						<div class="row card-row animate slow" >
 						<?php while(have_rows('list')): the_row(); ?>
-							<div class="col-6" >
+							<div class="col-12 col-md-6" >
 								<div class="card left" >
 									<div class="card-body vcenter" >
 										<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
@@ -86,6 +87,7 @@
 	
 	<?php if(have_rows('partners')): while(have_rows('partners')): the_row(); ?>
 	<section class="container-fluid bg partners" style="background-image:url(<?php the_sub_field('bg'); ?>);" >
+		<div class="overlay" style="background-color:rgba(0,0,0, .<?php the_sub_field('bg_overlay'); ?>);" ></div>
 		<div class="container" >
 			<div class="row vcenter" >
 				<div class="col-12 col-md-6" >
