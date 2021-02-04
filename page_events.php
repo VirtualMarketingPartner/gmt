@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Events */ 
+/* Template Name: Insights */ 
 ?>
 
 
@@ -17,7 +17,17 @@
 			</div><!-- .row -->
 			<div class="row" >
 				<div class="col-12 col-md-9" >
-					<?php $query = new WP_Query( array( 'post_type' => 'events', 'posts_per_page'=>10 ) ); while ( $query->have_posts() ) : $query->the_post(); ?> 
+					<?php
+						$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+						$args = array(
+							'paged'          => $paged,
+							'post_type'		 => 'events'
+						);
+
+						$the_query = new WP_Query( $args ); 
+						?>
+					
+					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?> 
 					<div class="row post animate" >
 						<?php if(have_rows('hero')): while(have_rows('hero')): the_row(); ?>
 						<div class="col-12 col-md-4" >
@@ -37,6 +47,18 @@
 						<?php endwhile; endif; ?>
 					</div><!-- .row -->
 					<?php endwhile; ?>
+					
+					<div class="row" >
+						<div class="col text-left" >
+							<p><?php next_posts_link( '<i class="fas fa-angle-left"></i> Older Entries', $the_query->max_num_pages ); ?></p>
+						</div><!-- .col -->
+						
+						<div class="col text-right" >
+							<p><?php previous_posts_link( 'Newer Entries <i class="fas fa-angle-right"></i>' ); ?></p>
+							<?php wp_reset_postdata(); ?>
+						</div><!-- .col -->
+					</div><!-- .row -->
+
 				</div><!-- .col -->
 				
 				<div class="col-12 col-md-3" >
