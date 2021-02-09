@@ -37,36 +37,33 @@
 		<?php if(have_rows('services')): while(have_rows('services')): the_row(); ?>
 		<section class="container-fluid angle grey services" >
 			<div class="container" >
+				
 				<div id="service_tabs" >
-					<?php $services = get_sub_field('services'); if( $services ):?>
 					<div class="row" >
 						<div class="col-12 col-md-4" >
 							<ul class="nav flex-column nav-tabs" role="tablist">
 								<div class="indicator" ></div>
-							<?php $serviceNavCount=0; $serviceTabCount=0; foreach( $services as $post ): setup_postdata($post); ?>
+								<?php while(have_rows('service_tabs')): the_row(); ?>
 								<li class="nav-item">
-									<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_title(); ?></a>
+									<a class="nav-link <?php if( $serviceNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $serviceNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $serviceNavCount; ?>" role="tab" aria-controls="nav-<?php echo $serviceNavCount; ?>" aria-selected="true"><?php the_sub_field('title'); ?></a>
 								</li>
-							<?php $serviceNavCount++; endforeach; ?>
-							<?php wp_reset_postdata(); endif; ?>
+								<?php $serviceNavCount++; endwhile; ?>
 							</ul><!-- .nav -->
 						</div><!-- .col -->
-						
-						
+
 						<div class="col-12 col-md-8" >
-							<div class="tab-content" id="service-content">
-							<?php $serviceNavCount=0; $serviceTabCount=0; foreach( $services as $post ): setup_postdata($post); ?>
-								
+							<div class="tab-content" id="group-content">
+								<?php while(have_rows('service_tabs')): the_row(); ?>
 								<div class="tab-pane fade <?php if( $serviceTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $serviceTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $serviceTabCount; ?>">
-									<h2><?php the_title(); ?></h2>
-									<?php the_content(); ?>
+									<?php the_sub_field('content'); ?>
 								</div><!-- .tab-pane -->
-								<?php $serviceTabCount++; endforeach; wp_reset_postdata(); ?>
-							</div><!-- .#service-content -->
-						</div><!-- .col -->	
-						
+								<?php $serviceTabCount++; endwhile; wp_reset_postdata(); ?>
+							</div><!-- .#group-content -->
+						</div><!-- .col -->
 					</div><!-- .row -->
 				</div><!-- #service_tabs -->
+				
+				
 			</div><!-- .container -->
 		</section><!-- .services -->
 		<?php endwhile; endif; ?>
