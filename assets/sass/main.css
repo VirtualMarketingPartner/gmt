@@ -534,12 +534,12 @@ ul.socials {
 
 .team {
   padding: 80px 0; }
+  .team .image-wrapper {
+    height: 220px;
+    margin: 20px 0 0; }
   .team p.name {
-    font-size: 150%;
     font-weight: 600;
     margin-bottom: 0; }
-  .team a.button {
-    margin: -15px 0 0; }
 
 .partners.bg {
   background-position: right center;

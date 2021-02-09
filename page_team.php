@@ -19,42 +19,55 @@
 					<h2><?php the_sub_field('header'); ?></h2>
 				</div><!-- .col -->
 			</div><!-- .row -->
-			<?php if(have_rows('group')): while(have_rows('group')): the_row(); ?>
+			
+			<?php if(have_rows('group')): $groupNavCount=0; $groupTabCount=0; ?>
 			<div class="row" >
-              	<div class="col" >
-					<h3><?php the_sub_field('group_name'); ?></h3>
+				<div class="col" >
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<?php while(have_rows('group')): the_row(); ?>
+						<li class="nav-item">
+							<a class="nav-link <?php if( $groupNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $groupNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $groupNavCount; ?>" role="tab" aria-controls="nav-<?php echo $groupNavCount; ?>" aria-selected="true"><?php the_sub_field('group_name'); ?></a>
+						</li>
+						<?php $groupNavCount++; endwhile; ?>
+					</ul><!-- .nav -->
 				</div><!-- .col -->
 			</div><!-- .row -->
-			<div class="row circle-list" >
-				<?php $team_groups = get_sub_field('group_members'); if( $team_groups ):?>
-				<?php foreach( $team_groups as $post ): setup_postdata($post); ?>
-					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
-					<div class="col-6 list-item animate slow" >
-						<div class="row vcenter" >
-							<div class="col-12 col-md-4" >
-								<a href="<?php the_permalink(); ?>" >
-									<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
-								</a>
-							</div><!-- .col -->
-							<div class="col-12 col-md-8" >
-								<p class="name" ><?php the_title(); ?></p>
-								<p class="title"><?php the_sub_field('title'); ?></p>
-								<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('meet_team_member','options'); ?> 
-									<?php 
-									$name = get_the_title();
-									$name_array = explode(' ', $name);
-									$first_name = $name_array[0];
-									echo $first_name; ?> 
-									<i class="fas fa-long-arrow-right"></i></a>
-							</div><!-- .col -->
-						</div><!-- .row -->
-					</div><!-- .col -->
-					<?php endwhile; endif; ?>
-				<?php endforeach; ?>
-				<hr>
-				<?php wp_reset_postdata(); endif; ?>
+			
+			<div class="row" >
+				<div class="col" >
+					<div class="tab-content" id="group-content">
+						<?php while(have_rows('group')): the_row(); ?>
+						<div class="tab-pane fade <?php if( $groupTabCount==0 ){ echo 'show active'; } ?>" id="tab-<?php echo $groupTabCount; ?>" role="tabpanel" aria-labelledby="nav-<?php echo $groupTabCount; ?>">
+							
+							<div class="row" >
+							<?php $group = get_sub_field('group_members'); if( $group ): ?>
+							<?php foreach( $group as $post ): setup_postdata($post); ?>
+								<div class="col-12 col-md-6 col-lg-3" >
+									<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?><div class="image-wrapper" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
+									<p class="name" ><?php 
+										$name = get_the_title(); 
+										$name_array = explode(' ', $name);
+										$first_name = $name_array[0];
+										echo $first_name; 
+										?></p>
+									<?php endwhile; endif; ?>
+								</div><!-- .col -->
+							<?php endforeach; ?>
+							<?php wp_reset_postdata(); endif; ?>
+							</div><!-- .row -->
+							
+						</div><!-- .tab-pane -->
+						<?php $groupTabCount++; endwhile; wp_reset_postdata(); ?>
+					</div><!-- .#group-content -->
+				</div><!-- .col -->
 			</div><!-- .row -->
-			<?php endwhile; endif; ?>
+			<?php endif; ?>
+			
+
+	
+			
+			
+			
 		</div><!-- .container -->
 	</section ><!-- .team -->
 	<?php endwhile; endif; ?>
