@@ -11,7 +11,7 @@
 					<div class="col-sm-3" >
 						<div class="image-wrapper" style="background-image:url(<?php the_sub_field('icon'); ?>);" ></div>
 					</div><!-- col -->
-					<div class="col-sm-9" >
+					<div class="col-sm-8" >
 						<div class="text-wrapper" >
 							<?php the_sub_field('content'); ?>
 						</div><!-- .text-wrapper -->
