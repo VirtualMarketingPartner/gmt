@@ -118,76 +118,35 @@
 		</section><!-- .approach -->
 		<?php endwhile; endif; ?>
 	
-	
+	<?php if(have_rows('clients')): while(have_rows('clients')): the_row(); ?>
 	<section class="container-fluid angle grey" >
 		<div class="container" >
+			<?php if(get_sub_field('content')): ?>
 			<div class="row" >
 				<div class="col-12 text-center" >
-					<h2>We Work with Large Organizations <br>Startups, and Individuals</h2>
+					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
+			<?php endif; ?>
 			
+			<?php if(have_rows('client_list')): ?>
 			<div class="row" >
 				<div class="col-12" >
 					<div class="row text-center" >
+						<?php while(have_rows('client_list')): the_row() ?>
 						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://1000logos.net/wp-content/uploads/2017/05/Walmart-logo-768x208.png');"></div> 
+							<div class="image-wrapper brand" style="background-image:url(<?php the_sub_field('logo'); ?>);" title="<?php the_sub_field('name'); ?>"></div> 
 						</div><!-- .col -->
-						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://dex.energy/wp-content/uploads/sites/11/2019/10/tesla-logo.png');"></div> 
-						</div><!-- .col -->
-						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://bigfishemployerservices.com/wp-content/uploads/2015/07/st-jude-logo-horizontal.jpg');"></div> 
-						</div><!-- .col -->
-						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://micromediaweb.com/home/1763119/webslides-latest/static/images/ibm_logo.png');"></div> 
-						</div><!-- .col -->
-						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMt6QYwAWLnH7pJlMlcqcGto9W-FFAnfESA&usqp=CAU');"></div> 
-						</div><!-- .col -->
-						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://chowhoundpet.com/wp-content/uploads/California-Natural-Company-Logo1.jpg');"></div> 
-						</div><!-- .col -->
-					</div><!-- .row -->
-					<div class="row" >
-						<div class="hidden-sm col-md-1" ></div>
-						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://bloximages.chicago2.vip.townnews.com/fontanaheraldnews.com/content/tncms/assets/v3/editorial/b/2f/b2f726f2-5401-11ea-9b65-fb31b2f4645c/5e4eba1d31405.image.jpg?resize=675%2C200');"></div> 
-						</div><!-- .col -->
-						<div class="col-sm-4 col-md-2" >
-							<div class="image-wrapper brand" style="background-image:url('https://i.pinimg.com/originals/f2/77/2d/f2772d96aace5a005fb7260766dc097d.png');"></div> 
-						</div><!-- .col -->
-						<div class="col-sm-4 col-md-3" >
-							<div class="image-wrapper brand" style="background-image:url('https://logos-download.com/wp-content/uploads/2019/11/TOMS_Shoes_Logo.png');"></div> 
-						</div><!-- .col -->
-						<div class="col-sm-4 col-md-3" >
-							<div class="image-wrapper brand" style="background-image:url('https://1000logos.net/wp-content/uploads/2017/05/Walmart-logo-768x208.png');"></div> 
-						</div><!-- .col -->
+						<?php endwhile; ?>
 					</div><!-- .row -->
 				</div><!-- .col-12 -->
 			</div><!-- .row -->
-			<div class="row text-center" >
-				<div class="col-sm-4 col-md-2" >
-					<div class="image-wrapper brand" style="background-image:url('https://chowhoundpet.com/wp-content/uploads/California-Natural-Company-Logo1.jpg');"></div> 
-				</div><!-- .col -->
-				<div class="col-sm-4 col-md-2" >
-					<div class="image-wrapper brand" style="background-image:url('https://1000logos.net/wp-content/uploads/2017/05/Walmart-logo-768x208.png');"></div> 
-				</div><!-- .col -->
-				<div class="col-sm-4 col-md-2" >
-					<div class="image-wrapper brand" style="background-image:url('https://bigfishemployerservices.com/wp-content/uploads/2015/07/st-jude-logo-horizontal.jpg');"></div> 
-				</div><!-- .col -->
-				<div class="col-sm-4 col-md-2" >
-					<div class="image-wrapper brand" style="background-image:url('https://micromediaweb.com/home/1763119/webslides-latest/static/images/ibm_logo.png');"></div> 
-				</div><!-- .col -->
-				<div class="col-sm-4 col-md-2" >
-					<div class="image-wrapper brand" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkMt6QYwAWLnH7pJlMlcqcGto9W-FFAnfESA&usqp=CAU');"></div> 
-				</div><!-- .col -->
-				<div class="col-sm-4 col-md-2" >
-					<div class="image-wrapper brand" style="background-image:url('https://dex.energy/wp-content/uploads/sites/11/2019/10/tesla-logo.png');"></div> 
-				</div><!-- .col -->
-			</div><!-- .row -->
+			<?php endif; ?>
 		</div><!-- .container -->
 	</section><!-- .container-fluid -->
+	<?php endwhile; endif; ?>
+	
+
 	
 	<?php if(have_rows('news')): while(have_rows('news')): the_row(); ?>
 	<section class="container-fluid white news" >
