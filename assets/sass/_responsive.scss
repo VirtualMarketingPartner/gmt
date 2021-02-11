@@ -52,7 +52,11 @@
 	.post .image-wrapper{width:100%;}
 	
 	.hero{min-height:300px;}
-	#home .hero #slideshow .carousel-item{padding:25px 0;}
+	#home .hero #slideshow .carousel-item{
+		height:300px;
+		padding:25px 0;}
+	
+	.bg{min-height:300px;}
 
 	.recent-news .date {
 		margin-bottom: 20px;

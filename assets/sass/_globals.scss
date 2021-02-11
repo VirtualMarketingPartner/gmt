@@ -434,3 +434,30 @@ ul.socials {
 		i{color:$secondary !important;}
 	}
 }
+
+
+.nav-tabs{
+	position:relative;
+
+	.indicator{
+	display:block;
+	background:$secondary;
+	width:5px; min-height:10px;
+	@include defaultTransition;
+	position:absolute;
+	top:0; right:-3px;
+	}
+}
+
+.nav.horiz{
+	position:relative;
+
+	.indicator{
+		display:block;
+		background:$secondary;
+		min-width:10px; height:5px;
+		@include defaultTransition;
+		position:absolute;
+		bottom:0; left:0;
+	}
+}

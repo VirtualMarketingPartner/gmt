@@ -463,6 +463,34 @@ ul.socials {
     ul.socials li i {
       color: #08cbfe !important; }
 
+.nav-tabs {
+  position: relative; }
+  .nav-tabs .indicator {
+    display: block;
+    background: #08cbfe;
+    width: 5px;
+    min-height: 10px;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    position: absolute;
+    top: 0;
+    right: -3px; }
+
+.nav.horiz {
+  position: relative; }
+  .nav.horiz .indicator {
+    display: block;
+    background: #08cbfe;
+    min-width: 10px;
+    height: 5px;
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
 /* ==========================================
 	Layout
 ========================================== */
@@ -532,20 +560,18 @@ ul.socials {
   .values .card .card-body {
     padding: 15px 30px; }
 
-.team {
-  padding: 80px 0; }
-  .team .image-wrapper {
-    height: 220px;
-    margin: 20px 0 10px;
-    background-size: contain;
-    background-position: bottom left;
-    background-color: #fff; }
-  .team p.name {
-    font-weight: 600;
-    margin-bottom: 0; }
-    .team p.name a {
-      color: #111111;
-      background: transparent; }
+.team .image-wrapper {
+  height: 220px;
+  margin: 20px 0 10px;
+  background-size: contain;
+  background-position: bottom left;
+  background-color: #fff; }
+.team p.name {
+  font-weight: 600;
+  margin-bottom: 0; }
+  .team p.name a {
+    color: #111111;
+    background: transparent; }
 
 .partners.bg {
   background-position: right center;
@@ -556,6 +582,14 @@ ul.socials {
   padding-bottom: 100px; }
 
 /* ===== Team ===== */
+#team .nav li {
+  margin: 0;
+  padding: 0; }
+  #team .nav li a.nav-link {
+    color: #111111;
+    padding: 10px; }
+    #team .nav li a.nav-link.active {
+      font-weight: bold; }
 #team .list-item {
   display: block;
   width: 80%;
@@ -668,19 +702,7 @@ ul.socials {
   margin: 50px 0;
   padding: 30px 30px 30px 0;
   border: none;
-  border-right: 1px solid #8c8c8c;
-  position: relative; }
-  #services #service_tabs .nav-tabs .indicator {
-    display: block;
-    background: #08cbfe;
-    width: 5px;
-    min-height: 10px;
-    -webkit-transition: all ease-in-out .2s;
-    -moz-transition: all ease-in-out .2s;
-    transition: all ease-in-out .2s;
-    position: absolute;
-    top: 0;
-    right: -3px; }
+  border-right: 1px solid #8c8c8c; }
   #services #service_tabs .nav-tabs li {
     padding: 5px 0;
     border-bottom: 1px solid #8c8c8c; }
@@ -1171,7 +1193,11 @@ form .form-group {
     min-height: 300px; }
 
   #home .hero #slideshow .carousel-item {
+    height: 300px;
     padding: 25px 0; }
+
+  .bg {
+    min-height: 300px; }
 
   .recent-news .date {
     margin-bottom: 20px; }

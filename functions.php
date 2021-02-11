@@ -64,14 +64,11 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
-
-
-/* =========================================
-  Google Map API Key - Temp setup 11/18/20 
-========================================= */
-
+// Google Map API Key - Temp setup 11/18/20
 function my_acf_init() {
     acf_update_setting('google_api_key', 'AIzaSyAXdo1pSufFydCToPxjbsSPwJPsUWGkXpY');
 }
 
 add_action('acf/init', 'my_acf_init');
+
+

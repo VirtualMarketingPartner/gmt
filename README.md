@@ -1,2 +1,2 @@
-# GLOMOTAX Consultants
-### A Wordpress Theme created by Taylor Desens
+# The Audible Lawyer
+### A Wordpress Theme created by Taylor Desens for Coretechs Consulting

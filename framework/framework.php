@@ -155,9 +155,9 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
-/* =========================================
-	Custom Menus on WP Dashboard
-========================================= */
+
+/* Custom Menus on WP Dashboard */
+
 
 // custom page & subnav for custom taxonomy
 

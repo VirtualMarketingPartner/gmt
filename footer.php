@@ -1,6 +1,5 @@
 </div><!-- #body -->
 
-
 <?php if(have_rows('newsletter_signup','options')): while(have_rows('newsletter_signup','options')): the_row(); ?>
 <section class="container-fluid bg" style="background-image:url(<?php the_sub_field('bg'); ?>); background-color:<?php the_sub_field('bg_color'); ?>" id="newsletter_signup" >
 	<div id="page_down" ></div>
@@ -11,7 +10,7 @@
 					<div class="col-sm-3" >
 						<div class="image-wrapper" style="background-image:url(<?php the_sub_field('icon'); ?>);" ></div>
 					</div><!-- col -->
-					<div class="col-sm-8" >
+					<div class="col-sm-9" >
 						<div class="text-wrapper" >
 							<?php the_sub_field('content'); ?>
 						</div><!-- .text-wrapper -->

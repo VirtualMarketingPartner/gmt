@@ -128,7 +128,6 @@
 }
 
 .team {
-padding:80px 0;
 	
 	.image-wrapper{
 		height:220px; 
@@ -161,6 +160,19 @@ padding:80px 0;
 
 /* ===== Team ===== */
 #team{
+	.nav{
+		li{
+			margin:0; padding:0; 
+			
+			a.nav-link{
+				color:$black;
+				padding:10px;
+				
+				&.active{font-weight:bold;}
+			}
+		}
+	}
+	
 	.list-item{
 		display:block;
 		width:80%; 
@@ -169,6 +181,7 @@ padding:80px 0;
 		
 		.image-wrapper{height:150px;}
 	}
+	
 }
 
 /* ===== Team - Single Team Member ===== */
@@ -351,16 +364,6 @@ padding:80px 0;
 			padding: 30px 30px 30px 0;
 			border: none;
 			border-right: 1px solid $grey;
-			position:relative;
-			
-			.indicator{
-				display:block;
-				background:$secondary;
-				width:5px; min-height:10px;
-				@include defaultTransition;
-				position:absolute;
-				top:0; right:-3px;
-			}
 
 			li {
 				padding: 5px 0;

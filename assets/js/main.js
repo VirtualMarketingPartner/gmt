@@ -68,24 +68,43 @@ jQuery(function($){
 	});
 	
 	
-	//  slide indicator for service tabs
-	var currentNav = $('.nav-tabs li a.active').parent('li');
-	var startNavPos = $(currentNav).position(); 
-	var startNavH = $(currentNav).height();
-	$('.nav-tabs .indicator').css({
-		top: +startNavPos.top,
-		height: startNavH
-	});
-	$('.nav-tabs li').hover(function () {
-		var currentNavPos = $(this).position();
-		var currentNavH = $(this).height();
-		$('.nav-tabs .indicator').css({
-			top: +currentNavPos.top, 
-			height: currentNavH
+	if( $('.nav-tabs.flex-column').length ){
+		//  slide indicator for vertical tabs
+		var currentNav = $('.nav-tabs.flex-column li a.active').parent('li');
+		var startNavPos = $(currentNav).position(); 
+		var startNavSize = $(currentNav).height();
+		$('.nav-tabs.flex-column .indicator').css({
+			top: +startNavPos.top,
+			height: startNavSize
 		});
-	});
+		$('.nav-tabs.flex-column li').hover(function () {
+			var currentNavPos = $(this).position();
+			var currentNavSize = $(this).height();
+			$('.nav-tabs.flex-column .indicator').css({
+				top: +currentNavPos.top, 
+				height: currentNavSize
+			});
+		});
+	}else if( $('.nav.horiz').length ){	
+		//  slide indicator for horizontal tabs
+		var HcurrentNav = $('.nav.horiz li a.active').parent('li');
+		var HstartNavPos = $(HcurrentNav).position(); 
+		var HstartNavSize = $(HcurrentNav).width();
+
+		$('.nav.horiz .indicator').css({
+			left: +HstartNavPos.left,
+			width: HstartNavSize
+		});
+		$('.nav.horiz li').hover(function () {
+			var HcurrentNavPos = $(this).position();
+			var HcurrentNavSize = $(this).width();
+			$('.nav.horiz .indicator').css({
+				left: +HcurrentNavPos.left, 
+				width: HcurrentNavSize
+			});
+		});	
+	}
 	
- 
 
 });
 
