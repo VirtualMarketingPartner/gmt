@@ -536,10 +536,16 @@ ul.socials {
   padding: 80px 0; }
   .team .image-wrapper {
     height: 220px;
-    margin: 20px 0 0; }
+    margin: 20px 0 10px;
+    background-size: contain;
+    background-position: bottom left;
+    background-color: #fff; }
   .team p.name {
     font-weight: 600;
     margin-bottom: 0; }
+    .team p.name a {
+      color: #111111;
+      background: transparent; }
 
 .partners.bg {
   background-position: right center;

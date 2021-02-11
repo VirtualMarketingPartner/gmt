@@ -43,13 +43,13 @@
 							<?php $group = get_sub_field('group_members'); if( $group ): ?>
 							<?php foreach( $group as $post ): setup_postdata($post); ?>
 								<div class="col-12 col-md-6 col-lg-3" >
-									<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?><div class="image-wrapper" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
-									<p class="name" ><?php 
+									<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?><a href="<?php the_permalink(); ?>" class="image-wrapper" style="background-image:url(<?php the_sub_field('image'); ?>);" ></a>
+									<p class="name" ><a href="<?php the_permalink(); ?>" ><?php 
 										$name = get_the_title(); 
 										$name_array = explode(' ', $name);
 										$first_name = $name_array[0];
 										echo $first_name; 
-										?></p>
+										?></a></p>
 									<?php endwhile; endif; ?>
 								</div><!-- .col -->
 							<?php endforeach; ?>
@@ -62,11 +62,6 @@
 				</div><!-- .col -->
 			</div><!-- .row -->
 			<?php endif; ?>
-			
-
-	
-			
-			
 			
 		</div><!-- .container -->
 	</section ><!-- .team -->
