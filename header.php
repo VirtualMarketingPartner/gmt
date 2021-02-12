@@ -20,7 +20,7 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap.min.js" ></script>
 	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/main.js?ver=jan28" ></script>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css" rel="stylesheet">
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css?ver=0928" rel="stylesheet">
 	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

@@ -30,6 +30,31 @@
     animation-duration: .5s;
     animation-delay: 1.5s; }
 
+.scroll-left {
+  animation-name: scroll-left;
+  animation-duration: 25s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse; }
+
+.scroll-right {
+  transform: scaleX(-1);
+  animation-name: scroll-right;
+  animation-duration: 35s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse; }
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0%); } }
 @keyframes fadeInUpXXX {
   0% {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
@@ -550,6 +575,9 @@ ul.socials {
   bottom: -50px; }
   .testimonials ol.carousel-indicators li {
     background-color: #febb15; }
+
+#client_list {
+  overflow: hidden; }
 
 /* ===== About Us ===== */
 .values h2 {
