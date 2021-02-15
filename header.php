@@ -10,18 +10,6 @@
 	<meta name="title" content="<?php the_field('default_seo_title', 'options'); ?>">
 	<meta name="description" content="<?php the_field('default_seo_description', 'options'); ?>">
 	
-	
-	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-	<script src="https://kit.fontawesome.com/391389ab70.js" crossorigin="anonymous"></script>
-	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap.min.js" ></script>
-	
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/main.js?ver=jan28" ></script>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/sass/main.css?ver=0928" rel="stylesheet">
-	
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

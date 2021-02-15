@@ -4,6 +4,56 @@
 	Front End 
 ========================================= */
 
+// enqueue scripts & styles
+
+function theme_enqueue_styles(){
+	wp_enqueue_style(
+		'bootstrap',
+		get_template_directory_uri() . '/assets/css/bootstrap.min.css',
+		array(),
+		false,
+		'all'
+	);
+		wp_enqueue_style(
+		'main-stylesheet',
+		get_template_directory_uri() . '/assets/sass/main.css',
+		array('bootstrap'),
+		false,
+		'all'
+	);
+	wp_enqueue_script(
+		'jquery',
+		get_template_directory_uri() . '/assets/js/jquery-3.5.1.min.js',
+		array(),
+		'3.5.1',
+		'true' // load in the footer
+	);
+	wp_enqueue_script(
+		'bootstrap',
+		get_template_directory_uri() . '/assets/js/bootstrap.min.js',
+		array('jquery'),
+		'1.0.0',
+		'true' // load in the footer
+	);
+	wp_enqueue_script(
+		'fontawesome',
+		'https://kit.fontawesome.com/391389ab70.js',
+		array('jquery'),
+		'1.0.0',
+		'true' // load in the footer
+	);
+	wp_enqueue_script(
+		'main-js',
+		get_template_directory_uri() . '/assets/js/main.js',
+		array('jquery', 'bootstrap'),
+		'1.0.0',
+		'true' // load in the footer
+	);
+	
+}
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+
+
 // register menus	
 function register_my_menus() {
 	register_nav_menus(

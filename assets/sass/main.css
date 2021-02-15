@@ -1,7 +1,11 @@
 /* ==========================================
 	Variables
 ========================================== */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Source+Sans+Pro:wght@400;700&display=swap");
+@font-face {
+  font-family: 'Avenir';
+  font-weight: normal;
+  src: url("../webfonts/avenir.otc") format("otc"); }
 /* ==========================================
 	Mixins
 ========================================== */
@@ -86,13 +90,13 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #111111;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Avenir", "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  background: #232323;
+  background: #fff;
   -webkit-transition: all ease-in-out .2s;
   -moz-transition: all ease-in-out .2s;
   transition: all ease-in-out .2s; }
@@ -171,8 +175,7 @@ section {
   position: relative;
   z-index: 0;
   margin-top: 0;
-  background: #fff;
-  position: relative; }
+  background: #fff; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
@@ -837,11 +840,6 @@ ul.socials {
       text-align: left;
       padding: 6px 10px;
       height: auto; }
-      #header .navbar-nav .sub-menu li:hover {
-        background: #5c5ce5;
-        color: #fff; }
-      #header .navbar-nav .sub-menu li a:hover {
-        color: #fff !important; }
   #header .navbar-nav .sub-menu-icon::after {
     content: "\f0dd";
     font-family: "Font Awesome 5 Pro";

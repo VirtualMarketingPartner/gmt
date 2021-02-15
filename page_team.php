@@ -9,8 +9,6 @@
 	
 	<?php get_template_part('/partials/hero'); ?>
 	
-	<?php get_template_part('/partials/intro'); ?>
-	
 	<?php if(have_rows('team')): while(have_rows('team')): the_row(); ?>
 	<section class="container-fluid angle grey team" >
 		<div class="container" >

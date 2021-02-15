@@ -6,7 +6,7 @@
 
 // register custom styles for Login Page
 function custom_login(){
-  echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/assets/css/custom-login.css" />';
+  echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/assets/sass/main.css" />';
 }
 add_action('login_head', 'custom_login');
 
@@ -59,7 +59,7 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 // Use Custom Editor Styles
 function my_theme_add_editor_styles(){
 
-  add_editor_style( '/assets/css/custom-editor.css' );
+  add_editor_style( '/assets/sass/main.css' );
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
 
