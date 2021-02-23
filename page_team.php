@@ -42,7 +42,7 @@
 								<div class="row" >
 								<?php $group = get_sub_field('group_members'); if( $group ): ?>
 								<?php foreach( $group as $post ): setup_postdata($post); ?>
-									<div class="col-12 col-md-6 col-lg-3" >
+									<div class="col-12 col-md-6 col-lg-3" style="margin-bottom:50px;" >
 										<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?><a href="<?php the_permalink(); ?>" class="image-wrapper" style="background-image:url(<?php the_sub_field('image'); ?>);" ></a>
 										<p class="name" ><a href="<?php the_permalink(); ?>" ><?php 
 											$name = get_the_title(); 

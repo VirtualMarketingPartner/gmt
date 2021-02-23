@@ -460,3 +460,22 @@ ul.socials {
 		bottom:0; left:0;
 	}
 }
+
+.expand{
+	padding:5px 0;
+	
+	.indicator{
+		@include defaultTransition;
+		&.open{
+			color:$primary;
+			transform:rotate(90deg);}
+	}
+	.expand-header{}
+	.expand-content{display:none;}
+}
+
+a.modal-togle{color:primary;}
+.modal-backdrop.show{display:none !important; opacity:0;}
+.modal.show{background:rgba(0,0,0,.85);}
+
+.modal-content{border-bottom:5px solid $accent;}

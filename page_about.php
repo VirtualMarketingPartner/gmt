@@ -44,41 +44,8 @@
 	<section class="container-fluid angle team" >
 		<div class="container" >
 		  <div class="row" >
-				<div class="col animate" >
-					<h2><?php the_sub_field('header'); ?></h2>
-				</div><!-- .col -->
-			</div><!-- .row -->
-			<div class="row circle-list animate" >
-				<?php 
-				$args = array(
-					'post_type' => 'team',
-					'tax_query' => array(
-						'relation' => 'AND',
-						array(
-							'taxonomy' => 'group',
-							'field'    => 'slug',
-							'terms'    => array( 'leadership' ),
-						),
-					),
-				);
-				$leadershipQuery = new WP_Query( $args );
-				while( $leadershipQuery->have_posts()): $leadershipQuery -> the_post(); 
-				?> 
-				
-				<div class="col-6 col-md-3 text-center" >
-					<?php if(have_rows('team_member')): while(have_rows('team_member')): the_row(); ?>
-					<a href="<?php the_permalink(); ?>" class="list-item" >
-						<div class="image-wrapper circle" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
-						<h4><?php the_title(); ?></h4>
-					</a>
-					<?php endwhile; endif; ?>
-				</div><!-- .col -->	 
-				<?php endwhile; wp_reset_postdata(); ?>
-			</div><!-- .row -->
-			<div class="row" >
-			  <div class="col text-center" >
-				  	<br>
-					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('button_label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+				<div class="col-12 offset-md-1 col-md-10 animate" >
+					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->

@@ -107,6 +107,10 @@
 @media all and (min-width:992px) {}
 
 // Mobile - Large Screens
+@media all and (max-width:1200px){
+	.full_flex, .combo_flex, .column_flex, .cards_flex{padding:50px 20px;}
+}
+
 @media all and (min-width:1200px) {
 	.single-team {
 		.card.single-team-info {

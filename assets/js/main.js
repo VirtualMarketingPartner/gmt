@@ -105,6 +105,17 @@ jQuery(function($){
 		});	
 	}
 	
+	// Progressive Disclosure
+	$('.expand-header').on('click', function(){
+		$(this).parent().children('.expand-content').slideToggle();
+		$(this).parent().children('.indicator').toggleClass('open');
+	});
+	
+	// Modal Close
+	$('.close-modal').on('click', function(){
+		$(this).closest('.modal.show').removeClass('show');
+	});
+	
 
 });
 

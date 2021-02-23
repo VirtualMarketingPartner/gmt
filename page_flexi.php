@@ -4,7 +4,6 @@
 
 
 <?php get_header(); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class="content" id="flexi">
 	
 	<?php get_template_part('/partials/hero'); ?>
@@ -32,5 +31,4 @@
 	<?php endwhile; endif; ?>
 	
 </div><!-- #flexi -->
-<?php endwhile; endif; ?>
 <?php get_footer(); 

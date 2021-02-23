@@ -63,67 +63,6 @@ function my_theme_add_editor_styles(){
 }
 add_action( 'init', 'my_theme_add_editor_styles' );
 
-
-/* =========================================
-	Framework : Shortcodes
-========================================= */
-
-
-function company_Shortcode(){
-  $company = get_field('site_name','options');
-  return $company;
-
-}
-add_shortcode('company', 'company_Shortcode');
-add_filter('acf/format_value/type=textarea', 'do_shortcode');
-add_filter('acf/format_value/type=text', 'do_shortcode');
-
-function address_Shortcode(){
-  $address = get_field('site_address','options');
-  return $address;
-
-}
-add_shortcode('address', 'address_Shortcode');
-add_filter('acf/format_value/type=textarea', 'do_shortcode');
-add_filter('acf/format_value/type=text', 'do_shortcode');
-
-function phone_Shortcode(){
-  $phone = get_field('site_phone','options');
-  return $phone;
-
-}
-add_shortcode('phone', 'phone_Shortcode');
-add_filter('acf/format_value/type=textarea', 'do_shortcode');
-add_filter('acf/format_value/type=text', 'do_shortcode');
-
-function email_Shortcode(){
-  $email = get_field('site_email','options');
-  return $email;
-
-}
-add_shortcode('email', 'email_Shortcode');
-add_filter('acf/format_value/type=textarea', 'do_shortcode');
-add_filter('acf/format_value/type=text', 'do_shortcode');
-
-function currentYear_Shortcode(){
-  $year = date("Y"); 
-  return $year;
-
-}
-add_shortcode('current_year', 'currentYear_Shortcode');
-add_filter('acf/format_value/type=textarea', 'do_shortcode');
-add_filter('acf/format_value/type=text', 'do_shortcode');
-
-
-function social_Shortcode(){
-  ob_start();
-    get_template_part( 'partials/socials' );
-    return ob_get_clean();
-}
-add_shortcode('socials', 'social_Shortcode');
-add_filter('acf/format_value/type=textarea', 'do_shortcode');
-add_filter('acf/format_value/type=text', 'do_shortcode');
-
 /* Framework */
 if( function_exists('acf_add_options_page') ) {
 	

@@ -69,6 +69,8 @@ require_once('wp_bootstrap_navwalker.php');
 
 // add default ACF Fields 
 include_once('framework/framework.php');
+// add shortcodes
+include_once('framework/shortcodes.php');
 
 // Custom Options Pages
 if( function_exists('acf_add_options_page') ) {

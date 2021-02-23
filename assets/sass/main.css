@@ -519,6 +519,31 @@ ul.socials {
     bottom: 0;
     left: 0; }
 
+.expand {
+  padding: 5px 0; }
+  .expand .indicator {
+    -webkit-transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s; }
+    .expand .indicator.open {
+      color: #5c5ce5;
+      transform: rotate(90deg); }
+  .expand .expand-content {
+    display: none; }
+
+a.modal-togle {
+  color: primary; }
+
+.modal-backdrop.show {
+  display: none !important;
+  opacity: 0; }
+
+.modal.show {
+  background: rgba(0, 0, 0, 0.85); }
+
+.modal-content {
+  border-bottom: 5px solid #febb15; }
+
 /* ==========================================
 	Layout
 ========================================== */
@@ -592,7 +617,7 @@ ul.socials {
     padding: 15px 30px; }
 
 .team .image-wrapper {
-  height: 220px;
+  min-height: 220px;
   margin: 20px 0 10px;
   background-size: contain;
   background-position: bottom left;
@@ -1247,6 +1272,9 @@ form .form-group {
 
   .container-fluid.bg {
     background-attachment: fixed; } }
+@media all and (max-width: 1200px) {
+  .full_flex, .combo_flex, .column_flex, .cards_flex {
+    padding: 50px 20px; } }
 @media all and (min-width: 1200px) {
   .single-team .card.single-team-info {
     flex-direction: row; }
