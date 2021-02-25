@@ -20,13 +20,16 @@
 				<div class="carousel-item <?php if( $slideCount==0 ){echo 'active'; } ?>" style="background-image:url(<?php the_sub_field('image'); ?>);" >
 					<div class="container" >
 						<div class="row" >
-							<div class="col-12 col-md-7" >
-								<div class="text-wrapper animate" >
-									<?php the_sub_field('content'); ?>
-								</div><!-- .text-wrapper -->
+							<div class="col-12 col-md-8" >
+								<div class="hero-text animate" >
+									<div class="content" >
+										<?php the_sub_field('content'); ?>
+									</div><!-- .content -->
+								</div><!-- .hero-text -->
 							</div><!-- .col -->
 						</div><!-- .row -->
 					</div><!-- .container -->
+					
 				</div><!-- .carousel-item -->
 			<?php $slideCount++; endwhile; ?>		
 			</div><!-- .carousel-inner -->
@@ -39,35 +42,8 @@
 	<section class="container-fluid angle services" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-12 col-md-4 animate" >
-					<div class="pattern left large" >
-						<div class="card blocker" >
-							<div clas="card-body" >
-								<?php the_sub_field('sidebar'); ?>
-							</div><!-- .card-body -->
-						</div><!-- .card -->
-						<div class="pattern-block" ></div>
-					</div><!-- .pattern right -->
-				</div><!-- .col -->
-				
-				<div class="col-12 col-md-8 service" >
-					<div class="row" >
-					<?php $services = get_sub_field('services'); if( $services ):?>
-					<?php foreach( $services as $post ): setup_postdata($post); ?>
-						<div class="col-6 col-md-4" >
-							<div class="row" >
-								<div class="col-12 offset-md-2 col-md-8 animate" >
-									<a href="<?php the_permalink(); ?>" >
-										<div class="image-wrapper circle icon" style="background-image:url(<?php the_field('icon'); ?>);" ></div>
-									</a>
-									<h3><?php the_title(); ?></h3>
-								</div><!-- .col -->
-							</div><!-- .row -->
-						</div><!-- .col -->	 
-					<?php endforeach; ?>
-					<?php wp_reset_postdata(); endif; ?>
-						
-					</div><!-- .row -->
+				<div class="col-12 animate" >
+					<?php the_sub_field('content'); ?>
 				</div><!-- .col -->
 			</div><!-- .row -->
 		</div><!-- .container -->

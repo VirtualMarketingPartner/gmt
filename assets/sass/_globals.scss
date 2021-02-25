@@ -32,12 +32,11 @@ body{
 		background-position:center center;
 		background-color:$off-white;
 		background-size:cover;
+		padding:150px 0;
 		
 		.text-wrapper{
 			color:$white;
 			text-shadow:0 0 10px rgba(0,0,0,.8);
-			padding:150px 0 100px;
-			padding:150px 0 100px;
 			
 			.card{color:$black; text-shadow: none;}
 		}
@@ -229,18 +228,12 @@ blockquote{
 
 .hero{
 	min-height:500px;
-	padding:200px 0 50px;
 	color:$white;
 	text-shadow:0 0 8px rgba(0,0,0,.85);
 	background-position:center center;
 	background-size:cover;
 	background-repeat:no-repeat;
 	position:relative;
-	
-	.text-wrapper{
-		position:relative;
-		z-index:1;
-	}
 	
 	.overlay{
 		top:0; left:0;
@@ -304,11 +297,11 @@ blockquote{
 	.pattern-block{
 		content:'';
 		position:absolute;
-		background-image:url('../images/diagonal_stripes.png');
-		background-size:contain;
+		background-image:url('../images/dots.png');
+		background-size:cover;
 		width:85%; height:100%;
 		bottom:-10%;
-		@include opacity(15,.15);
+		@include opacity(8,.08);
 	}
 	
 	&.right{

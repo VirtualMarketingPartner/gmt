@@ -15,16 +15,23 @@
 			}
 
 			.carousel-item {
-				min-height:500px;
-				padding: 100px 0;
-				color: $white;
-				text-shadow: 0 0 8px rgba(0, 0, 0, .85);
 				background-position: center center;
+				background-repeat:no-repeat;
 				background-size: cover;
-				background-repeat: no-repeat;
-
-				h2 {
-					margin-bottom: 0;
+				background-attachment: fixed;
+				min-height:500px;
+				padding:100px 0 50px;
+				position: relative;
+				
+				.hero-text{
+					display:block;
+					height:500px;
+					position:relative;
+					top:0; left:0;
+					display: flex;  
+					align-items: center;
+					
+					.content{}
 				}
 			}
 		}
