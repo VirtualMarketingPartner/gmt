@@ -133,9 +133,9 @@
 										<tr>
 											<?php if(have_rows('th_options')): while(have_rows('th_options')): the_row(); ?>
 												<th scope="col"></th>
-												<th scope="col"><?php the_sub_field('option_1'); ?></th>
-												<th scope="col"><?php the_sub_field('option_2'); ?></th>
 												<th scope="col"><?php the_sub_field('option_3'); ?></th>
+												<th scope="col"><?php the_sub_field('option_2'); ?></th>
+												<th scope="col"><?php the_sub_field('option_1'); ?></th>
 											<?php endwhile; endif; ?>
 										</tr>
 									</thead>
@@ -146,7 +146,7 @@
 											<tr>
 											<td scope="row"><?php the_sub_field('objective'); ?></td>
 												<td>
-													<?php if($options && in_array('strategic', $options)) {
+													<?php if($options && in_array('compliance', $options)) {
 														echo '<i class="fas fa-check-circle"></i>';
 													}?>
 												</td>
@@ -156,7 +156,7 @@
 													}?>
 												</td>
 												<td>
-													<?php if($options && in_array('compliance', $options)) {
+													<?php if($options && in_array('strategic', $options)) {
 														echo '<i class="fas fa-check-circle"></i>';
 													}?>
 												</td>
