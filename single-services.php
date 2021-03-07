@@ -5,15 +5,6 @@
 	
 	<?php get_template_part('/partials/hero'); ?>
 	
-	<section class="container-fluid angle" >
-		<div class="container" >
-			<div class="text-wrapper animate slow" >
-				<h2><?php the_title(); ?></h2>
-				<?php the_content(); ?>
-			</div><!-- .text-wrapper -->
-		</div><!-- .container -->
-	</section><!-- .container-fluid -->
-	
 	<?php if(have_rows('flex')): while(have_rows('flex')): the_row();
 	$bgImage = get_sub_field('bg_image');
 	$opacity = get_sub_field('bg_overlay');
