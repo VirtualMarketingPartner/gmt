@@ -1,7 +1,7 @@
 /* ==========================================
 	Variables
 ========================================== */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Source+Sans+Pro:wght@400;700&display=swap");
 @font-face {
   font-family: 'Avenir';
   font-weight: normal;
@@ -36,29 +36,15 @@
 
 .scroll-left {
   animation-name: scroll-left;
-  animation-duration: 25s;
-  animation-timing-function: ease-out;
+  animation-duration: 60s;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse; }
-
-.scroll-right {
-  transform: scaleX(-1);
-  animation-name: scroll-right;
-  animation-duration: 35s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse; }
+  animation-direction: alternate; }
 
 @keyframes scroll-left {
   0% {
     transform: translateX(0%); }
   100% {
-    transform: translateX(-100%); } }
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(0%); } }
+    transform: translateX(-505%); } }
 @keyframes fadeInUpXXX {
   0% {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ie)";
@@ -112,7 +98,7 @@ body {
     background-position: center center;
     background-color: #f5f5f5;
     background-size: cover;
-    padding: 150px 0; }
+    padding: 100px 0; }
     .container-fluid.bg .text-wrapper {
       color: #fff;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); }
@@ -185,6 +171,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 260%; }
+
+h3 {
+  font-size: 130%; }
 
 h4 {
   margin: 10px 0;
@@ -598,6 +587,14 @@ a.modal-togle {
   padding: 150px 0 80px; }
   #home .news .recent-news a {
     padding-top: 0; }
+#home .brand {
+  margin: 40px auto;
+  height: 75px;
+  width: 100%;
+  background-size: contain;
+  background-position: center center;
+  -webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%);
+  opacity: .3; }
 
 .testimonials ol.carousel-indicators {
   position: absolute;
@@ -618,8 +615,9 @@ a.modal-togle {
     padding: 15px 30px; }
 
 .team .image-wrapper {
-  min-height: 220px;
-  margin: 20px 0 10px;
+  width: 250px;
+  height: 250px;
+  margin: auto 0;
   background-size: contain;
   background-position: bottom left;
   background-color: #fff; }
@@ -1258,9 +1256,6 @@ form .form-group {
     right: 0; }
   .pattern.bottom .pattern-block {
     bottom: -5%; }
-
-  .team {
-    text-align: center; }
 
   #footer .text-left,
   #footer .text-right,

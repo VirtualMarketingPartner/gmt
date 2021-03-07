@@ -118,19 +118,6 @@
 				</div><!-- .col-12 -->
 			</div><!-- .row -->
 			<?php endif; ?>
-			<?php if(have_rows('client_list')): ?>
-			<div class="row" >
-				<div class="col-12" id="client_list" style="overflow:hidden;" >
-					<div class="row text-center scroll-right" style="flex-wrap: nowrap;" >
-						<?php while(have_rows('client_list')): the_row(); ?>
-						<div class="col-4 col-md-2 logo" >
-							<div class="image-wrapper brand" style="background-image:url(<?php the_sub_field('logo'); ?>);" title="<?php the_sub_field('name'); ?>"></div> 
-						</div><!-- .col -->
-						<?php endwhile; ?>
-					</div><!-- .row -->
-				</div><!-- .col-12 -->
-			</div><!-- .row -->
-			<?php endif; ?>
 		</div><!-- .container -->
 	</section><!-- .container-fluid -->
 	<?php endwhile; endif; ?>
@@ -174,15 +161,5 @@
 
 </div><!-- #home -->
 <?php endwhile; endif; ?>
-
-<style type="text/css" >
-	
-	.brand{
-		margin:40px auto;
-		height:60px; width:100%; 
-		background-size:contain;
-		background-position: center center;
-		-webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%); opacity: .3;}
-</style>
 
 <?php get_footer(); 

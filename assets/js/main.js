@@ -10,12 +10,12 @@ jQuery(function($){
 		};
 		
 		
+		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){
 			var circleW = $(this).width();
 			$(this).css('height', circleW );
 		});
-		
 	});
 
 	$(document).ready(function(){

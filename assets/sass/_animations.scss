@@ -24,27 +24,14 @@
 
 .scroll-left{
 	animation-name:scroll-left;
-	animation-duration: 25s;
-	animation-timing-function: ease-out;
+	animation-duration: 60s;
 	animation-iteration-count: infinite;
-	animation-direction: alternate-reverse;
-}
-.scroll-right{
-	transform: scaleX(-1);
-	animation-name:scroll-right;
-	animation-duration: 35s;
-	animation-timing-function: ease-out;
-	animation-iteration-count: infinite;
-	animation-direction: alternate-reverse;
+	animation-direction:alternate;
 }
 
 @keyframes scroll-left{
 	0%{transform:translateX(0%);}
-	100%{transform:translateX(-100%);}
-}
-@keyframes scroll-right{
-	0%{transform:translateX(-100%);}
-	100%{transform:translateX(0%);}
+	100%{transform:translateX(-505%);}
 }
 
 

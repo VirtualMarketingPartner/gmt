@@ -13,7 +13,7 @@
 								if($colSize == 1){ echo "col-md-12"; }else  
 								if($colSize == 2){ echo "col-md-6"; }else  
 								if($colSize == 3){ echo "col-md-4"; }else 
-								if($colSize == 4){ echo "col-md-3"; }?>" style="margin-bottom:100px;" >
+								if($colSize == 4){ echo "col-md-3"; }?>" style="margin-bottom:40px;" >
 						<?php the_sub_field('content'); ?>
 					</div><!-- .col -->
 					<?php endwhile; ?>

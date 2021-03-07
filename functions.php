@@ -19,7 +19,8 @@ function theme_enqueue_styles(){
 		get_template_directory_uri() . '/assets/sass/main.css',
 		array('bootstrap'),
 		false,
-		'all'
+		'all',
+		filemtime(get_template_directory() . '/assets/sass/main.css')
 	);
 	wp_enqueue_script(
 		'jquery',
@@ -47,7 +48,9 @@ function theme_enqueue_styles(){
 		get_template_directory_uri() . '/assets/js/main.js',
 		array('jquery', 'bootstrap'),
 		'1.0.0',
+		filemtime(get_template_directory() . '/assets/js/main.js'),
 		'true' // load in the footer
+		
 	);
 	
 }

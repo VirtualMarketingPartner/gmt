@@ -104,6 +104,13 @@
 			}
 		}
 	}
+	
+	.brand{
+		margin:40px auto;
+		height:75px; width:100%; 
+		background-size:contain;
+		background-position: center center;
+		-webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%); opacity: .3;}
 }
 
 .testimonials{
@@ -141,8 +148,8 @@
 .team {
 	
 	.image-wrapper{
-		min-height:220px; 
-		margin:20px 0 10px;
+		width:250px; height:250px;
+		margin:auto 0;
 		background-size:contain;
 		background-position:bottom left;
 		background-color:$white;
