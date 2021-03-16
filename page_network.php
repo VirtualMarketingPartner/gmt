@@ -27,32 +27,6 @@
 	</section><!-- .network-map -->
 	<?php endif; ?>
 	
-	<?php if(have_rows('approach')): while(have_rows('approach')): the_row(); ?>
-	<section class="container-fluid angle approach" >
-		<div class="container" >
-			<div class="row" >
-				<div class="col offset-md-2 col-md-8 text-center animate" >
-					<h2><?php the_sub_field('header'); ?></h2>
-				</div><!-- .col -->
-			</div><!-- .row -->
-			<?php if(have_rows('list')): ?>
-			<div class="row card-row animate slow" >
-			<?php while(have_rows('list')): the_row(); ?>
-				<div class="col-12 col-md-4" >
-					<div class="card narrow left" >
-						<div class="card-body vcenter" >
-							<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
-							<h4><?php the_sub_field('title'); ?></h4>
-						</div><!-- .card-body -->
-					</div><!-- .card -->
-				</div><!-- .col -->
-			<?php endwhile; ?>
-			</div><!-- .row -->
-			<?php endif; ?>
-		</div><!-- .container -->
-	</section><!-- .approach -->
-	<?php endwhile; endif; ?>
-	
 	<?php if(have_rows('contact')): while(have_rows('contact')): the_row(); ?>
 		<section class="container-fluid angle grey contact" >
 		<div class="container" >

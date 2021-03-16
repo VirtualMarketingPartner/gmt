@@ -170,7 +170,11 @@
 									</div><!-- .col -->
 									
 									<div class="col-12 col-md-3" >
-										<a href="<?php the_sub_field('button_link'); ?>" class="button" ><?php the_sub_field('button_label'); ?></a>
+									<?php $link = get_sub_field('button_link');
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self'; ?>
+										<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="button" ><?php echo esc_html( $link_title ); ?></a>
 									</div>
 								</div><!-- .row -->
 								
