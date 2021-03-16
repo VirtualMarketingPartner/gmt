@@ -107,7 +107,7 @@
 			
 			<?php if(have_rows('client_list')): ?>
 			<div class="row" >
-				<div class="col-12" id="client_list" style="overflow:hidden;" >
+				<div class="col-12" id="client_list" >
 					<div class="row text-center scroll-left" style="flex-wrap: nowrap;" >
 						<?php while(have_rows('client_list')): the_row(); ?>
 						<div class="col-4 col-md-2 logo" >

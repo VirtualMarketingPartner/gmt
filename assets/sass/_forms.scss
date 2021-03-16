@@ -34,7 +34,12 @@
 
 	input:valid + label,
 	textarea:valid + label{
-		// do something amazing
+		top:-5px;
+		left:5px;
+		font-size:75%;
+		padding:0 10px;
+		background:$white;
+		@include defaultTransition;
 	}
 	
 	textarea{
