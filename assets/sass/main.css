@@ -239,7 +239,8 @@ a {
     background-image: linear-gradient(38deg, #5c5ce5 30%, #08cbfe 90%);
     background-color: #5c5ce5;
     background-size: 120% auto; }
-    a.button:hover {
+    a.button:hover, a.button:active {
+      color: #fff;
       background-size: 150% auto; }
     a.button.inverted {
       background: transparent;
@@ -317,6 +318,14 @@ blockquote {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
+  .hero .hero-text {
+    display: block;
+    height: 500px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center; }
   .hero .overlay {
     top: 0;
     left: 0;

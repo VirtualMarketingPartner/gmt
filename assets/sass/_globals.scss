@@ -149,7 +149,9 @@ a{
 		background-size: 120% auto;
 		
 		
-		&:hover{
+		&:hover,
+		&:active{
+			color:$white;
 			background-size:150% auto;
 		}
 		
@@ -236,6 +238,20 @@ blockquote{
 	background-size:cover;
 	background-repeat:no-repeat;
 	position:relative;
+				
+		.hero-text{
+			display:block;
+			height:500px;
+			position:relative;
+			top:0; left:0;
+			display: flex;  
+			align-items: center;
+
+			.content{}
+		}
+		
+	
+	
 	
 	.overlay{
 		top:0; left:0;

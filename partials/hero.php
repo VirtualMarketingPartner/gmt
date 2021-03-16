@@ -5,13 +5,15 @@
 	<div class="container" >
 		<div class="row" >
 			<div class="col-12 col-md-8" >
-				<div class="text-wrapper animate" >
-					<p class="all-caps" ><?php the_sub_field('sub_header'); ?></p>
-					<h1><?php the_sub_field('header'); ?></h1>
-					<?php if( get_sub_field('label')): ?>
-					<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
-					<?php endif; ?>
-				</div><!-- .text-wrapper -->
+				<div class="hero-text animate" >
+					<div class="content" >
+						<p class="all-caps" ><?php the_sub_field('sub_header'); ?></p>
+						<h1><?php the_sub_field('header'); ?></h1>
+						<?php if( get_sub_field('label')): ?>
+						<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+						<?php endif; ?>
+					</div><!-- .content -->
+				</div><!-- .hero-text -->
 			</div><!-- .col -->
 		</div><!-- .row -->
 	</div><!-- .container -->
