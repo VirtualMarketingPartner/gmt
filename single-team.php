@@ -4,6 +4,11 @@
 
 <?php get_header(); ?>
 
+<?php 
+$name = get_the_title();
+$name_array = explode(' ', $name);
+$first_name = $name_array[0];?> 
+
 <section>
 	<div class="content" >
 		<div class="container single-team">
@@ -23,19 +28,25 @@
 						<h4 class="all-caps grey"><?php the_sub_field('title');?></h4>
 					<?php endwhile; endif;?>
 					<?php the_content(); ?>
-					<div class="single-team-contact">
-						<?php if(get_sub_field('email')): ?>
-						<i class="far fa-envelope"></i>
-						<a href="mailto:<?php the_sub_field('email');?>"><?php the_sub_field('email');?></a>
-						<br>
-						<?php endif; ?>
-						<?php if(get_sub_field('phone')): ?>
-						<i class="far fa-phone"></i>
-						<a href="tel:<?php the_sub_field('phone');?>"><?php the_sub_field('phone');?></a>
-						<?php endif; ?>
-						
-						<?php if(have_rows('get_to_know_content')): while(have_rows('get_to_know_content')): the_row(); ?>
-						<?php if(have_rows('social_media_accounts')): ?>
+					
+					<?php if(get_field('contact_team_button','options')): ?>
+					<a href="/contact-us?talk-to=<?php echo $name; ?>" class="button"><?php the_field('contact_team_button','options'); echo ' '.$first_name; ?></a>
+					<?php endif; ?>
+					
+				</div><!-- .col-sm-12 .col-md-8 .single-team -->
+				<?php endwhile; endif; ?>
+			</div><!-- .row -->
+			
+			<div class="row">
+				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
+					<div class="card single-team-info">
+						<div class="row" >
+						<div class="col-12 col-md-4 col-lg-3">
+							<h3><?php the_field('get_to_know','options'); ?></h3>
+							
+							<h3><?php echo $first_name; ?></h3>
+							
+							<?php if(have_rows('social_media_accounts')): ?>
 							<ul class="socials" style="margin-top:20px;">
 								<?php while(have_rows('social_media_accounts')): the_row(); ?>
 								<li>
@@ -54,25 +65,6 @@
 								<?php endwhile; ?>
 							</ul>
 							<?php endif; ?>
-						<?php endwhile; endif; ?>
-					</div><!-- .single-team-contact -->
-				</div><!-- .col-sm-12 .col-md-8 .single-team -->
-				<?php endwhile; endif; ?>
-			</div><!-- .row -->
-			<div class="row">
-				<?php if( have_rows('get_to_know_content') ): while ( have_rows('get_to_know_content') ) : the_row(); ?>
-					<div class="card single-team-info">
-						<div class="row" >
-						<div class="col-12 col-md-4 col-lg-3">
-							
-							
-							<h3><?php the_field('get_to_know','options'); ?></h3>
-							<?php 
-							$name = get_the_title();
-							$name_array = explode(' ', $name);
-							$first_name = $name_array[0];
-							?> 
-							<h3><?php echo $first_name; ?></h3>
 						</div><!-- .col-12 .col-md-4 -->
 							
 						<div class="col-12 col-md-8 col-lg-9" >
