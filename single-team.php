@@ -29,10 +29,6 @@ $first_name = $name_array[0];?>
 					<?php endwhile; endif;?>
 					<?php the_content(); ?>
 					
-					<?php if(get_field('contact_team_button','options')): ?>
-					<a href="/contact-us?talk-to=<?php echo $name; ?>" class="button"><?php the_field('contact_team_button','options'); echo ' '.$first_name; ?></a>
-					<?php endif; ?>
-					
 				</div><!-- .col-sm-12 .col-md-8 .single-team -->
 				<?php endwhile; endif; ?>
 			</div><!-- .row -->
@@ -86,6 +82,21 @@ $first_name = $name_array[0];?>
 				</div><!-- .card .single-team-info -->
 				<?php endwhile; endif; ?>
 		</div><!-- .container -->
+		<div class="container" >
+			<div class="row" >
+				<div class="col-12 col-md-4" >
+					<div class="expand">
+					<a class="expand-header" >
+						<h3><i class="far fa-angle-right indicator"></i> <?php the_field('contact_team_button','options'); echo ' '.$first_name; ?></h3>
+					</a>
+						<div class="expand-content" >
+							<?php gravity_form( 1, false, false, false, '', false ); ?>
+						</div><!-- .expand-content -->
+					</div><!-- .expand -->
+					
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- container -->
 	</div><!-- .content -->
 </section>
 
