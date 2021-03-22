@@ -15,6 +15,14 @@ function theme_enqueue_styles(){
 		'all'
 	);
 		wp_enqueue_style(
+		'myFonts-webkit',
+		get_template_directory_uri() . '/assets/webfonts/MyFontsWebfontsKit.css',
+		array(),
+		false,
+		'all'
+	);
+	
+		wp_enqueue_style(
 		'main-stylesheet',
 		get_template_directory_uri() . '/assets/sass/main.css',
 		array('bootstrap'),
