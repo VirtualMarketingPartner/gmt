@@ -62,7 +62,7 @@
 		}
 
 		.card {
-			padding: 20px 40px;
+			padding: 20px 40px 0;
 		}
 
 		.pattern {
@@ -116,14 +116,15 @@
 	}
 }
 
-#client_list{}
+#client_list{overflow:hidden;}
 
 .brand{
 		margin:40px auto;
 		height:100px; width:100%; 
 		background-size:contain;
 		background-position: center center;
-		-webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%); opacity: .3;}
+		-webkit-filter: grayscale(100%) contrast(100%); opacity: .3;
+		filter: grayscale(100%) contrast(100%); opacity: .3;}
 
 
 /* ===== About Us ===== */
@@ -412,7 +413,9 @@
 			}
 		}
 
-		.tab-content {}
+		.tab-content {
+			padding-top:20px;
+		}
 	}
 
 

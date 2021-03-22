@@ -2,10 +2,6 @@
 	Variables
 ========================================== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Source+Sans+Pro:wght@400;700&display=swap");
-@font-face {
-  font-family: 'Avenir';
-  font-weight: normal;
-  src: url("../webfonts/avenir.otc") format("otc"); }
 /* ==========================================
 	Mixins
 ========================================== */
@@ -36,7 +32,7 @@
 
 .scroll-left {
   animation-name: scroll-left;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-timing-function: linear;
   animation-duration: 80s;
   animation-iteration-count: infinite;
   animation-direction: alternate; }
@@ -77,7 +73,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #111111;
-  font-family: "Avenir", "Source Sans Pro", sans-serif;
+  font-family: "AvenirLTPro-Light", "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
@@ -116,7 +112,7 @@ body {
       background: inherit;
       content: '';
       display: block;
-      height: 50%;
+      height: 100px;
       left: 0;
       position: absolute;
       right: 0;
@@ -130,7 +126,7 @@ body {
       background: inherit;
       content: '';
       display: block;
-      height: 50%;
+      height: 100px;
       left: 0;
       position: absolute;
       right: 0;
@@ -311,7 +307,7 @@ blockquote {
   align-items: center; }
 
 .hero {
-  min-height: 500px;
+  min-height: 400px;
   color: #fff;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
   background-position: center center;
@@ -320,7 +316,7 @@ blockquote {
   position: relative; }
   .hero .hero-text {
     display: block;
-    height: 500px;
+    height: 400px;
     position: relative;
     top: 0;
     left: 0;
@@ -580,7 +576,7 @@ a.modal-togle {
     #home .services .service .icon:hover {
       background-size: 80%; }
 #home .services .card {
-  padding: 20px 40px; }
+  padding: 20px 40px 0; }
 #home .services .pattern h2 {
   margin-bottom: 0; }
 #home .network {
@@ -606,13 +602,18 @@ a.modal-togle {
   .testimonials ol.carousel-indicators li {
     background-color: #febb15; }
 
+#client_list {
+  overflow: hidden; }
+
 .brand {
   margin: 40px auto;
   height: 100px;
   width: 100%;
   background-size: contain;
   background-position: center center;
-  -webkit-filter: grayscale(100%) brightness(60%) contrast(10000000%);
+  -webkit-filter: grayscale(100%) contrast(100%);
+  opacity: .3;
+  filter: grayscale(100%) contrast(100%);
   opacity: .3; }
 
 /* ===== About Us ===== */
@@ -787,6 +788,8 @@ a.modal-togle {
         font-weight: bold; }
     #services #service_tabs .nav-tabs li:last-child {
       border-bottom-color: transparent; }
+#services #service_tabs .tab-content {
+  padding-top: 20px; }
 #services .fees {
   padding-top: 150px; }
   #services .fees .services-table {
@@ -918,6 +921,7 @@ a.modal-togle {
       position: relative;
       height: 45px; }
       #header ul li a {
+        font-size: 14px;
         font-weight: 600;
         color: #111111;
         display: block;
