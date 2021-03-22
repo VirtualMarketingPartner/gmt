@@ -60,11 +60,38 @@ add_filter('acf/format_value/type=textarea', 'do_shortcode');
 add_filter('acf/format_value/type=text', 'do_shortcode');
 
 
+function arrow_Shortcode(){
+  $arrow = get_field('arrow','options');
+  return $arrow;
+
+}
+add_shortcode('arrow', 'arrow_Shortcode');
+add_filter('acf/format_value/type=textarea', 'do_shortcode');
+add_filter('acf/format_value/type=text', 'do_shortcode');
+
+function servicePlan_shortcode(){    
+     ob_start();
+     get_template_part( '/partials/flex/service_table' );
+     return ob_get_clean();    
+}
+add_shortcode('service_plan', 'servicePlan_shortcode');
+
+function clientScroll_shortcode(){    
+     ob_start();
+     get_template_part( '/partials/flex/brands_flex' );
+     return ob_get_clean();    
+}
+add_shortcode('client_scroll', 'clientScroll_shortcode');
+
+
+
+
 
 /* =========================================
 	Custom Shortcodes
 ========================================= */ 
 
+// Get Services
 function services_shortcode( $atts ){
 	$atts = shortcode_atts(
 		array(
@@ -142,5 +169,3 @@ function services_shortcode( $atts ){
 	return $services;
 }
 add_shortcode('services_list', 'services_shortcode');
-
-

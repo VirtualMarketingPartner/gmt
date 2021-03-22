@@ -105,6 +105,16 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Footer Settings',
 		'parent_slug'	=> 'website-settings',
 	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Service Plans',
+		'menu_title'	=> 'Service Plans',
+		'parent_slug'	=> 'services',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Our Clients',
+		'menu_title'	=> 'Our Clients',
+		'parent_slug'	=> 'services',
+	));
 	
 }
 

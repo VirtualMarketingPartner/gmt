@@ -12,7 +12,7 @@
 			<div class="col-12 col-md-7 animate" >
 				<h2><?php the_sub_field('header'); ?></h2>
 				<?php if(have_rows('quotes')): $quote=0; $quoteIndicator=0; ?>
-				<div id="quoteCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
+				<div id="quoteCarousel" class="carousel slide" data-ride="carousel" >
 					<ol class="carousel-indicators" >
 						<?php while( have_rows('quotes')): the_row(); ?>
 						<li data-target="#quoteCarousel" data-slide-to="<?php echo $quoteIndicator; ?>" class="<?php if($quoteIndicator==0){echo 'active'; } ?>" ></li>

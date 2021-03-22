@@ -266,6 +266,9 @@ hr {
   border: none;
   border-bottom: 1px solid #111111; }
 
+/* ==========================================
+	Layout
+========================================== */
 /* ===== Repeated Page Elements ===== */
 .wp-block-image img {
   height: auto; }
@@ -597,17 +600,13 @@ a.modal-togle {
     color: #4CA963;
     font-size: 16px; }
 
-/* ==========================================
-	Layout
-========================================== */
-/* ===== Homepage ===== */
-#home .hero {
-  padding: 0;
-  min-height: 500px; }
-  #home .hero #slideshow ol.carousel-indicators {
+/* Slideshow */
+#slideshow {
+  margin: -75px auto; }
+  #slideshow ol.carousel-indicators {
     position: absolute;
     bottom: 50px; }
-  #home .hero #slideshow .carousel-item {
+  #slideshow .carousel-item {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -615,14 +614,17 @@ a.modal-togle {
     min-height: 500px;
     padding: 100px 0 50px;
     position: relative; }
-    #home .hero #slideshow .carousel-item .hero-text {
+    #slideshow .carousel-item .hero-text {
       display: block;
       height: 500px;
       position: relative;
       top: 0;
       left: 0;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      color: #fff; }
+
+/* ===== Homepage ===== */
 #home .services .service {
   text-align: center; }
   #home .services .service h3 {
