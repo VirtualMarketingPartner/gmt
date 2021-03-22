@@ -31,14 +31,14 @@
 		<section class="container-fluid angle grey contact" >
 		<div class="container" >
 			<div class="row vcenter" >
-				<div class="col-12 col-md-5" >
+				<div class="col-12 col-md-4" >
 					<div class="pattern left animate" >
 						<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
 						<div class="pattern-block" ></div>
 					</div><!-- .pattern -->
 				</div><!-- .col -->
 				
-				<div class="col-12 md-offset-1 col-md-6" >
+				<div class="col-12 md-offset-1 col-md-7" >
 					<div class="text-wrapper animate slow" >
 						<h2><?php the_sub_field('title'); ?></h2>
 						<?php the_sub_field('content'); ?>

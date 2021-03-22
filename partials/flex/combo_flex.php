@@ -1,7 +1,7 @@
 <div class="container combo_flex" >
 	<div class="row vcenter" >
 		<?php if( get_sub_field('layout') == 'image-left' ): ?>
-		<div class="col-12 col-md-5" >
+		<div class="col-12 col-md-4" >
 			<?php if(get_sub_field('image_type') == 'image'): ?>
 			<div class="pattern left animate" >
 				<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>
@@ -18,7 +18,7 @@
 				</video>
 			<?php endif; ?>
 		</div><!-- .col -->
-		<div class="col-12 col-md-7" >
+		<div class="col-12 col-md-8" >
 			<div class="text-wrapper animate slow" >
 			<?php the_sub_field('content'); ?>
 			</div><!-- .text-wrapper -->
@@ -26,12 +26,12 @@
 		
 		
 		<?php elseif( get_sub_field('layout') == 'image-right' ): ?>
-		<div class="col-12 col-md-6" >
+		<div class="col-12 col-md-7" >
 			<div class="text-wrapper animate slow" >
 			<?php the_sub_field('content'); ?>
 			</div><!-- .text-wrapper -->
 		</div><!-- .col -->
-		<div class="col-12 offset-md-1 col-md-5" >
+		<div class="col-12 offset-md-1 col-md-4" >
 			<?php if(get_sub_field('image_type') == 'image'): ?>
 			<div class="pattern left animate" >
 				<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);" ></div>

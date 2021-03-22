@@ -2,14 +2,14 @@
 <section class="container-fluid angle testimonials" >
 	<div class="container" >
 		<div class="row vcenter" >
-			<div class="col-12 col-md-5" >
+			<div class="col-12 col-md-4" >
 				<div class="pattern bottom left animate" >
 					<div class="image-wrapper circle blocker" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
 					<div class="pattern-block" ></div>
 				</div><!-- .pattern -->
 			</div><!-- .col -->
 
-			<div class="col-12 col-md-6 animate" >
+			<div class="col-12 col-md-7 animate" >
 				<h2><?php the_sub_field('header'); ?></h2>
 				<?php if(have_rows('quotes')): $quote=0; $quoteIndicator=0; ?>
 				<div id="quoteCarousel" class="carousel slide carousel-fade" data-ride="carousel" >
