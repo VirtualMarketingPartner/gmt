@@ -147,7 +147,7 @@
 								
 								<div class="card-body" >
 									<h4><?php the_title(); ?></h4>
-									<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
+									<a href="<?php the_permalink(); ?>" class="button inverted" ><?php the_field('read_more','options'); ?></a>
 								</div><!-- .card-body -->
 							</div><!-- .card -->						
 						</div><!-- .col -->	 

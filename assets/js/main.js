@@ -34,21 +34,17 @@ jQuery(function($){
 		var cardHeight = 0;
 		$('.card-row .card').each(function(){
 			if($(this).height() > cardHeight){
-				cardHeight = $(this).height();
+				cardHeight = $(this).height()+30;
 			}
 		});
 		$('.card-row .card').height(cardHeight);
 		
-		$('.card-row .card a.button').css({
-			'position':'absolute',
-			'bottom':'10px',
-		});
 		
 		//set card heights - use this if there are more than one set of cards on a page
 		var cardHeight2 = 0;
 		$('.card-row-2 .card').each(function(){
 			if($(this).height() > cardHeight2){
-				cardHeight2 = $(this).height();
+				cardHeight2 = $(this).height()+30;
 			}
 		});
 		$('.card-row-2 .card').height(cardHeight2);

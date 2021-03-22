@@ -304,6 +304,10 @@ blockquote{
 			display:inline-block;}
 	}
 	
+	a.button{
+		position:absolute; 
+		bottom:10px;}
+	
 }
 .pattern{
 	position:relative;
@@ -476,6 +480,49 @@ ul.socials {
 	}
 }
 
+#tabs{
+		.nav-tabs{
+			margin: 50px 0;
+			padding: 30px 30px 30px 0;
+			border: none;
+			border-right: 1px solid $grey;
+
+			li {
+				padding: 5px 0;
+				border-bottom: 1px solid $grey;
+
+				a {
+					color: $black;
+					border: none;
+					position: relative;
+					@include border-radius(0);
+
+					&.active {
+						background: $trans;
+						font-weight: bold;
+
+						&:after {
+							border-right-color: $secondary;
+						}
+					}
+
+					&:hover {
+						font-weight: bold;
+					}
+				}
+
+				&:last-child {
+					border-bottom-color: $trans;
+				}
+			}
+		}
+
+		.tab-content {
+			padding-top:20px;
+		}
+	}
+
+
 .expand{
 	padding:5px 0;
 	
@@ -494,3 +541,56 @@ a.modal-togle{color:primary;}
 .modal.show{background:rgba(0,0,0,.85);}
 
 .modal-content{border-bottom:5px solid $accent;}
+
+
+.services-table {
+	padding-top: 100px;
+	padding-bottom:50px;
+
+	.table {
+		th {
+			border: none;
+
+			&:nth-child(n+2):nth-child(-n+4) {
+				background: $charcoal;
+				color: $white;
+				text-align: center;
+				border: 2px solid;
+				padding: 5px;
+				min-width: 130px;
+			}
+		}
+
+		td {
+			border-top: none;
+
+			&:nth-child(n+2):nth-child(-n+4) {
+				text-align: center;
+				border-right: 1px solid $light-grey;
+				padding: 15px 0;
+				min-width: 170px;
+
+				&:last-child {
+					border-right: none;
+				}
+			}
+
+			&:first-of-type {
+				min-width: 250px;
+			}
+		}
+
+		tr {
+			border-bottom: 1px solid $light-grey;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		.fa-check-circle {
+			color: $lime-green;
+			font-size: 16px;
+		}
+	}
+}

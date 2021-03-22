@@ -369,6 +369,9 @@ blockquote {
     .card.left h4 {
       width: 60%;
       display: inline-block; }
+  .card a.button {
+    position: absolute;
+    bottom: 10px; }
 
 .pattern {
   position: relative; }
@@ -511,6 +514,33 @@ ul.socials {
     bottom: 0;
     left: 0; }
 
+#tabs .nav-tabs {
+  margin: 50px 0;
+  padding: 30px 30px 30px 0;
+  border: none;
+  border-right: 1px solid #8c8c8c; }
+  #tabs .nav-tabs li {
+    padding: 5px 0;
+    border-bottom: 1px solid #8c8c8c; }
+    #tabs .nav-tabs li a {
+      color: #111111;
+      border: none;
+      position: relative;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0; }
+      #tabs .nav-tabs li a.active {
+        background: transparent;
+        font-weight: bold; }
+        #tabs .nav-tabs li a.active:after {
+          border-right-color: #08cbfe; }
+      #tabs .nav-tabs li a:hover {
+        font-weight: bold; }
+    #tabs .nav-tabs li:last-child {
+      border-bottom-color: transparent; }
+#tabs .tab-content {
+  padding-top: 20px; }
+
 .expand {
   padding: 5px 0; }
   .expand .indicator {
@@ -535,6 +565,37 @@ a.modal-togle {
 
 .modal-content {
   border-bottom: 5px solid #febb15; }
+
+.services-table {
+  padding-top: 100px;
+  padding-bottom: 50px; }
+  .services-table .table th {
+    border: none; }
+    .services-table .table th:nth-child(n+2):nth-child(-n+4) {
+      background: #232323;
+      color: #fff;
+      text-align: center;
+      border: 2px solid;
+      padding: 5px;
+      min-width: 130px; }
+  .services-table .table td {
+    border-top: none; }
+    .services-table .table td:nth-child(n+2):nth-child(-n+4) {
+      text-align: center;
+      border-right: 1px solid #e1e1e1;
+      padding: 15px 0;
+      min-width: 170px; }
+      .services-table .table td:nth-child(n+2):nth-child(-n+4):last-child {
+        border-right: none; }
+    .services-table .table td:first-of-type {
+      min-width: 250px; }
+  .services-table .table tr {
+    border-bottom: 1px solid #e1e1e1; }
+    .services-table .table tr:last-child {
+      border-bottom: none; }
+  .services-table .table .fa-check-circle {
+    color: #4CA963;
+    font-size: 16px; }
 
 /* ==========================================
 	Layout
@@ -762,66 +823,6 @@ a.modal-togle {
   margin-bottom: 30px; }
 .post-body #post_cta .card-body {
   padding: 15px 30px; }
-
-/* ===== Services ===== */
-#services #service_tabs .nav-tabs {
-  margin: 50px 0;
-  padding: 30px 30px 30px 0;
-  border: none;
-  border-right: 1px solid #8c8c8c; }
-  #services #service_tabs .nav-tabs li {
-    padding: 5px 0;
-    border-bottom: 1px solid #8c8c8c; }
-    #services #service_tabs .nav-tabs li a {
-      color: #111111;
-      border: none;
-      position: relative;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0; }
-      #services #service_tabs .nav-tabs li a.active {
-        background: transparent;
-        font-weight: bold; }
-        #services #service_tabs .nav-tabs li a.active:after {
-          border-right-color: #08cbfe; }
-      #services #service_tabs .nav-tabs li a:hover {
-        font-weight: bold; }
-    #services #service_tabs .nav-tabs li:last-child {
-      border-bottom-color: transparent; }
-#services #service_tabs .tab-content {
-  padding-top: 20px; }
-#services .fees {
-  padding-top: 150px; }
-  #services .fees .services-table {
-    padding-top: 100px;
-    padding-bottom: 50px; }
-    #services .fees .services-table .table th {
-      border: none; }
-      #services .fees .services-table .table th:nth-child(n+2):nth-child(-n+4) {
-        background: #232323;
-        color: #fff;
-        text-align: center;
-        border: 2px solid;
-        padding: 5px;
-        min-width: 130px; }
-    #services .fees .services-table .table td {
-      border-top: none; }
-      #services .fees .services-table .table td:nth-child(n+2):nth-child(-n+4) {
-        text-align: center;
-        border-right: 1px solid #e1e1e1;
-        padding: 15px 0;
-        min-width: 170px; }
-        #services .fees .services-table .table td:nth-child(n+2):nth-child(-n+4):last-child {
-          border-right: none; }
-      #services .fees .services-table .table td:first-of-type {
-        min-width: 250px; }
-    #services .fees .services-table .table tr {
-      border-bottom: 1px solid #e1e1e1; }
-      #services .fees .services-table .table tr:last-child {
-        border-bottom: none; }
-    #services .fees .services-table .table .fa-check-circle {
-      color: #4CA963;
-      font-size: 16px; }
 
 /* ===== Clients ===== */
 .card-row .card {
