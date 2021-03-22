@@ -17,7 +17,7 @@
 			</ol>
 			<div class="carousel-inner" >
 			<?php while( have_rows('slideshow')): the_row(); ?>
-				<div class="carousel-item <?php if( $slideCount==0 ){echo 'active'; } ?>" style="background-image:url(<?php the_sub_field('image'); ?>);" >
+				<div class="carousel-item <?php if( $slideCount==0 ){echo 'active'; } ?>" style="background-image:url(<?php the_sub_field('image'); ?>); background-position:<?php the_sub_field('image_position') ?>" >
 					<div class="container" >
 						<div class="row" >
 							<div class="col-12 col-md-8" >
