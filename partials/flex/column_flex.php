@@ -1,8 +1,14 @@
 <div class="container column_flex" >
 	<div class="row" >
-		<div class="col" >
+		<div class="col-12" >
 			<div class="text-wrapper animate slow" >
 				<?php the_sub_field('content'); ?>
+			</div><!-- .text-wrapper -->
+		</div><!-- .col -->
+	</div><!-- .row -->
+	<div class="row" >
+		<div class="col" >
+			<div class="text-wrapper animate slow" >
 				<?php 
 					$count = count(get_sub_field('columns')); 
 					if(have_rows('columns')): ?>
@@ -19,6 +25,13 @@
 					<?php endwhile; ?>
 				</div><!-- .row -->
 				<?php endif; ?>
+			</div><!-- .text-wrapper -->
+		</div><!-- .col -->
+	</div><!-- .row -->
+	<div class="row" >
+		<div class="col-12" >
+			<div class="text-wrapper animate slow" >
+				<?php the_sub_field('closing_content'); ?>
 			</div><!-- .text-wrapper -->
 		</div><!-- .col -->
 	</div><!-- .row -->

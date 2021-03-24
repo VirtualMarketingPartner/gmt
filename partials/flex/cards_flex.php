@@ -3,6 +3,13 @@
 		<div class="col-12" >
 			<div class="text-wrapper animate slow" >
 				<?php the_sub_field('content'); ?>
+			</div><!-- .text-wrapper -->
+		</div><!-- .col -->
+	</div><!-- .row -->
+	
+	<div class="row" >
+		<div class="col-12" >
+			<div class="text-wrapper animate slow" >
 				<?php if( get_sub_field('icon_layout') == 'left' ): ?>
 					<?php if(have_rows('cards')): ?>
 					<div class="row card-row" >
@@ -71,8 +78,15 @@
 					</div><!-- .row -->
 					<?php endif; ?>
 				
-				
 				<?php endif; ?>
+			</div><!-- .text-wrapper -->
+		</div><!-- .col -->
+	</div><!-- .row -->
+	<br>
+	<div class="row" >
+		<div class="col-12" >
+			<div class="text-wrapper animate slow" >
+				<?php the_sub_field('closing_content'); ?>
 			</div><!-- .text-wrapper -->
 		</div><!-- .col -->
 	</div><!-- .row -->

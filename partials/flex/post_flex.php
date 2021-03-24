@@ -1,7 +1,7 @@
 <div class="container" >
 			<div class="row" >
 				<div class="col-12" >
-					<h2><?php the_sub_field('header'); ?></h2>
+					<h2><?php the_sub_field('content'); ?></h2>
 					<br>
 					<div class="row card-row-2" >
 					<?php 
