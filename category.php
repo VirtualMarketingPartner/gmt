@@ -26,7 +26,7 @@
 							<h5><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h5>
 							<?php the_excerpt(); ?>
 							<a href="<?php the_permalink(); ?>" class="button inverted" >
-								<?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
+								<?php the_field('read_more','options'); ?> </a>
 						</div><!-- .col -->
 						<?php endwhile; else: ?>
 
@@ -35,7 +35,7 @@
 							<h5><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h5>
 							<?php the_excerpt(); ?>
 							<a href="<?php the_permalink(); ?>" class="button inverted" >
-								<?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
+								<?php the_field('read_more','options'); ?></a>
 						</div><!-- .col -->
 
 						<?php endif; ?>
@@ -46,7 +46,6 @@
 					<div class="row" >
 						<div class="col" >
 							<p><?php the_field('empty_search', 'options'); ?></p>
-							<h3>Nothing to see here but a dead fairy. Move along, its wings ain't flappin' no more.</h3>
 						</div>
 					</div><!-- .row -->
 				<?php endif; ?>
