@@ -49,6 +49,18 @@ function my_mce_before_init_insert_formats( $init_array ) {
       'selector' => 'a',
 	  'classes' => 'button inverted'
     ),
+	array(
+      'title' => 'Quote Attribution',
+      'selector' => 'p',
+	  'inline' => 'span',
+	  'classes' => 'quote-from'
+    ),
+    
+	array(
+      'title' => 'Checklist',
+      'selector' => 'ul',
+	  'classes' => 'checklist'
+    ),
     
     ); 
     $init_array['style_formats'] = json_encode( $style_formats ); 
@@ -99,7 +111,6 @@ if( function_exists('acf_add_options_page') ) {
 
 
 // custom page & subnav for custom taxonomy
-
 add_action( 'admin_menu', 'post_menu' );  
 function post_menu(){    
 	$page_title = 'News & Events';   
@@ -132,6 +143,31 @@ function edit_menu() {
     'manage_options', 'nav-menus.php');
 }
 
+// custom page & subnav for custom taxonomy
+add_action( 'admin_menu', 'services_menu' );  
+function services_menu(){    
+	$s_page_title = 'Services';   
+	$s_menu_title = 'Services';   
+	$s_capability = 'manage_options';   
+	$s_menu_slug  = 'services';   
+	$s_function   = 'post';   
+	$s_icon_url   = 'dashicons-store';   
+	$s_position   = 20;    
+	
+	add_menu_page( 
+		$s_page_title,                  
+		$s_menu_title,                   
+		$s_capability,                   
+		$s_menu_slug,                   
+		$s_function,                   
+		$s_icon_url,                   
+		$s_position ); 
+}
+
+
+
+
+
 // hide default Posts menu
 if( current_user_can('editor') ) { 
     add_action( 'admin_init', 'remove_menu_pages' );
@@ -143,4 +179,6 @@ if( current_user_can('editor') ) {
 		remove_menu_page( 'admin.php?page=members-settings' );
 	}
 } 
+
+
 
