@@ -26,7 +26,9 @@
 							<div class="indicator" ></div>
 							<?php while(have_rows('group')): the_row(); ?>
 							<li class="nav-item">
-								<a class="nav-link <?php if( $groupNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $groupNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $groupNavCount; ?>" role="tab" aria-controls="nav-<?php echo $groupNavCount; ?>" aria-selected="true"><?php the_sub_field('group_name'); ?></a>
+								<a class="nav-link <?php if( $groupNavCount==0 ){ echo 'active'; } ?>" id="nav-<?php echo $groupNavCount; ?>" data-toggle="tab" href="#tab-<?php echo $groupNavCount; ?>" role="tab" aria-controls="nav-<?php echo $groupNavCount; ?>" aria-selected="true">
+									<h4><?php the_sub_field('group_name'); ?></h4>
+								</a>
 							</li>
 							<?php $groupNavCount++; endwhile; ?>
 						</ul><!-- .nav -->
