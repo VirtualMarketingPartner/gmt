@@ -8,7 +8,7 @@
 						<th scope="col"></th>
 						<th scope="col"><?php the_sub_field('option_1'); ?></th>
 						<th scope="col"><?php the_sub_field('option_2'); ?></th>
-						<th scope="col"><?php the_sub_field('option_1'); ?></th>
+						<th scope="col"><?php the_sub_field('option_3'); ?></th>
 					<?php endwhile; endif; ?>
 				</tr>
 			</thead>
@@ -19,7 +19,7 @@
 					<tr>
 					<td scope="row"><?php the_sub_field('objective'); ?></td>
 						<td>
-							<?php if($options && in_array('opt3', $options)) {
+							<?php if($options && in_array('opt1', $options)) {
 								echo '<i class="fas fa-check-circle"></i>';
 							}?>
 						</td>
@@ -29,7 +29,7 @@
 							}?>
 						</td>
 						<td>
-							<?php if($options && in_array('opt1', $options)) {
+							<?php if($options && in_array('opt3', $options)) {
 								echo '<i class="fas fa-check-circle"></i>';
 							}?>
 						</td>
