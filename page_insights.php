@@ -42,7 +42,7 @@
 							<h5><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h5>
 							<?php the_excerpt(); ?>
 							<a href="<?php the_permalink(); ?>" class="button inverted" >
-								<?php the_field('read_more','options'); ?> <i class="fas fa-long-arrow-right"></i></a>
+								<?php the_field('read_more','options'); ?></a>
 						</div><!-- .col -->
 						<?php endwhile; endif; ?>
 					</div><!-- .row -->
