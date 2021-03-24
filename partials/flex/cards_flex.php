@@ -55,6 +55,22 @@
 					</div><!-- .row -->
 					<?php endif; ?>
 				
+				<?php elseif( get_sub_field('icon_layout') == 'none' ): ?>
+					<?php if(have_rows('cards')): ?>
+					<div class="row card-row" >
+						<?php while(have_rows('cards')): the_row(); ?>
+						<div class="col-12 col-md-4" >
+							<div class="card bottom animate" >
+								<div class="card-body  text-left" >
+									<h3><?php the_sub_field('title'); ?></h3>
+									<?php the_sub_field('content'); ?>
+								</div><!-- .card-body -->
+							</div><!-- .card -->
+						</div><!-- .col -->
+						<?php endwhile; ?>
+					</div><!-- .row -->
+					<?php endif; ?>
+				
 				
 				<?php endif; ?>
 			</div><!-- .text-wrapper -->

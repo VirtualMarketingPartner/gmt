@@ -15,13 +15,23 @@
 		<?php endif; ?>
 		
 		<?php if( get_row_layout() == 'full_flex'): ?>
-		<?php get_template_part('/partials/flex/full_flex'); ?>
+			<?php get_template_part('/partials/flex/full_flex'); ?>
 		<?php elseif( get_row_layout() == 'column_flex'): ?>
-		<?php get_template_part('/partials/flex/column_flex'); ?>
+			<?php get_template_part('/partials/flex/column_flex'); ?>
 		<?php elseif( get_row_layout() == 'cards_flex'): ?>
-		<?php get_template_part('/partials/flex/cards_flex'); ?>
+			<?php get_template_part('/partials/flex/cards_flex'); ?>
 		<?php elseif( get_row_layout() == 'combo_flex'): ?>
-		<?php get_template_part('/partials/flex/combo_flex'); ?>		
+			<?php get_template_part('/partials/flex/combo_flex'); ?>
+		<?php elseif( get_row_layout() == 'quote_flex'): ?>
+			<?php get_template_part('/partials/flex/quote_flex'); ?>
+		<?php elseif( get_row_layout() == 'tabs_flex'): ?>
+			<?php get_template_part('/partials/flex/tab_flex'); ?>
+		<?php elseif( get_row_layout() == 'post_flex'): ?>
+			<?php get_template_part('/partials/flex/post_flex'); ?>
+		<?php elseif( get_row_layout() == 'slideshow_flex'): ?>
+			<?php get_template_part('/partials/flex/slideshow_flex'); ?>
+		<?php elseif( get_row_layout() == 'pd_flex'): ?>
+			<?php get_template_part('/partials/flex/pd_flex'); ?>
 		<?php endif; ?>
 	</section><!-- .container-fluid -->
 	

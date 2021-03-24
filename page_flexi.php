@@ -34,6 +34,8 @@
 			<?php get_template_part('/partials/flex/post_flex'); ?>
 		<?php elseif( get_row_layout() == 'slideshow_flex'): ?>
 			<?php get_template_part('/partials/flex/slideshow_flex'); ?>
+		<?php elseif( get_row_layout() == 'pd_flex'): ?>
+			<?php get_template_part('/partials/flex/pd_flex'); ?>
 		<?php endif; ?>
 	</section><!-- .container-fluid -->
 	

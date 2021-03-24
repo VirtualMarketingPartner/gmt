@@ -1,5 +1,10 @@
 <?php if(have_rows('tabs')): while(have_rows('tabs')): the_row(); ?>
 <div class="container" >
+	<div class="row" >
+		<div class="col" >
+			<?php the_sub_field('content'); ?>
+		</div><!-- .col -->
+	</div><!-- .row -->
 	<div id="tabs" >
 	<div class="row" >
 		<div class="col-12 col-md-4" >
