@@ -21,9 +21,13 @@
 </section><!-- .hero -->
 
 <?php else: ?>
-
-<div class="hero-spacer" ></div>
-
+<section class="container-fluid hero-spacer" >
+	<div class="container" >
+		<div class="row" >
+			<h1><?php the_title(); ?></h1>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- .hero-spacer -->
 <?php endif; ?>
 
 
