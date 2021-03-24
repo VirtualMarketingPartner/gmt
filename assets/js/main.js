@@ -34,7 +34,7 @@ jQuery(function($){
 		var cardHeight = 0;
 		$('.card-row .card').each(function(){
 			if($(this).height() > cardHeight){
-				cardHeight = $(this).height()+30;
+				cardHeight = $(this).height()+50;
 			}
 		});
 		$('.card-row .card').height(cardHeight);
@@ -44,7 +44,7 @@ jQuery(function($){
 		var cardHeight2 = 0;
 		$('.card-row-2 .card').each(function(){
 			if($(this).height() > cardHeight2){
-				cardHeight2 = $(this).height()+30;
+				cardHeight2 = $(this).height()+50;
 			}
 		});
 		$('.card-row-2 .card').height(cardHeight2);

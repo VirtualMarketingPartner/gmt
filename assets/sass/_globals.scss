@@ -44,7 +44,7 @@ body{
 	}
 	
 	&.angle{
-		background:$white;
+		background-color:$white;
 		@include angle(after, false);
 		@include angle(before, true);
 		
@@ -62,7 +62,7 @@ body{
 .clear{clear:both; float:none;}
 
 section{
-	padding:25px 0 45px;
+	padding:10px 0 50px;
 	position:relative;
 	
 	.overlay{

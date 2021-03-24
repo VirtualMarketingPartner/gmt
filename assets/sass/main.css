@@ -93,7 +93,7 @@ body {
   padding-right: 0; }
   .container-fluid.bg {
     background-position: center center;
-    background-color: #f5f5f5;
+    background-color: #f0f1f2;
     background-size: cover;
     padding: 100px 0; }
     .container-fluid.bg .text-wrapper {
@@ -103,7 +103,7 @@ body {
         color: #111111;
         text-shadow: none; }
   .container-fluid.angle {
-    background: #fff;
+    background-color: #fff;
     position: relative;
     z-index: 1;
     position: relative;
@@ -140,14 +140,14 @@ body {
       background: #fff;
       z-index: 2; }
   .container-fluid.grey {
-    background: #f5f5f5; }
+    background: #f0f1f2; }
 
 .clear {
   clear: both;
   float: none; }
 
 section {
-  padding: 25px 0 45px;
+  padding: 10px 0 50px;
   position: relative; }
   section .overlay {
     position: absolute;
@@ -305,7 +305,7 @@ blockquote {
   .image-wrapper.circle {
     width: 100%;
     height: auto;
-    background-color: #f5f5f5;
+    background-color: #f0f1f2;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%; }
@@ -322,16 +322,18 @@ blockquote {
   align-items: center; }
 
 .hero {
-  min-height: 400px;
+  min-height: 300px;
   color: #fff;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; }
+  .hero.bg {
+    padding: 50px 0; }
   .hero .hero-text {
     display: block;
-    height: 400px;
+    height: 300px;
     position: relative;
     top: 0;
     left: 0;
@@ -419,7 +421,7 @@ blockquote {
 .recent-news h4 {
   font-size: 125%; }
 .recent-news .image-wrapper {
-  background: #f5f5f5;
+  background: #f0f1f2;
   background-size: cover;
   height: 150px;
   position: relative; }
@@ -469,7 +471,7 @@ blockquote {
     margin: 0;
     padding: 0; }
     .sidebar .categories li {
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid #f0f1f2;
       padding: 10px 0; }
       .sidebar .categories li i {
         color: #febb15;
@@ -502,7 +504,7 @@ ul.checklist {
   ul.checklist li h1, ul.checklist li h2, ul.checklist li h3, ul.checklist li h4, ul.checklist li h5 {
     display: inline; }
   ul.checklist li p {
-    margin-left: 25px; }
+    margin-left: 30px; }
 
 ul.socials {
   list-style: none;
@@ -636,7 +638,7 @@ a.modal-togle {
   margin: -75px auto; }
   #slideshow ol.carousel-indicators {
     position: absolute;
-    bottom: 50px; }
+    bottom: 100px; }
   #slideshow .carousel-item {
     background-position: center center;
     background-repeat: no-repeat;
@@ -664,7 +666,7 @@ a.modal-togle {
     margin: 0 auto;
     padding: 10px 0 40px; }
   #home .services .service .icon {
-    background-color: #f5f5f5;
+    background-color: #f0f1f2;
     background-size: 70%;
     background-position: center center; }
     #home .services .service .icon:hover {
@@ -842,7 +844,7 @@ a.modal-togle {
       bottom: 0;
       left: 0; }
     #post_list .post .image-date-wrapper .image-wrapper {
-      background: #f5f5f5;
+      background: #f0f1f2;
       min-height: 150px;
       background-size: cover; }
   #post_list .post a.button {
