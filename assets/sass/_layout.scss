@@ -4,16 +4,28 @@
 
 /* ===== Repeated Page Elements ===== */
 
+.hero-spacer{
+	margin-top:50px;
+	padding:25px 0;}
+
 .wp-block-image img{
 	height:auto;
 }
 
-blockquote{
+.post blockquote{
 	padding-left:20px;
 	border-left:5px solid $accent;
 }
 
-.hero-spacer{margin-top:100px;}
+blockquote{
+	font-size:24px;
+	font-weight:bold;
+	
+	.quote-from{
+		font-family:$poppins;
+		font-size:18px; 
+		font-weight:bold;}
+}
 
 .image-wrapper{
 	display:block;
@@ -252,6 +264,25 @@ blockquote{
 	
 }
 
+ul.checklist{
+	list-style:none;
+	margin:0 auto; padding:0;
+
+	li{
+		
+		&:before{
+			content:'\f058';
+			font-weight:400;
+			font-family:$icon;
+			color:$primary;
+			margin-right:10px;
+		}
+		
+		h1,h2,h3,h4,h5{display:inline;}
+		p{margin-left:25px;}
+	}
+}
+
 ul.socials {
 	list-style: none;
 	margin: 0;
@@ -330,12 +361,16 @@ ul.socials {
 				}
 			}
 		}
-
-		.tab-content {
-			padding-top:20px;
-		}
 	}
 
+#team_tabs{
+	.tab-content {
+		padding-top:20px;
+	}
+}
+
+
+.pd_flex{padding-bottom:100px;}
 
 .expand{
 	padding:5px 0;
@@ -660,6 +695,7 @@ a.modal-togle{color:primary;}
 
 		ul {
 			padding: 0 0 0 16px;
+			
 		}
 
 
