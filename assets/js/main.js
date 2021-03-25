@@ -9,32 +9,43 @@ jQuery(function($){
 		return elementBottom > viewportTop && elementTop < viewportBottom;
 		};
 		
-		
-		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){
 			var circleW = $(this).width();
 			$(this).css('height', circleW );
 		});
+		
+
+		//set height of partner map
+		var mapHeight = $('.map_flex .text-wrapper').height();
+		var lgMapHeight = mapHeight+300;
+		$('.partner-map, .partner-map .acf-map').css({
+			'height' : lgMapHeight,
+			'min-height' : lgMapHeight
+		}); 
+		
+		// hide image overflow for partner map
+		$('.partner-map').parent('.container-fluid').css('overflow','hidden');
+		
 	});
 
 	$(document).ready(function(){
 
 		// set slideshow height to be consistent based on tallest slide
 		var slideHeight = 0;
-		$('.hero .carousel-item').each(function(){
+		$('#slideshow .carousel-item').each(function(){
 			if($(this).height() > slideHeight){
 				slideHeight = $(this).height();
 			}
 		});
-		$('.hero .carousel-item').height(slideHeight);
+		$('#slideshow .carousel-item').height(slideHeight);
 		
 		
 		//set card heights
 		var cardHeight = 0;
 		$('.card-row .card').each(function(){
 			if($(this).height() > cardHeight){
-				cardHeight = $(this).height()+50;
+				cardHeight = $(this).height();
 			}
 		});
 		$('.card-row .card').height(cardHeight);
@@ -44,7 +55,7 @@ jQuery(function($){
 		var cardHeight2 = 0;
 		$('.card-row-2 .card').each(function(){
 			if($(this).height() > cardHeight2){
-				cardHeight2 = $(this).height()+50;
+				cardHeight2 = $(this).height()+30;
 			}
 		});
 		$('.card-row-2 .card').height(cardHeight2);

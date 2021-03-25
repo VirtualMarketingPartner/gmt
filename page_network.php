@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Partner Network */ 
+/* Template Name: Global Coverage */ 
 ?>
 
 
@@ -12,23 +12,36 @@
 	<?php get_template_part('/partials/intro'); ?>
 	
 	<?php if(have_rows('network')): ?>
-	<section class="container-fluid bg partner-map" >	
-		<div class="acf-map" data-zoom="2">
-		<?php while ( have_rows('network') ) : the_row(); 
-			$location = get_sub_field('map');
-			$title = get_sub_field('name');
-			?>
-			<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>">
-				<h3><?php echo esc_html( $title ); ?></h3>
-			</div>
-		<?php endwhile; ?>
-		</div>
-		<?php get_template_part('partials/map_helper'); ?>
-	</section><!-- .network-map -->
+	<section class="container-fluid grey angle map_flex" >
+		<div class="container" >
+			<div class="row vcenter" >
+				<div class="col-12 col-md-6">
+					<div class="text-wrapper" >
+						<?php the_field('map_content'); ?>
+					</div><!-- .text-wrapper -->
+				</div><!-- .col -->
+				<div class="col-12 col-md-6" >
+					<div class="partner-map" >
+						<div class="acf-map" data-zoom="16">
+						<?php while ( have_rows('network') ) : the_row(); 
+							$location = get_sub_field('map');
+							$title = get_sub_field('name');
+							?>
+							<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>">
+								<h3><?php echo esc_html( $title ); ?></h3>
+							</div>
+						<?php endwhile; ?>
+						</div>
+						<?php get_template_part('partials/map_helper'); ?>
+					</div><!-- .partner-map -->
+				</div><!-- .col -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section><!-- .container-fluid -->
 	<?php endif; ?>
 	
 	<?php if(have_rows('contact')): while(have_rows('contact')): the_row(); ?>
-		<section class="container-fluid angle grey contact" >
+		<section class="container-fluid angle contact" >
 		<div class="container" >
 			<div class="row vcenter" >
 				<div class="col-12 col-md-4" >
