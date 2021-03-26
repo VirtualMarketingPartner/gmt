@@ -15,7 +15,7 @@
 				<div class="row" >
 					<?php while(have_rows('columns')): the_row(); 
 					$colSize = get_sub_field('column_size'); ?>
-					<div class="col <?php 
+					<div class="col-12 col-md <?php 
 								if($colSize == 1){ echo "col-md-12"; }else  
 								if($colSize == 2){ echo "col-md-6"; }else  
 								if($colSize == 3){ echo "col-md-4"; }else 
