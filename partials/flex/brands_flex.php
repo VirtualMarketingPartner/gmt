@@ -5,7 +5,7 @@
 		<div class="col-12" id="client_list" >
 			<div class="row text-center scroll-left" style="flex-wrap: nowrap;" >
 				<?php while(have_rows('client_list')): the_row(); ?>
-				<div class="col-4 col-md-2 logo" >
+				<div class="col-8 col-md-2 logo" >
 					<div class="image-wrapper brand" style="background-image:url(<?php the_sub_field('logo'); ?>);" title="<?php the_sub_field('name'); ?>"></div> 
 				</div><!-- .col -->
 				<?php endwhile; ?>
