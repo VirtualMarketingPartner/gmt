@@ -9,6 +9,15 @@ jQuery(function($){
 		return elementBottom > viewportTop && elementTop < viewportBottom;
 		};
 		
+		$('section').each(function() {
+			if ($(this).isInViewport()) {
+				$(this).addClass('active');
+				$(this).children().find('.animate').addClass('fadeInUp');
+			} else {
+				$(this).removeClass('active');
+			}
+			}, 2000);
+		
 		// set circle height
 		$('.image-wrapper.circle').each(function(){
 			var circleW = $(this).width();
