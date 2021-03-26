@@ -57,19 +57,17 @@ blockquote{
 }
 
 .hero{
-	min-height:300px;
+	min-height:100px;
 	color:$white;
 	text-shadow:0 0 8px rgba(0,0,0,.85);
 	background-position:center center;
 	background-size:cover;
 	background-repeat:no-repeat;
 	position:relative;
-	
-	&.bg{padding:50px 0;}
 				
 		.hero-text{
 			display:block;
-			height:300px;
+			min-height:100px;
 			position:relative;
 			top:0; left:0;
 			display: flex;  
@@ -448,7 +446,6 @@ a.modal-togle{color:primary;}
 
 /* Slideshow */
 #slideshow {
-	margin:-75px auto;
 	
 	ol.carousel-indicators {
 		position: absolute;
@@ -460,13 +457,12 @@ a.modal-togle{color:primary;}
 		background-repeat:no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
-		min-height:500px;
 		padding:100px 0 50px;
 		position: relative;
+		transition:transform 1.5s ease-in-out,-webkit-transform 1.5s ease-in-out;
 
 		.hero-text{
 			display:block;
-			height:500px;
 			position:relative;
 			top:0; left:0;
 			display: flex;  
@@ -480,72 +476,15 @@ a.modal-togle{color:primary;}
 
 
 /* ===== Homepage ===== */
-#home {
-
-	.services {
-
-		.service {
-			text-align: center;
-
-			h3 {
-				font-size: 100%;
-				font-weight: bold;
-				margin: 0 auto;
-				padding: 10px 0 40px;
-			}
-
-			.icon {
-				background-color: $off-white;
-				background-size: 70%;
-				background-position: center center;
-				
-				&:hover{
-					background-size:80%;
-				}
-			}
-		}
-
-		.card {
-			padding: 20px 40px 0;
-		}
-
-		.pattern {
-			h2 {
-				margin-bottom: 0;
-			}
-		}
-
-	}
-
-
-	.network {
-		color: $white;
-		text-shadow: 0 0 5px rgba(0, 0, 0, .85);
-	}
-
-	.testimonials {
-		padding:80px 0;
+.home {
+	
+	#slideshow{
+		margin:-75px auto;
 		
-		.quote {}
-
-		.author {
-			margin-bottom: 0;
-			font-weight: bold;
-		}
-
-		.company {
-			@include uppercase;
-			color: $grey;
-		}
-	}
-
-	.news {
-		padding: 150px 0 80px;
-
-		.recent-news {
-			a {
-				padding-top: 0;
-			}
+		.carousel-item{
+			min-height:500px;
+			
+			.hero-text{min-height:500px;}
 		}
 	}
 	
@@ -747,13 +686,32 @@ a.modal-togle{color:primary;}
 
 #network {
 
-	.partner-map {
-		height: 500px;
-		overflow: hidden;
-
-		.acf-map {
-			height: 700px;
-			margin-top: -120px;
+	.map_flex{
+		overflow:hidden; 
+		padding:100px 0 50px;
+		margin-top:-100px;
+		
+		&.angle:before{background-color:$white; z-index:2;}
+		
+		.vcenter{align-items: end;}
+		
+		.text-wrapper{
+			padding:50px 50px 50px 0;
+		}
+		
+		.partner-map{
+			width:50vw; height:auto;
+			display:block;
+			position:absolute;
+			overflow:hidden;
+			margin-top:-100px;
+			
+			.acf-map{
+				margin-top:-50px;
+				min-height:1000px;
+				
+				& > div{background:$off-white !important;}
+			}
 		}
 	}
 	
