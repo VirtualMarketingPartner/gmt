@@ -13,8 +13,8 @@
 				</div><!-- .embed-container -->
 			<?php elseif(get_sub_field('image_type') == 'video'): ?>
 				<video autoplay="true" muted="true" loop="true" style="width:100%; height:auto;">
-					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video.mp4" type="video/mp4">
-					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video.webm" type="video/webm">
+					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video_03252021.mp4" type="video/mp4">
+					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video_03252021.webm" type="video/webm">
 				</video>
 			<?php endif; ?>
 		</div><!-- .col -->
@@ -43,8 +43,8 @@
 				</div><!-- .embed-container -->
 			<?php elseif(get_sub_field('image_type') == 'video'): ?>
 				<video autoplay="true" muted="true" loop="true" style="width:100%; height:auto;">
-					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video.mp4" type="video/mp4">
-					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video.webm" type="video/webm">
+					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video_03252021.mp4" type="video/mp4">
+					<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/videos/GMT_Video_03252021.webm" type="video/webm">
 				</video>
 			<?php endif; ?>
 		</div><!-- .col -->
