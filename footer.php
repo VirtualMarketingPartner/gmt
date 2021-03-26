@@ -31,7 +31,7 @@
 		<div class="container" >
 			<div class="row" >
 				<div class="col text-left" >
-					<a class="image-wrapper" href="<?php bloginfo('url'); ?>" style="background-image:url(<?php the_field('footer_logo', 'options'); ?>);" ></a>
+					<a class="image-wrapper" id="footer_logo" href="<?php bloginfo('url'); ?>" style="background-image:url(<?php the_field('footer_logo', 'options'); ?>);" ></a>
 					<p><?php the_field('site_address','options'); ?></p>
 					<p class="all-caps">Contact Us</p>
 					<?php get_template_part('partials/socials'); ?>
