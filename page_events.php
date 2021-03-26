@@ -1,5 +1,5 @@
 <?php 
-/* Template Name: Insights */ 
+/* Template Name: Events */ 
 ?>
 
 
