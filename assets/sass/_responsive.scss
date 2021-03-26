@@ -2,9 +2,6 @@
 	Responsive Styles
 ========================================== */
 
-// Mobile - Smallest screens 
-@media all and (max-width:580px) {}
-
 // Mobile - Default 
 @media all and (max-width:768px) {
 	#header {
@@ -22,8 +19,6 @@
 					&:hover > ul.sub-menu{display:block;}
 
 				}
-				
-				
 			}
 
 			.sub-menu {
@@ -41,7 +36,8 @@
 			margin: 0 0 0 15px;
 		}
 	}
-
+	#footer_logo{background-position:center center;}
+	
 	.image-wrapper,
 	.image-wrapper.circle {
 		width: 80%;
@@ -52,9 +48,30 @@
 	.post .image-wrapper{width:100%;}
 	
 	.hero{min-height:300px;}
-	#home .hero #slideshow .carousel-item{
-		height:300px;
-		padding:25px 0;}
+	
+	#slideshow{
+		.carousel-item{
+			min-height:300px;
+			padding:25px 0;
+			background-attachment: scroll;
+			
+			.hero-text{
+				padding:100px 0 50px;
+				min-height:300px;}
+			img.logo{
+				width:80%; 
+				height:auto;
+				margin:0 auto;}
+			
+			.overlay{background:rgba(0,0,0,.4) !important;}
+		}
+		.carousel-indicators{display:none;}
+	}
+	
+	.scroll-left{
+		animation-duration:20s;
+	}
+	
 	
 	.bg{min-height:300px;}
 
@@ -76,7 +93,21 @@
 		}
 	}
 	
-	
+	#network .map_flex .partner-map{
+		position:relative;
+		width:100%;
+		margin:0 auto;
+		height:350px !important;
+		min-height:350px !important;
+		max-height:350px;
+		
+		.acf-map{
+			margin:0 auto;
+			height:350px !important;
+			min-height:350px !important;
+			max-height:350px;}
+	}
+
 
 	#footer {
 
