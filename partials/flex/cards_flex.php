@@ -17,7 +17,9 @@
 						<div class="col-12 col-md-4" >
 							<div class="card left narrow animate" >
 								<div class="card-body vcenter" >
+									<?php if(get_sub_field('icon')): ?>
 									<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
+									<?php endif; ?>
 									<div class="text-left" >
 										<?php the_sub_field('content'); ?>
 									</div><!-- .text-left -->
@@ -35,7 +37,9 @@
 						<div class="col-12 col-md-4" >
 							<div class="card bottom animate" >
 								<div class="card-body text-left" >
+									<?php if(get_sub_field('icon')): ?>
 									<div class="image-wrapper icon" style="background-image:url(<?php the_sub_field('icon'); ?>);"></div> 
+									<?php endif; ?>
 									<h3><?php the_sub_field('title'); ?></h3>
 									<?php the_sub_field('content'); ?>
 								</div><!-- .card-body -->
@@ -51,7 +55,9 @@
 						<?php while(have_rows('cards')): the_row(); ?>
 						<div class="col-12 col-md-4" >
 							<div class="card animate" >
+								<?php if(get_sub_field('icon')): ?>
 								<div class="image-wrapper" style="background-image:url(<?php the_sub_field('icon'); ?>); height:200px;" ></div>
+								<?php endif; ?>
 								<div class="card-body text-left" >
 									<h3><?php the_sub_field('title'); ?></h3>
 									<?php the_sub_field('content'); ?>
