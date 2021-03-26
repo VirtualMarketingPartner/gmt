@@ -1,4 +1,5 @@
-<?php if( have_rows('slideshow')): $slideCount = 0; $indicatorCount = 0; ?>
+<?php if( have_rows('slideshow')): $slideCount = 0; $indicatorCount = 0;  ?>
+
 	<div id="slideshow" class="carousel slide" data-ride="carousel" >
 		<ol class="carousel-indicators" >
 			<?php while( have_rows('slideshow')): the_row(); ?>
@@ -6,11 +7,12 @@
 			<?php $indicatorCount++; endwhile; ?>
 		</ol>
 		<div class="carousel-inner" >
-		<?php while( have_rows('slideshow')): the_row(); ?>
+		<?php while( have_rows('slideshow')): the_row(); $bgOpacity = get_sub_field('bg_overlay'); ?>
 			<div class="carousel-item <?php if( $slideCount==0 ){echo 'active'; } ?>" style="background-image:url(<?php the_sub_field('image'); ?>); background-position:<?php the_sub_field('image_position') ?>" >
+				<div class="overlay" style="background-color:rgba(0,0,0, .<?php echo $bgOpacity; ?>);" ></div>
 				<div class="container" >
 					<div class="row" >
-						<div class="col-12 col-md-8" >
+						<div class="col-12" >
 							<div class="hero-text animate" >
 								<div class="content" >
 									<?php the_sub_field('content'); ?>
