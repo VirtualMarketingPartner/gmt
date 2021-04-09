@@ -25,7 +25,7 @@ jQuery(function($){
 		});
 		
 
-		//set height of partner map
+		// set height of partner map
 		var mapHeight = $('.map_flex .text-wrapper').height();
 		var lgMapHeight = mapHeight+300;
 		$('.partner-map, .partner-map .acf-map').css({

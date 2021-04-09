@@ -42,19 +42,7 @@
 
 <div class="row" >
 	<div class="col-12 offset-md-1 col-md-10" >
-		<div class="row" >
-			<div class="col-12 col-md-9" >
-				<?php the_sub_field('closing'); ?>
-			</div><!-- .col -->
-
-			<div class="col-12 col-md-3" >
-			<?php $link = get_sub_field('button');
-			$link_url = $link['url'];
-			$link_title = $link['title'];
-			$link_target = $link['target'] ? $link['target'] : '_self'; ?>
-				<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="button" ><?php echo esc_html( $link_title ); ?></a>
-			</div>
-		</div><!-- .row -->
+		<?php the_sub_field('closing'); ?>
 	</div><!-- .col -->
 </div><!-- .row -->
 <?php endwhile; endif; ?>

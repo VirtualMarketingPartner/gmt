@@ -14,9 +14,6 @@
 						<div class="text-wrapper" >
 							<?php the_sub_field('content'); ?>
 						</div><!-- .text-wrapper -->
-						<div class="form-wrapper" >
-							<?php get_template_part('/partials/email_signup'); ?>
-						</div><!-- .form-wrapper -->
 					</div><!-- .col -->
 				</div><!-- .row -->
 			</div><!-- .col -->
@@ -31,7 +28,7 @@
 		<div class="container" >
 			<div class="row" >
 				<div class="col text-left" >
-					<a class="image-wrapper" id="footer_logo" href="<?php bloginfo('url'); ?>" style="background-image:url(<?php the_field('footer_logo', 'options'); ?>);" ></a>
+					<a class="image-wrapper" title="<?php the_field('company','options'); ?>" id="footer_logo" href="<?php bloginfo('url'); ?>" style="background-image:url(<?php the_field('footer_logo', 'options'); ?>);" ></a>
 					<p><?php the_field('site_address','options'); ?></p>
 					<p class="all-caps">Contact Us</p>
 					<?php get_template_part('partials/socials'); ?>
@@ -46,7 +43,7 @@
 					<?php if(get_field('impressum','options')): ?>
 					<div class="row" >
 						<div class="col offset-md-2" id="impressum" >
-							<p ><?php the_field('impressum','options'); ?></p>
+							<?php the_field('impressum','options'); ?>
 						</div><!-- .col -->
 					</div><!-- .row -->
 					<?php endif; ?>
@@ -54,7 +51,7 @@
 					<div class="row" >
 						<div class="col offset-md-2" >
 							<p><?php the_field('copyright','options'); ?><br>
-								Website by <a href="https://taylordesens.com/" target="_blank" >Taylor Desens</a></p>
+								Website by <a href="https://taylordesens.com/" rel="nofollow noreferrer" target="_blank" >Taylor Desens</a></p>
 						</div><!-- .col -->
 					</div><!-- .row -->
 				</div><!-- .col -->

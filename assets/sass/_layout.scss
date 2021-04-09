@@ -445,11 +445,15 @@ a.modal-togle{color:primary;}
 }
 
 /* Slideshow */
+
+.home #slideshow ol.carousel-indicators{bottom:100px;}
+
 #slideshow {
+	margin-top:-10px; 
 	
 	ol.carousel-indicators {
 		position: absolute;
-		bottom:100px;
+		bottom:20px;
 	}
 
 	.carousel-item {
@@ -709,6 +713,8 @@ a.modal-togle{color:primary;}
 			.acf-map{
 				margin-top:-50px;
 				min-height:1000px;
+				-webkit-filter: saturate(.8);
+				filter: saturate(.8);
 				
 				& > div{background:$off-white !important;}
 			}

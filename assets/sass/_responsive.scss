@@ -3,6 +3,10 @@
 ========================================== */
 
 // Mobile - Default 
+@media all and (max-width:580px) {
+	#header #site_id{width:250px;}
+}
+
 @media all and (max-width:768px) {
 	#header {
 		background: $white;

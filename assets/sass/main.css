@@ -210,8 +210,8 @@ h6 {
 p {
   margin-bottom: 20px; }
   p a {
-    background-image: linear-gradient(90deg, transparent 1%, #5c5ce5 1%);
-    background-size: 100% 10%;
+    background-image: linear-gradient(90deg, #5c5ce5 1%, transparent 1%);
+    background-size: 100% 0%;
     background-position: bottom left;
     background-repeat: repeat-x;
     -webkit-transition: all ease-in-out .2s;
@@ -267,7 +267,7 @@ a {
     a.button.inverted {
       background: transparent;
       color: #08cbfe;
-      padding: 20px 0 0;
+      padding: 0;
       text-align: left;
       text-transform: uppercase; }
       a.button.inverted:after {
@@ -655,25 +655,30 @@ a.modal-togle {
     font-size: 16px; }
 
 /* Slideshow */
-#slideshow ol.carousel-indicators {
-  position: absolute;
+.home #slideshow ol.carousel-indicators {
   bottom: 100px; }
-#slideshow .carousel-item {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 100px 0 50px;
-  position: relative;
-  transition: transform 1.5s ease-in-out,-webkit-transform 1.5s ease-in-out; }
-  #slideshow .carousel-item .hero-text {
-    display: block;
+
+#slideshow {
+  margin-top: -10px; }
+  #slideshow ol.carousel-indicators {
+    position: absolute;
+    bottom: 20px; }
+  #slideshow .carousel-item {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0 50px;
     position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    color: #fff; }
+    transition: transform 1.5s ease-in-out,-webkit-transform 1.5s ease-in-out; }
+    #slideshow .carousel-item .hero-text {
+      display: block;
+      position: relative;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      color: #fff; }
 
 /* ===== Homepage ===== */
 .home #slideshow {
@@ -828,7 +833,9 @@ a.modal-togle {
     margin-top: -100px; }
     #network .map_flex .partner-map .acf-map {
       margin-top: -50px;
-      min-height: 1000px; }
+      min-height: 1000px;
+      -webkit-filter: saturate(0.8);
+      filter: saturate(0.8); }
       #network .map_flex .partner-map .acf-map > div {
         background: #f0f1f2 !important; }
 #network .approach {
@@ -916,7 +923,10 @@ a.modal-togle {
     border-radius: 0 0 5px 5px;
     background: rgba(255, 255, 255, 0.85);
     display: none;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-box-shadow: 0 0px 20px 0 rgba(204, 204, 204, 0.4);
+    -moz-box-shadow: 0 0px 20px 0 rgba(204, 204, 204, 0.4);
+    box-shadow: 0 0px 20px 0 rgba(204, 204, 204, 0.4); }
     #header .navbar-nav .sub-menu li {
       display: block;
       text-align: left;
@@ -1037,7 +1047,8 @@ a.modal-togle {
   width: 100%;
   padding: 30px 0;
   margin: 0;
-  color: #fff; }
+  color: #fff;
+  font-size: 90%; }
   #footer a {
     text-transform: none;
     color: #fff; }
@@ -1206,77 +1217,77 @@ input.gform_button.button {
       color: #fff; }
 
 /* Newsletter Signup Form */
-form .form-group {
+#newsletter_signup #gform_wrapper_2 {
   position: relative; }
-  form .form-group label {
-    position: absolute;
-    z-index: 2;
-    left: 15px;
-    top: 8px;
-    width: 50%;
-    display: inline-block;
-    color: #8c8c8c; }
-  form .form-group input[type=text],
-  form .form-group input[type=email],
-  form .form-group input[type=phone] {
-    position: relative;
-    width: 100%;
-    border: 1px solid #8c8c8c;
-    padding: 0 50px 0 15px;
-    height: 40px;
-    line-height: 36px;
+#newsletter_signup input[type=text],
+#newsletter_signup input[type=email],
+#newsletter_signup input[type=phone] {
+  position: relative;
+  width: 100%;
+  border: 1px solid #8c8c8c;
+  padding: 0 50px 0 15px;
+  height: 40px;
+  line-height: 36px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px; }
+  #newsletter_signup input[type=text]:focus,
+  #newsletter_signup input[type=email]:focus,
+  #newsletter_signup input[type=phone]:focus {
+    outline: none;
+    border: 2px solid #5c5ce5;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px; }
-    form .form-group input[type=text]:focus,
-    form .form-group input[type=email]:focus,
-    form .form-group input[type=phone]:focus {
-      outline: none;
-      border: 2px solid #5c5ce5;
-      -webkit-border-radius: 20px;
-      -moz-border-radius: 20px;
-      border-radius: 20px; }
-  form .form-group input[type=text]:focus + label, form .form-group input[type=text]:valid + label,
-  form .form-group input[type=email]:focus + label,
-  form .form-group input[type=email]:valid + label,
-  form .form-group input[type=phone]:focus + label,
-  form .form-group input[type=phone]:valid + label {
-    top: 0;
-    left: 15px;
-    font-size: 65%;
-    padding: 3px 10px;
-    width: auto;
-    -webkit-transition: all ease-in-out .2s;
-    -moz-transition: all ease-in-out .2s;
-    transition: all ease-in-out .2s; }
-  form .form-group .button {
-    height: 39px;
-    width: 39px;
-    line-height: 36px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    margin: 0;
-    padding: 0;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    font-size: 120%;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    -webkit-transition: all ease-in-out .2s;
-    -moz-transition: all ease-in-out .2s;
-    transition: all ease-in-out .2s;
-    background: #febb15; }
-    form .form-group .button:hover {
-      background: #f2b145;
-      color: #fff; }
+#newsletter_signup input[type=text]:focus + label, #newsletter_signup input[type=text]:valid + label,
+#newsletter_signup input[type=email]:focus + label,
+#newsletter_signup input[type=email]:valid + label,
+#newsletter_signup input[type=phone]:focus + label,
+#newsletter_signup input[type=phone]:valid + label {
+  color: #111111;
+  text-shadow: none;
+  top: 0;
+  left: 15px;
+  font-size: 65%;
+  padding: 3px 10px;
+  width: auto;
+  background: transparent;
+  -webkit-transition: all ease-in-out .2s;
+  -moz-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s; }
+#newsletter_signup input[type=submit] {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  position: absolute;
+  right: 19px;
+  top: 2px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 90%;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all ease-in-out .2s;
+  -moz-transition: all ease-in-out .2s;
+  transition: all ease-in-out .2s;
+  background: #febb15; }
+  #newsletter_signup input[type=submit]:hover {
+    background: #f2b145;
+    color: #fff; }
 
 /* ==========================================
 	Responsive Styles
 ========================================== */
+@media all and (max-width: 580px) {
+  #header #site_id {
+    width: 250px; } }
 @media all and (max-width: 768px) {
   #header {
     background: #fff; }

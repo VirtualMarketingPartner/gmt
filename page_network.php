@@ -22,7 +22,7 @@
 				</div><!-- .col -->
 				<div class="col-12 col-md-6" >
 					<div class="partner-map" >
-						<div class="acf-map" data-zoom="16">
+						<div class="acf-map">
 						<?php while ( have_rows('network') ) : the_row(); 
 							$location = get_sub_field('map');
 							$title = get_sub_field('name');
@@ -32,7 +32,7 @@
 							</div>
 						<?php endwhile; ?>
 						</div>
-						<?php get_template_part('partials/map_helper'); ?>
+						<?php get_template_part('partials/coverage_map_helper'); ?>
 					</div><!-- .partner-map -->
 				</div><!-- .col -->
 			</div><!-- .row -->
@@ -55,7 +55,7 @@
 					<div class="text-wrapper animate slow" >
 						<h2><?php the_sub_field('title'); ?></h2>
 						<?php the_sub_field('content'); ?>
-						<a href="<?php the_sub_field('link'); ?>" class="button" ><?php the_sub_field('label'); ?> <i class="fas fa-long-arrow-right"></i></a>
+						
 					</div><!-- .text-wrapper -->
 				</div><!-- .col -->
 			</div><!-- .row -->

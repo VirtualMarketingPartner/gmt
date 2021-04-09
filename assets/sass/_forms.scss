@@ -141,19 +141,12 @@ input.gform_button.button{
 
 
 /* Newsletter Signup Form */
-form{
-	.form-group{
-		position:relative;
-		
-		label{
-			position:absolute;
-			z-index:2; 
-			left:15px; top:8px;
-			width:50%;
-			display:inline-block;
-			color:$grey;
-		}
-		input[type=text],
+#newsletter_signup{
+	
+	#gform_wrapper_2{position: relative;}
+	
+	
+	input[type=text],
 		input[type=email],
 		input[type=phone]{
 			position:relative;
@@ -175,33 +168,38 @@ form{
 		input[type=phone]{
 			&:focus + label,
 			&:valid + label{
+				color:$black;
+				text-shadow: none;
 				top:0;
 				left:15px;
 				font-size:65%;
 				padding:3px 10px;
 				width:auto;
+				background:$trans;
 				@include defaultTransition;
 			}
 		}
+	
+	input[type=submit]{
+		height:36px; width:36px;
+		line-height:36px;
+		position:absolute;
+		right:19px; top:2px;
+		z-index:2;
+		margin:0;
+		padding:0;
+		border:none;
+		outline:none;
+		@include border-radius(50%);
+		font-size:90%;
+		@include border-radius(50px);
+		@include defaultTransition;
+		background:$accent;
 
-		.button{
-			height:39px; width:39px;
-			line-height:36px;
-			position:absolute;
-			right:0; top:0;
-			z-index:2;
-			margin:0;
-			padding:0;
-			@include border-radius(50%);
-			font-size:120%;
-			@include border-radius(50px);
-			@include defaultTransition;
-			background:$accent;
-
-			&:hover{
-				background:$accent-dk;
-				color:$white;
-			}
+		&:hover{
+			background:$accent-dk;
+			color:$white;
 		}
 	}
+	
 }

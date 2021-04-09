@@ -108,8 +108,8 @@ p{
 	margin-bottom:20px;
 	
 	a{
-		background-image:linear-gradient(90deg, $trans 1%, $primary 1%);
-		background-size: 100% 10%;
+		background-image:linear-gradient(90deg, $primary 1%, $trans 1%);
+		background-size: 100% 0%;
 		background-position:bottom left;
 		background-repeat: repeat-x;
 		@include defaultTransition;
@@ -163,7 +163,7 @@ a{
 		&.inverted{
 			background:$trans; 
 			color:$secondary;
-			padding:20px 0 0;
+			padding:0;
 			text-align:left;		
 			text-transform:uppercase;
 			

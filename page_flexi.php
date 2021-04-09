@@ -13,7 +13,8 @@
 	$bgImage = get_sub_field('bg_image');
 	$opacity = get_sub_field('bg_overlay');
 	?>
-	<section class="container-fluid <?php the_sub_field('bg'); ?> <?php if( get_sub_field('bg') != 'bg' || get_row_layout() != 'slideshow_flex' ){ echo 'angle'; } ?>" style="background-image:url(<?php if( get_sub_field('bg') == 'bg'){ echo $bgImage; } ?>);" >
+	<section class="container-fluid <?php the_sub_field('bg'); ?> 
+					<?php if( get_row_layout() != 'slideshow_flex' ){ echo 'angle'; } ?>" style="background-image:url(<?php if( get_sub_field('bg') == 'bg'){ echo $bgImage; } ?>);" >
 		<?php if(get_sub_field('bg') =='bg'): ?>
 		<div class="overlay" style="background-color:rgba(0,0,0, .<?php echo $opacity; ?>);" ></div>
 		<?php endif; ?>

@@ -137,6 +137,24 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
+
+add_filter('wpse_opengraph_image', 'og_image');
+ 
+function og_image($image) {
+    global $post;
+ 
+    if (get_field('hero')) {
+        $image = base_image_url(get_field('hero'), null); 
+    }
+    return $image;
+}
+
+
+
+
+
+
+
 // Google Map API Key - Temp setup 11/18/20
 function my_acf_init() {
     acf_update_setting('google_api_key', 'AIzaSyAXdo1pSufFydCToPxjbsSPwJPsUWGkXpY');
